@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "DetailViewController.h"
 
 @interface MainViewController ()
 
@@ -33,6 +34,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)settings:(id)sender {
+    [self performSegueWithIdentifier:@"goToSettings" sender:self];
+}
+
+- (IBAction)favorites:(id)sender {
+    [self performSegueWithIdentifier:@"goToFavorites" sender:self];
+}
+
+- (IBAction)details:(id)sender {
+    [self performSegueWithIdentifier:@"goToDetail" sender:self];
 }
 
 @end
