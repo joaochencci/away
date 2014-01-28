@@ -27,7 +27,7 @@
 
 // Fazer Login com o Faceboook
 - (IBAction)loginFacebook:(id)sender {
-
+    [self performSegueWithIdentifier:@"doLogin" sender:self];
 }
 
 @end

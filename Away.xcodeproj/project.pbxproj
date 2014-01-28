@@ -27,6 +27,7 @@
 		35A96E731896B7EE00DC1300 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E721896B7EE00DC1300 /* DetailViewController.m */; };
 		35A96E761896B83500DC1300 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E751896B83500DC1300 /* FavoritesViewController.m */; };
 		35A96E791896B85000DC1300 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E781896B85000DC1300 /* SettingsViewController.m */; };
+		35A96E861897E3A200DC1300 /* teste.gif in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E851897E3A200DC1300 /* teste.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		35A96E771896B85000DC1300 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		35A96E781896B85000DC1300 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		35A96E821897CE7500DC1300 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		35A96E851897E3A200DC1300 /* teste.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = teste.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		35A96E321896B10B00DC1300 /* Away */ = {
 			isa = PBXGroup;
 			children = (
+				35A96E841897E3A200DC1300 /* Images */,
 				35A96E611896B60F00DC1300 /* Model */,
 				35A96E3B1896B10B00DC1300 /* AppDelegate.h */,
 				35A96E3C1896B10B00DC1300 /* AppDelegate.m */,
@@ -190,6 +193,14 @@
 				35A96E691896B6BD00DC1300 /* Destination.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		35A96E841897E3A200DC1300 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				35A96E851897E3A200DC1300 /* teste.gif */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +281,7 @@
 			files = (
 				35A96E451896B10B00DC1300 /* Images.xcassets in Resources */,
 				35A96E371896B10B00DC1300 /* InfoPlist.strings in Resources */,
+				35A96E861897E3A200DC1300 /* teste.gif in Resources */,
 				35A96E401896B10B00DC1300 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
