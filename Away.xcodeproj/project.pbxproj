@@ -100,6 +100,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A3199131897E3B60080261C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1A3199141897E3BB0080261C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35A96E411896B10B00DC1300 /* LoginViewController.h */,
+				35A96E421896B10B00DC1300 /* LoginViewController.m */,
+				35A96E6E1896B7CF00DC1300 /* MainViewController.h */,
+				35A96E6F1896B7CF00DC1300 /* MainViewController.m */,
+				35A96E711896B7EE00DC1300 /* DetailViewController.h */,
+				35A96E721896B7EE00DC1300 /* DetailViewController.m */,
+				35A96E741896B83500DC1300 /* FavoritesViewController.h */,
+				35A96E751896B83500DC1300 /* FavoritesViewController.m */,
+				35A96E771896B85000DC1300 /* SettingsViewController.h */,
+				35A96E781896B85000DC1300 /* SettingsViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		35A96E201896B10B00DC1300 = {
 			isa = PBXGroup;
 			children = (
@@ -139,16 +163,8 @@
 				35A96E3B1896B10B00DC1300 /* AppDelegate.h */,
 				35A96E3C1896B10B00DC1300 /* AppDelegate.m */,
 				35A96E3E1896B10B00DC1300 /* Main.storyboard */,
-				35A96E411896B10B00DC1300 /* LoginViewController.h */,
-				35A96E421896B10B00DC1300 /* LoginViewController.m */,
-				35A96E6E1896B7CF00DC1300 /* MainViewController.h */,
-				35A96E6F1896B7CF00DC1300 /* MainViewController.m */,
-				35A96E711896B7EE00DC1300 /* DetailViewController.h */,
-				35A96E721896B7EE00DC1300 /* DetailViewController.m */,
-				35A96E741896B83500DC1300 /* FavoritesViewController.h */,
-				35A96E751896B83500DC1300 /* FavoritesViewController.m */,
-				35A96E771896B85000DC1300 /* SettingsViewController.h */,
-				35A96E781896B85000DC1300 /* SettingsViewController.m */,
+				1A3199131897E3B60080261C /* View */,
+				1A3199141897E3BB0080261C /* Controller */,
 				35A96E441896B10B00DC1300 /* Images.xcassets */,
 				35A96E331896B10B00DC1300 /* Supporting Files */,
 			);
