@@ -33,7 +33,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Pjs-fg-K4h"/>
+                    <navigationItem key="navigationItem" id="Pjs-fg-K4h">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="QiY-YY-rXe" kind="push" identifier="doLogin" id="TSH-FF-Iy8"/>
                     </connections>
@@ -103,38 +105,6 @@
                                 </state>
                                 <connections>
                                     <action selector="settings:" destination="QiY-YY-rXe" eventType="touchUpInside" id="V13-3m-d6a"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyf-9K-fyA">
-                                <rect key="frame" x="215" y="68" width="35" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="star-icon.png" backgroundImage="star-icon.png">
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected">
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="favorites:" destination="QiY-YY-rXe" eventType="touchUpInside" id="3sd-NP-eiZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ii-uH-XrU">
-                                <rect key="frame" x="258" y="68" width="35" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="settings-icon.png" backgroundImage="settings-icon.png">
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected">
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="settings:" destination="QiY-YY-rXe" eventType="touchUpInside" id="aiz-tm-omm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOa-pS-dkF">
@@ -479,10 +449,6 @@
         <image name="plus-icon.png" width="256" height="256"/>
         <image name="plus-icon.png" width="256" height="256"/>
         <image name="settings-icon.png" width="276" height="276"/>
-        <image name="settings-icon.png" width="276" height="276"/>
-        <image name="settings-icon.png" width="276" height="276"/>
-        <image name="star-icon.png" width="512" height="512"/>
-        <image name="star-icon.png" width="512" height="512"/>
         <image name="teste.gif" width="624" height="460"/>
         <image name="teste.gif" width="624" height="460"/>
         <image name="teste.gif" width="624" height="460"/>
