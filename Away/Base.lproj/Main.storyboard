@@ -97,16 +97,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7Y-Qx-gxT">
-                                <rect key="frame" x="269" y="4" width="35" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="settings-icon.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="settings:" destination="QiY-YY-rXe" eventType="touchUpInside" id="V13-3m-d6a"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOa-pS-dkF">
                                 <rect key="frame" x="144" y="488" width="32" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -141,7 +131,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
-                    <navigationItem key="navigationItem" id="Q2K-0F-Cbv"/>
+                    <navigationItem key="navigationItem" id="Q2K-0F-Cbv">
+                        <barButtonItem key="rightBarButtonItem" id="YFf-pl-UNa">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="F7Y-Qx-gxT">
+                                <rect key="frame" x="264" y="2" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icon_settings"/>
+                                <connections>
+                                    <action selector="settings:" destination="QiY-YY-rXe" eventType="touchUpInside" id="V13-3m-d6a"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="destinationImageView" destination="Np8-cq-9ck" id="sRr-AY-CCS"/>
                         <outlet property="money1ImageView" destination="1RA-mB-uB2" id="Kr1-Br-2si"/>
@@ -284,7 +285,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="65" id="Kw7-d3-TaZ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="prototypeCell" rowHeight="65" id="Kw7-d3-TaZ">
                                         <rect key="frame" x="0.0" y="86" width="320" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kw7-d3-TaZ" id="1MB-Dg-M8I">
@@ -447,11 +448,11 @@
         <image name="icon_money_yes" width="2138" height="4135"/>
         <image name="icon_plus" width="128" height="128"/>
         <image name="icon_plus" width="128" height="128"/>
+        <image name="icon_settings" width="138" height="138"/>
         <image name="logo_away" width="126" height="45"/>
         <image name="placeholder" width="312" height="230"/>
         <image name="placeholder" width="312" height="230"/>
         <image name="placeholder" width="312" height="230"/>
-        <image name="settings-icon.png" width="276" height="276"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
