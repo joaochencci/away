@@ -425,32 +425,13 @@
     </scenes>
     <resources>
         <image name="friends-facebook-icon.png" width="256" height="256"/>
-        <image name="friends-facebook-icon.png" width="256" height="256"/>
-        <image name="friends-facebook-icon.png" width="256" height="256"/>
         <image name="info-icon.png" width="85" height="104"/>
         <image name="logo.png" width="253" height="91"/>
         <image name="minus-icon.png" width="256" height="256"/>
-        <image name="minus-icon.png" width="256" height="256"/>
-        <image name="money-no-icon.png" width="512" height="512"/>
-        <image name="money-no-icon.png" width="512" height="512"/>
-        <image name="money-no-icon.png" width="512" height="512"/>
-        <image name="money-no-icon.png" width="512" height="512"/>
-        <image name="money-no-icon.png" width="512" height="512"/>
         <image name="money-no-icon.png" width="512" height="512"/>
         <image name="money-yes-icon.png" width="4276" height="8271"/>
-        <image name="money-yes-icon.png" width="4276" height="8271"/>
-        <image name="money-yes-icon.png" width="4276" height="8271"/>
-        <image name="money-yes-icon.png" width="4276" height="8271"/>
-        <image name="money-yes-icon.png" width="4276" height="8271"/>
-        <image name="money-yes-icon.png" width="4276" height="8271"/>
-        <image name="money-yes-icon.png" width="4276" height="8271"/>
-        <image name="money-yes-icon.png" width="4276" height="8271"/>
-        <image name="money-yes-icon.png" width="4276" height="8271"/>
-        <image name="plus-icon.png" width="256" height="256"/>
         <image name="plus-icon.png" width="256" height="256"/>
         <image name="settings-icon.png" width="276" height="276"/>
-        <image name="teste.gif" width="624" height="460"/>
-        <image name="teste.gif" width="624" height="460"/>
         <image name="teste.gif" width="624" height="460"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
