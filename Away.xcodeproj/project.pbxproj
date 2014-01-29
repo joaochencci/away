@@ -101,7 +101,6 @@
 		1A3199131897E3B60080261C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				35A96E3E1896B10B00DC1300 /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -157,6 +156,7 @@
 		35A96E321896B10B00DC1300 /* Away */ = {
 			isa = PBXGroup;
 			children = (
+				35A96E3E1896B10B00DC1300 /* Main.storyboard */,
 				35A96E611896B60F00DC1300 /* Model */,
 				35A96E3B1896B10B00DC1300 /* AppDelegate.h */,
 				35A96E3C1896B10B00DC1300 /* AppDelegate.m */,

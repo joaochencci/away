@@ -426,13 +426,32 @@
     </scenes>
     <resources>
         <image name="icon_fb_friends" width="128" height="128"/>
+        <image name="icon_fb_friends" width="128" height="128"/>
+        <image name="icon_fb_friends" width="128" height="128"/>
         <image name="icon_info" width="42" height="52"/>
         <image name="icon_minus" width="128" height="128"/>
+        <image name="icon_minus" width="128" height="128"/>
+        <image name="icon_money_no" width="256" height="256"/>
+        <image name="icon_money_no" width="256" height="256"/>
+        <image name="icon_money_no" width="256" height="256"/>
+        <image name="icon_money_no" width="256" height="256"/>
+        <image name="icon_money_no" width="256" height="256"/>
         <image name="icon_money_no" width="256" height="256"/>
         <image name="icon_money_yes" width="2138" height="4135"/>
+        <image name="icon_money_yes" width="2138" height="4135"/>
+        <image name="icon_money_yes" width="2138" height="4135"/>
+        <image name="icon_money_yes" width="2138" height="4135"/>
+        <image name="icon_money_yes" width="2138" height="4135"/>
+        <image name="icon_money_yes" width="2138" height="4135"/>
+        <image name="icon_money_yes" width="2138" height="4135"/>
+        <image name="icon_money_yes" width="2138" height="4135"/>
+        <image name="icon_money_yes" width="2138" height="4135"/>
+        <image name="icon_plus" width="128" height="128"/>
         <image name="icon_plus" width="128" height="128"/>
         <image name="icon_settings" width="138" height="138"/>
         <image name="logo_away" width="126" height="45"/>
+        <image name="placeholder" width="312" height="230"/>
+        <image name="placeholder" width="312" height="230"/>
         <image name="placeholder" width="312" height="230"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
