@@ -36,7 +36,7 @@
 {
     [super viewDidLoad];
 
-    UIImage *imagefavoritesButton = [UIImage imageNamed:@"star-icon.png"];
+    UIImage *imagefavoritesButton = [UIImage imageNamed:@"icon_star"];
     CGSize newSize = CGSizeMake(40, 40);
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
     [imagefavoritesButton drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
@@ -44,7 +44,7 @@
     UIGraphicsEndImageContext();
     UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithImage:imagefavoritesButton style:UIBarButtonItemStylePlain target:self action:@selector(favorites:)];
 
-    UIImage *imageSettingsButton = [UIImage imageNamed:@"settings-icon.png"];
+    UIImage *imageSettingsButton = [UIImage imageNamed:@"icon_settings"];
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
     [imageSettingsButton drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
     imageSettingsButton = UIGraphicsGetImageFromCurrentImageContext();
