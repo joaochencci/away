@@ -28,6 +28,15 @@
 		35A96E761896B83500DC1300 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E751896B83500DC1300 /* FavoritesViewController.m */; };
 		35A96E791896B85000DC1300 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E781896B85000DC1300 /* SettingsViewController.m */; };
 		35A96E861897E3A200DC1300 /* teste.gif in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E851897E3A200DC1300 /* teste.gif */; };
+		35A96E891898005E00DC1300 /* settings-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E871898005E00DC1300 /* settings-icon.png */; };
+		35A96E8A1898005E00DC1300 /* star-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E881898005E00DC1300 /* star-icon.png */; };
+		35A96E8C1898029200DC1300 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E8B1898029200DC1300 /* logo.png */; };
+		35A96E8E1898035600DC1300 /* friends-facebook-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E8D1898035600DC1300 /* friends-facebook-icon.png */; };
+		35A96E911898040E00DC1300 /* money-no-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E8F1898040E00DC1300 /* money-no-icon.png */; };
+		35A96E921898040E00DC1300 /* money-yes-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E901898040E00DC1300 /* money-yes-icon.png */; };
+		35A96E941898050700DC1300 /* info-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E931898050700DC1300 /* info-icon.png */; };
+		35A96E97189806ED00DC1300 /* minus-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E95189806ED00DC1300 /* minus-icon.png */; };
+		35A96E98189806ED00DC1300 /* plus-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E96189806ED00DC1300 /* plus-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +83,15 @@
 		35A96E781896B85000DC1300 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		35A96E821897CE7500DC1300 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		35A96E851897E3A200DC1300 /* teste.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = teste.gif; sourceTree = "<group>"; };
+		35A96E871898005E00DC1300 /* settings-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-icon.png"; sourceTree = "<group>"; };
+		35A96E881898005E00DC1300 /* star-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-icon.png"; sourceTree = "<group>"; };
+		35A96E8B1898029200DC1300 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		35A96E8D1898035600DC1300 /* friends-facebook-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "friends-facebook-icon.png"; sourceTree = "<group>"; };
+		35A96E8F1898040E00DC1300 /* money-no-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "money-no-icon.png"; sourceTree = "<group>"; };
+		35A96E901898040E00DC1300 /* money-yes-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "money-yes-icon.png"; sourceTree = "<group>"; };
+		35A96E931898050700DC1300 /* info-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "info-icon.png"; sourceTree = "<group>"; };
+		35A96E95189806ED00DC1300 /* minus-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minus-icon.png"; sourceTree = "<group>"; };
+		35A96E96189806ED00DC1300 /* plus-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +121,8 @@
 		1A3199131897E3B60080261C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				35A96E841897E3A200DC1300 /* Images */,
+				35A96E3E1896B10B00DC1300 /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -158,11 +178,9 @@
 		35A96E321896B10B00DC1300 /* Away */ = {
 			isa = PBXGroup;
 			children = (
-				35A96E841897E3A200DC1300 /* Images */,
 				35A96E611896B60F00DC1300 /* Model */,
 				35A96E3B1896B10B00DC1300 /* AppDelegate.h */,
 				35A96E3C1896B10B00DC1300 /* AppDelegate.m */,
-				35A96E3E1896B10B00DC1300 /* Main.storyboard */,
 				1A3199131897E3B60080261C /* View */,
 				1A3199141897E3BB0080261C /* Controller */,
 				35A96E441896B10B00DC1300 /* Images.xcassets */,
@@ -214,6 +232,15 @@
 		35A96E841897E3A200DC1300 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				35A96E95189806ED00DC1300 /* minus-icon.png */,
+				35A96E96189806ED00DC1300 /* plus-icon.png */,
+				35A96E931898050700DC1300 /* info-icon.png */,
+				35A96E8F1898040E00DC1300 /* money-no-icon.png */,
+				35A96E901898040E00DC1300 /* money-yes-icon.png */,
+				35A96E8D1898035600DC1300 /* friends-facebook-icon.png */,
+				35A96E8B1898029200DC1300 /* logo.png */,
+				35A96E871898005E00DC1300 /* settings-icon.png */,
+				35A96E881898005E00DC1300 /* star-icon.png */,
 				35A96E851897E3A200DC1300 /* teste.gif */,
 			);
 			path = Images;
@@ -295,10 +322,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A96E911898040E00DC1300 /* money-no-icon.png in Resources */,
 				35A96E451896B10B00DC1300 /* Images.xcassets in Resources */,
 				35A96E371896B10B00DC1300 /* InfoPlist.strings in Resources */,
+				35A96E97189806ED00DC1300 /* minus-icon.png in Resources */,
+				35A96E941898050700DC1300 /* info-icon.png in Resources */,
 				35A96E861897E3A200DC1300 /* teste.gif in Resources */,
+				35A96E891898005E00DC1300 /* settings-icon.png in Resources */,
+				35A96E8E1898035600DC1300 /* friends-facebook-icon.png in Resources */,
+				35A96E8C1898029200DC1300 /* logo.png in Resources */,
+				35A96E8A1898005E00DC1300 /* star-icon.png in Resources */,
 				35A96E401896B10B00DC1300 /* Main.storyboard in Resources */,
+				35A96E921898040E00DC1300 /* money-yes-icon.png in Resources */,
+				35A96E98189806ED00DC1300 /* plus-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

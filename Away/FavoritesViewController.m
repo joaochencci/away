@@ -9,6 +9,14 @@
 #import "FavoritesViewController.h"
 
 @interface FavoritesViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *destinationImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *money1ImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *money2ImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *money3ImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *money4ImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *money5ImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberFriendsLabel;
 
 @end
 
@@ -26,7 +34,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    self.navigationItem.title = @"Favoritos";
 }
 
 - (void)didReceiveMemoryWarning

@@ -9,6 +9,8 @@
 #import "SettingsViewController.h"
 
 @interface SettingsViewController ()
+@property (weak, nonatomic) IBOutlet UISlider *distanceSlider;
+@property (weak, nonatomic) IBOutlet UISlider *priceSlider;
 
 @end
 
@@ -26,7 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    self.navigationItem.title = @"Configurações";
 }
 
 - (void)didReceiveMemoryWarning
