@@ -291,7 +291,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="teste.gif" translatesAutoresizingMaskIntoConstraints="NO" id="rsl-D8-d3V">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="rsl-D8-d3V">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
@@ -302,27 +302,27 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money-yes-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="crc-n3-L83">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_money_yes" translatesAutoresizingMaskIntoConstraints="NO" id="crc-n3-L83">
                                                     <rect key="frame" x="145" y="27" width="17" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money-yes-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="AJh-Dh-so2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_money_yes" translatesAutoresizingMaskIntoConstraints="NO" id="AJh-Dh-so2">
                                                     <rect key="frame" x="170" y="27" width="17" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money-yes-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="vkc-bZ-lVJ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_money_yes" translatesAutoresizingMaskIntoConstraints="NO" id="vkc-bZ-lVJ">
                                                     <rect key="frame" x="195" y="27" width="17" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money-no-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="bQx-iR-d7B">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_money_no" translatesAutoresizingMaskIntoConstraints="NO" id="bQx-iR-d7B">
                                                     <rect key="frame" x="214" y="27" width="23" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money-no-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="0r9-S2-oVq">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_money_no" translatesAutoresizingMaskIntoConstraints="NO" id="0r9-S2-oVq">
                                                     <rect key="frame" x="236" y="27" width="23" height="28"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="friends-facebook-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hh4-wF-XDM">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_fb_friends" translatesAutoresizingMaskIntoConstraints="NO" id="Hh4-wF-XDM">
                                                     <rect key="frame" x="68" y="21" width="37" height="39"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -424,7 +424,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="friends-facebook-icon.png" width="256" height="256"/>
+        <image name="icon_fb_friends" width="128" height="128"/>
         <image name="icon_fb_friends" width="128" height="128"/>
         <image name="icon_fb_friends" width="128" height="128"/>
         <image name="icon_info" width="42" height="52"/>
@@ -434,6 +434,11 @@
         <image name="icon_money_no" width="256" height="256"/>
         <image name="icon_money_no" width="256" height="256"/>
         <image name="icon_money_no" width="256" height="256"/>
+        <image name="icon_money_no" width="256" height="256"/>
+        <image name="icon_money_no" width="256" height="256"/>
+        <image name="icon_money_yes" width="2138" height="4135"/>
+        <image name="icon_money_yes" width="2138" height="4135"/>
+        <image name="icon_money_yes" width="2138" height="4135"/>
         <image name="icon_money_yes" width="2138" height="4135"/>
         <image name="icon_money_yes" width="2138" height="4135"/>
         <image name="icon_money_yes" width="2138" height="4135"/>
@@ -443,15 +448,10 @@
         <image name="icon_plus" width="128" height="128"/>
         <image name="icon_plus" width="128" height="128"/>
         <image name="logo_away" width="126" height="45"/>
-        <image name="money-no-icon.png" width="512" height="512"/>
-        <image name="money-no-icon.png" width="512" height="512"/>
-        <image name="money-yes-icon.png" width="4276" height="8271"/>
-        <image name="money-yes-icon.png" width="4276" height="8271"/>
-        <image name="money-yes-icon.png" width="4276" height="8271"/>
+        <image name="placeholder" width="312" height="230"/>
         <image name="placeholder" width="312" height="230"/>
         <image name="placeholder" width="312" height="230"/>
         <image name="settings-icon.png" width="276" height="276"/>
-        <image name="teste.gif" width="624" height="460"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -459,6 +459,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xxe-9r-946"/>
+        <segue reference="xlg-3n-gD9"/>
     </inferredMetricsTieBreakers>
 </document>
