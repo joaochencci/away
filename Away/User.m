@@ -2,7 +2,7 @@
 //  User.m
 //  Away
 //
-//  Created by Wesley Ide on 27/01/14.
+//  Created by Marcelo Toledo on 1/29/14.
 //  Copyright (c) 2014 Wesley Ide. All rights reserved.
 //
 

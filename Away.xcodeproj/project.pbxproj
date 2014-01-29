@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A965763189981CF00DB1D32 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965762189981CF00DB1D32 /* User.m */; };
+		1A965766189981DB00DB1D32 /* Destination.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965765189981DB00DB1D32 /* Destination.m */; };
 		35A96E2D1896B10B00DC1300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2C1896B10B00DC1300 /* Foundation.framework */; };
 		35A96E2F1896B10B00DC1300 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */; };
 		35A96E311896B10B00DC1300 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E301896B10B00DC1300 /* UIKit.framework */; };
@@ -21,8 +23,6 @@
 		35A96E4E1896B10B00DC1300 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E301896B10B00DC1300 /* UIKit.framework */; };
 		35A96E561896B10B00DC1300 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E541896B10B00DC1300 /* InfoPlist.strings */; };
 		35A96E581896B10B00DC1300 /* AwayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E571896B10B00DC1300 /* AwayTests.m */; };
-		35A96E671896B6AF00DC1300 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E661896B6AF00DC1300 /* User.m */; };
-		35A96E6A1896B6BD00DC1300 /* Destination.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E691896B6BD00DC1300 /* Destination.m */; };
 		35A96E701896B7CF00DC1300 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E6F1896B7CF00DC1300 /* MainViewController.m */; };
 		35A96E731896B7EE00DC1300 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E721896B7EE00DC1300 /* DetailViewController.m */; };
 		35A96E761896B83500DC1300 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E751896B83500DC1300 /* FavoritesViewController.m */; };
@@ -40,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A965761189981CF00DB1D32 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		1A965762189981CF00DB1D32 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		1A965764189981DB00DB1D32 /* Destination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Destination.h; sourceTree = "<group>"; };
+		1A965765189981DB00DB1D32 /* Destination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Destination.m; sourceTree = "<group>"; };
 		35A96E291896B10B00DC1300 /* Away.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Away.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A96E2C1896B10B00DC1300 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,10 +63,6 @@
 		35A96E531896B10B00DC1300 /* AwayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AwayTests-Info.plist"; sourceTree = "<group>"; };
 		35A96E551896B10B00DC1300 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		35A96E571896B10B00DC1300 /* AwayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwayTests.m; sourceTree = "<group>"; };
-		35A96E651896B6AF00DC1300 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
-		35A96E661896B6AF00DC1300 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
-		35A96E681896B6BD00DC1300 /* Destination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Destination.h; path = Model/Destination.h; sourceTree = "<group>"; };
-		35A96E691896B6BD00DC1300 /* Destination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Destination.m; path = Model/Destination.m; sourceTree = "<group>"; };
 		35A96E6E1896B7CF00DC1300 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		35A96E6F1896B7CF00DC1300 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		35A96E711896B7EE00DC1300 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -122,6 +122,17 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		1A965760189981BB00DB1D32 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A965761189981CF00DB1D32 /* User.h */,
+				1A965762189981CF00DB1D32 /* User.m */,
+				1A965764189981DB00DB1D32 /* Destination.h */,
+				1A965765189981DB00DB1D32 /* Destination.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		35A96E201896B10B00DC1300 = {
 			isa = PBXGroup;
 			children = (
@@ -156,8 +167,8 @@
 		35A96E321896B10B00DC1300 /* Away */ = {
 			isa = PBXGroup;
 			children = (
+				1A965760189981BB00DB1D32 /* Model */,
 				35A96E3E1896B10B00DC1300 /* Main.storyboard */,
-				35A96E611896B60F00DC1300 /* Model */,
 				35A96E3B1896B10B00DC1300 /* AppDelegate.h */,
 				35A96E3C1896B10B00DC1300 /* AppDelegate.m */,
 				1A3199131897E3B60080261C /* View */,
@@ -195,17 +206,6 @@
 				35A96E541896B10B00DC1300 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		35A96E611896B60F00DC1300 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				35A96E651896B6AF00DC1300 /* User.h */,
-				35A96E661896B6AF00DC1300 /* User.m */,
-				35A96E681896B6BD00DC1300 /* Destination.h */,
-				35A96E691896B6BD00DC1300 /* Destination.m */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,11 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35A96E671896B6AF00DC1300 /* User.m in Sources */,
+				1A965763189981CF00DB1D32 /* User.m in Sources */,
 				35A96E701896B7CF00DC1300 /* MainViewController.m in Sources */,
 				35A96E431896B10B00DC1300 /* LoginViewController.m in Sources */,
 				35A96E791896B85000DC1300 /* SettingsViewController.m in Sources */,
-				35A96E6A1896B6BD00DC1300 /* Destination.m in Sources */,
+				1A965766189981DB00DB1D32 /* Destination.m in Sources */,
 				35A96E3D1896B10B00DC1300 /* AppDelegate.m in Sources */,
 				35A96E391896B10B00DC1300 /* main.m in Sources */,
 				35A96E761896B83500DC1300 /* FavoritesViewController.m in Sources */,
