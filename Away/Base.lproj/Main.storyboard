@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="6X8-cT-aya">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_away" translatesAutoresizingMaskIntoConstraints="NO" id="6X8-cT-aya">
                                 <rect key="frame" x="52" y="169" width="217" height="102"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -56,7 +56,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="teste.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Np8-cq-9ck">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Np8-cq-9ck">
                                 <rect key="frame" x="19" y="106" width="280" height="271"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -67,27 +67,27 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="friends-facebook-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="fPw-nh-NfK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_fb_friends" translatesAutoresizingMaskIntoConstraints="NO" id="fPw-nh-NfK">
                                 <rect key="frame" x="40" y="418" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money-yes-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="1RA-mB-uB2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_money_yes" translatesAutoresizingMaskIntoConstraints="NO" id="1RA-mB-uB2">
                                 <rect key="frame" x="180" y="423" width="17" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money-yes-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="tNW-6R-75V">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_money_yes" translatesAutoresizingMaskIntoConstraints="NO" id="tNW-6R-75V">
                                 <rect key="frame" x="205" y="423" width="17" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money-yes-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="B7w-9s-Dev">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_money_yes" translatesAutoresizingMaskIntoConstraints="NO" id="B7w-9s-Dev">
                                 <rect key="frame" x="230" y="423" width="17" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money-no-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="kV4-8x-9Co">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_money_no" translatesAutoresizingMaskIntoConstraints="NO" id="kV4-8x-9Co">
                                 <rect key="frame" x="249" y="423" width="23" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="money-no-icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="GAM-fD-ic0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_money_no" translatesAutoresizingMaskIntoConstraints="NO" id="GAM-fD-ic0">
                                 <rect key="frame" x="271" y="423" width="23" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -110,7 +110,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOa-pS-dkF">
                                 <rect key="frame" x="144" y="488" width="32" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="info-icon.png">
+                                <state key="normal" image="icon_info">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -120,7 +120,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t68-Kf-5Cx">
                                 <rect key="frame" x="20" y="472" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="plus-icon.png">
+                                <state key="normal" title="Button" image="icon_plus">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -130,7 +130,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reI-m9-O7f">
                                 <rect key="frame" x="223" y="473" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="minus-icon.png">
+                                <state key="normal" title="Button" image="icon_minus">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -425,13 +425,32 @@
     </scenes>
     <resources>
         <image name="friends-facebook-icon.png" width="256" height="256"/>
-        <image name="info-icon.png" width="85" height="104"/>
-        <image name="logo.png" width="253" height="91"/>
+        <image name="friends-facebook-icon.png" width="256" height="256"/>
+        <image name="icon_fb_friends" width="128" height="128"/>
+        <image name="icon_info" width="42" height="52"/>
+        <image name="icon_minus" width="128" height="128"/>
+        <image name="icon_money_no" width="256" height="256"/>
+        <image name="icon_money_no" width="256" height="256"/>
+        <image name="icon_money_yes" width="2138" height="4135"/>
+        <image name="icon_money_yes" width="2138" height="4135"/>
+        <image name="icon_money_yes" width="2138" height="4135"/>
+        <image name="icon_plus" width="128" height="128"/>
+        <image name="logo_away" width="126" height="45"/>
         <image name="minus-icon.png" width="256" height="256"/>
         <image name="money-no-icon.png" width="512" height="512"/>
+        <image name="money-no-icon.png" width="512" height="512"/>
+        <image name="money-no-icon.png" width="512" height="512"/>
+        <image name="money-no-icon.png" width="512" height="512"/>
         <image name="money-yes-icon.png" width="4276" height="8271"/>
+        <image name="money-yes-icon.png" width="4276" height="8271"/>
+        <image name="money-yes-icon.png" width="4276" height="8271"/>
+        <image name="money-yes-icon.png" width="4276" height="8271"/>
+        <image name="money-yes-icon.png" width="4276" height="8271"/>
+        <image name="money-yes-icon.png" width="4276" height="8271"/>
+        <image name="placeholder" width="312" height="230"/>
         <image name="plus-icon.png" width="256" height="256"/>
         <image name="settings-icon.png" width="276" height="276"/>
+        <image name="teste.gif" width="624" height="460"/>
         <image name="teste.gif" width="624" height="460"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
