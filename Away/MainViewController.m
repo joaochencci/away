@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *money5ImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberFriendsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 
 @end
 
