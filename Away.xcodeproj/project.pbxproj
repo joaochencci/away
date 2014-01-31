@@ -10,6 +10,7 @@
 		1A965763189981CF00DB1D32 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965762189981CF00DB1D32 /* User.m */; };
 		1A965766189981DB00DB1D32 /* Destination.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965765189981DB00DB1D32 /* Destination.m */; };
 		356AC3C2189A77B9000EEBBD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */; };
+		356AC3C5189BD7AD000EEBBD /* UserRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 356AC3C4189BD7AD000EEBBD /* UserRepository.m */; };
 		35A96E2D1896B10B00DC1300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2C1896B10B00DC1300 /* Foundation.framework */; };
 		35A96E2F1896B10B00DC1300 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */; };
 		35A96E311896B10B00DC1300 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E301896B10B00DC1300 /* UIKit.framework */; };
@@ -46,6 +47,8 @@
 		1A965764189981DB00DB1D32 /* Destination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Destination.h; sourceTree = "<group>"; };
 		1A965765189981DB00DB1D32 /* Destination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Destination.m; sourceTree = "<group>"; };
 		356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		356AC3C3189BD7AD000EEBBD /* UserRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRepository.h; sourceTree = "<group>"; };
+		356AC3C4189BD7AD000EEBBD /* UserRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRepository.m; sourceTree = "<group>"; };
 		35A96E291896B10B00DC1300 /* Away.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Away.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A96E2C1896B10B00DC1300 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,8 @@
 		1A965760189981BB00DB1D32 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				356AC3C3189BD7AD000EEBBD /* UserRepository.h */,
+				356AC3C4189BD7AD000EEBBD /* UserRepository.m */,
 				1A965761189981CF00DB1D32 /* User.h */,
 				1A965762189981CF00DB1D32 /* User.m */,
 				1A965764189981DB00DB1D32 /* Destination.h */,
@@ -315,6 +320,7 @@
 				35A96E3D1896B10B00DC1300 /* AppDelegate.m in Sources */,
 				35A96E391896B10B00DC1300 /* main.m in Sources */,
 				35A96E761896B83500DC1300 /* FavoritesViewController.m in Sources */,
+				356AC3C5189BD7AD000EEBBD /* UserRepository.m in Sources */,
 				35A96E731896B7EE00DC1300 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

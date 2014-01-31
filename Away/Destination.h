@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Destination : NSObject
+@property(nonatomic) NSInteger identifier;
+@property(strong, nonatomic) NSString *name;
 
 @end

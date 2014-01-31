@@ -11,4 +11,7 @@
 
 @interface MainViewController : UIViewController
 
+- (void)chooseDestination;
+- (void)rejectDestination;
+
 @end

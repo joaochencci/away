@@ -7,6 +7,8 @@
 //
 
 #import "MainViewController.h"
+#import "UserRepository.h"
+#import "Destination.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *destinationImageView;
@@ -67,6 +69,12 @@
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
     [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.view addGestureRecognizer:swipeRight];
+
+    UserRepository *userRepo = [UserRepository sharedManager];
+    Destination *dest = [[Destination alloc] init];
+    dest.identifier = 1;
+    dest.name = @"Rio de Janeiro";
+    userRepo.destination = dest;
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,10 +83,44 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)chooseDestination {
+    UserRepository *userRepo = [UserRepository sharedManager];
+    Destination *dest = userRepo.destination;
+    
+    NSMutableArray *destinationsChoose = userRepo.destinationsChoose;
+    [destinationsChoose addObject:dest];
+    userRepo.destinationsChoose = destinationsChoose;
+    
+    Destination *newDest = [[Destination alloc] init];
+    newDest.identifier = 1;
+    newDest.name = @"São Paulo";
+    userRepo.destination = newDest;
+    
+    self.nameLabel.text = newDest.name;
+}
+
+- (void)rejectDestination {
+    UserRepository *userRepo = [UserRepository sharedManager];
+    Destination *dest = userRepo.destination;
+    
+    NSMutableArray *destinationsReject = userRepo.destinationsReject;
+    [destinationsReject addObject:dest];
+    userRepo.destinationsReject = destinationsReject;
+    
+    Destination *newDest = [[Destination alloc] init];
+    newDest.identifier = 1;
+    newDest.name = @"Curitiba";
+    userRepo.destination = newDest;
+    
+    self.nameLabel.text = newDest.name;
+}
+
 - (IBAction)choose:(id)sender {
+    [self chooseDestination];
 }
 
 - (IBAction)reject:(id)sender {
+    [self rejectDestination];
 }
 
 - (IBAction)settings:(id)sender {
@@ -99,11 +141,12 @@
 
 - (IBAction)swipeView:(UISwipeGestureRecognizer*)swipe {
     if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
-        NSLog(@"Left Swipe");
-        
+        [self rejectDestination];
+//        NSLog(@"Left Swipe");
     }
     if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
-        NSLog(@"Right Swipe");
+        [self chooseDestination];
+//        NSLog(@"Right Swipe");
     }
 }
 

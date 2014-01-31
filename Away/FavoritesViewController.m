@@ -7,6 +7,7 @@
 //
 
 #import "FavoritesViewController.h"
+#import "UserRepository.h"
 
 @interface FavoritesViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *destinationImageView;
@@ -36,12 +37,36 @@
     [super viewDidLoad];
 
     self.navigationItem.title = @"Favoritos";
+
+//    UserRepository *userRepo = [UserRepository sharedManager];
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    UserRepository *userRepo = [UserRepository sharedManager];
+    return [userRepo.destinationsChoose count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *MyIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
+    }
+    UserRepository *userRepo = [UserRepository sharedManager];
+    Destination *dest = [userRepo.destinationsChoose objectAtIndex:indexPath.row];
+    
+    // Coloca os valores da célula
+    UILabel *name = (UILabel *)[cell viewWithTag:101];
+    name.text = dest.name;
+    
+    return cell;
 }
 
 @end
