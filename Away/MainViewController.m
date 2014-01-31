@@ -7,7 +7,6 @@
 //
 
 #import "MainViewController.h"
-#import "DetailViewController.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *destinationImageView;
@@ -48,7 +47,7 @@
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
     [imageSettingsButton drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
     imageSettingsButton = UIGraphicsGetImageFromCurrentImageContext();
-//    UIGraphicsEndImageContext();
+    UIGraphicsEndImageContext();
     UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:imageSettingsButton style:UIBarButtonItemStylePlain target:self action:@selector(settings:)];
     
 
@@ -67,7 +66,6 @@
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
     [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.view addGestureRecognizer:swipeRight];
-
 }
 
 - (void)didReceiveMemoryWarning

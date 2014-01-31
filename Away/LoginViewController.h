@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController <FBLoginViewDelegate>
+
+//- (void)authorize:(NSArray *)permissions delegate:(id<FBSessionDelegate>)delegate;
 
 @end
