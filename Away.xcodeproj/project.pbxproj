@@ -105,7 +105,7 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		1A3199141897E3BB0080261C /* Controller */ = {
+		1A3199141897E3BB0080261C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				35A96E411896B10B00DC1300 /* LoginViewController.h */,
@@ -119,10 +119,10 @@
 				35A96E771896B85000DC1300 /* SettingsViewController.h */,
 				35A96E781896B85000DC1300 /* SettingsViewController.m */,
 			);
-			name = Controller;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
-		1A965760189981BB00DB1D32 /* Model */ = {
+		1A965760189981BB00DB1D32 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				1A965761189981CF00DB1D32 /* User.h */,
@@ -130,7 +130,23 @@
 				1A965764189981DB00DB1D32 /* Destination.h */,
 				1A965765189981DB00DB1D32 /* Destination.m */,
 			);
-			name = Model;
+			name = Models;
+			sourceTree = "<group>";
+		};
+		1AD9C3A7189B4C1100CA6210 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		1AD9C3A8189B4D7100CA6210 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				35A96E3B1896B10B00DC1300 /* AppDelegate.h */,
+				35A96E3C1896B10B00DC1300 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 		35A96E201896B10B00DC1300 = {
@@ -167,12 +183,12 @@
 		35A96E321896B10B00DC1300 /* Away */ = {
 			isa = PBXGroup;
 			children = (
-				1A965760189981BB00DB1D32 /* Model */,
+				1AD9C3A8189B4D7100CA6210 /* AppDelegate */,
+				1AD9C3A7189B4C1100CA6210 /* Helpers */,
+				1A965760189981BB00DB1D32 /* Models */,
 				35A96E3E1896B10B00DC1300 /* Main.storyboard */,
-				35A96E3B1896B10B00DC1300 /* AppDelegate.h */,
-				35A96E3C1896B10B00DC1300 /* AppDelegate.m */,
 				1A3199131897E3B60080261C /* View */,
-				1A3199141897E3BB0080261C /* Controller */,
+				1A3199141897E3BB0080261C /* Controllers */,
 				35A96E441896B10B00DC1300 /* Images.xcassets */,
 				35A96E331896B10B00DC1300 /* Supporting Files */,
 			);
