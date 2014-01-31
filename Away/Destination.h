@@ -10,4 +10,14 @@
 
 @interface Destination : NSObject
 
+@property(nonatomic, strong) NSString *title;
+@property(nonatomic, strong) NSString *description;
+
+@property(nonatomic) NSInteger price;
+@property(nonatomic) NSInteger numberOfFriends;
+
+@property(nonatomic, strong, readonly) UIImage *firstImage;
+
+- (NSArray *)getAllImages;
+
 @end

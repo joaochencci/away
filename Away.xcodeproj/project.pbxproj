@@ -80,8 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35A96E2F1896B10B00DC1300 /* CoreGraphics.framework in Frameworks */,
 				356AC3C2189A77B9000EEBBD /* FacebookSDK.framework in Frameworks */,
+				35A96E2F1896B10B00DC1300 /* CoreGraphics.framework in Frameworks */,
 				35A96E311896B10B00DC1300 /* UIKit.framework in Frameworks */,
 				35A96E2D1896B10B00DC1300 /* Foundation.framework in Frameworks */,
 			);
@@ -445,6 +445,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
+					/Users/marcelotoledo/Desktop/Challenge2/away,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";
@@ -462,6 +463,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
+					/Users/marcelotoledo/Desktop/Challenge2/away,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";

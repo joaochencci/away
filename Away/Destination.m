@@ -8,6 +8,28 @@
 
 #import "Destination.h"
 
+@interface Destination () {
+    NSArray *images;
+}
+
+@end
+
 @implementation Destination
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
+# pragma mark - Public
+- (NSArray *)getAllImages
+{
+    //
+    return images;
+}
 
 @end
