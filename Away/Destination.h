@@ -10,14 +10,17 @@
 
 @interface Destination : NSObject
 
+@property(nonatomic, strong) NSString *_id;
 @property(nonatomic, strong) NSString *title;
 @property(nonatomic, strong) NSString *description;
 
-@property(nonatomic) NSInteger price;
+@property(nonatomic) CGFloat geographicCoordinates;
+@property(nonatomic) NSInteger basePrice;
 @property(nonatomic) NSInteger numberOfFriends;
 
 @property(nonatomic, strong, readonly) UIImage *firstImage;
 
+- (id)initWithDictionary:(NSDictionary *)destinationDataDictionary;
 - (NSArray *)getAllImages;
 
 @end
