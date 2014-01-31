@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A965763189981CF00DB1D32 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965762189981CF00DB1D32 /* User.m */; };
 		1A965766189981DB00DB1D32 /* Destination.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965765189981DB00DB1D32 /* Destination.m */; };
+		356AC3C2189A77B9000EEBBD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */; };
 		35A96E2D1896B10B00DC1300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2C1896B10B00DC1300 /* Foundation.framework */; };
 		35A96E2F1896B10B00DC1300 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */; };
 		35A96E311896B10B00DC1300 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E301896B10B00DC1300 /* UIKit.framework */; };
@@ -44,6 +45,7 @@
 		1A965762189981CF00DB1D32 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		1A965764189981DB00DB1D32 /* Destination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Destination.h; sourceTree = "<group>"; };
 		1A965765189981DB00DB1D32 /* Destination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Destination.m; sourceTree = "<group>"; };
+		356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		35A96E291896B10B00DC1300 /* Away.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Away.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A96E2C1896B10B00DC1300 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -71,7 +73,6 @@
 		35A96E751896B83500DC1300 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 		35A96E771896B85000DC1300 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		35A96E781896B85000DC1300 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
-		35A96E821897CE7500DC1300 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35A96E2F1896B10B00DC1300 /* CoreGraphics.framework in Frameworks */,
+				356AC3C2189A77B9000EEBBD /* FacebookSDK.framework in Frameworks */,
 				35A96E311896B10B00DC1300 /* UIKit.framework in Frameworks */,
 				35A96E2D1896B10B00DC1300 /* Foundation.framework in Frameworks */,
 			);
@@ -155,7 +157,7 @@
 		35A96E2B1896B10B00DC1300 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				35A96E821897CE7500DC1300 /* FacebookSDK.framework */,
+				356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */,
 				35A96E2C1896B10B00DC1300 /* Foundation.framework */,
 				35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */,
 				35A96E301896B10B00DC1300 /* UIKit.framework */,
@@ -440,6 +442,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";
 				INFOPLIST_FILE = "Away/Away-Info.plist";
@@ -453,6 +459,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";
 				INFOPLIST_FILE = "Away/Away-Info.plist";
