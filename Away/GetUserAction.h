@@ -10,4 +10,7 @@
 
 @interface GetUserAction : BaseAwayAction
 
+// Returns a user for a given facebook token.
+- ()getUserForFacebookToken:(NSString *)fbToken;
+
 @end

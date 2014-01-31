@@ -8,6 +8,18 @@
 
 #import "GetUserAction.h"
 
+@interface GetUserAction () {
+   
+}
+
+
+@end
+
 @implementation GetUserAction
+
+- (id)init
+{
+    
+}
 
 @end

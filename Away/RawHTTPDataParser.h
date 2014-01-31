@@ -16,7 +16,6 @@ typedef enum {
 
 @interface RawHTTPDataParser : NSObject
 
-- (id)initWithDataType:(RawHTTPDataType)dataType;
-- (HTTPResponseObject *)parseData:(NSData *)dataToParse;
++ (HTTPResponseObject *)parseData:(NSData *)dataToParse forDataType:(RawHTTPDataType)dataType;
 
 @end

@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "User.h"
-
 @interface AwayWebService : NSObject
 
 // Returns a user for a given facebook token.
