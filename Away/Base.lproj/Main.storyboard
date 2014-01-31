@@ -418,6 +418,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5ge-Mw-4zG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.058823529411764705" green="0.42352941176470588" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -436,7 +437,7 @@
         <image name="icon_money_no" width="30" height="30"/>
         <image name="icon_money_yes" width="30" height="30"/>
         <image name="icon_plus" width="1771" height="1771"/>
-        <image name="icon_settings" width="138" height="138"/>
+        <image name="icon_settings" width="80" height="80"/>
         <image name="logo_away" width="4724" height="2480"/>
         <image name="placeholder" width="331" height="233"/>
     </resources>
@@ -446,6 +447,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xlg-3n-gD9"/>
+        <segue reference="xxe-9r-946"/>
     </inferredMetricsTieBreakers>
 </document>
