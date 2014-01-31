@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		1A965763189981CF00DB1D32 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965762189981CF00DB1D32 /* User.m */; };
 		1A965766189981DB00DB1D32 /* Destination.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965765189981DB00DB1D32 /* Destination.m */; };
+		1AD9C3AB189B60A300CA6210 /* WebServiceHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3AA189B60A300CA6210 /* WebServiceHTTPRequest.m */; };
+		1AD9C3AE189B6E2900CA6210 /* RawHTTPDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3AD189B6E2900CA6210 /* RawHTTPDataParser.m */; };
+		1AD9C3B2189B74F800CA6210 /* WebServiceAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3B1189B74F800CA6210 /* WebServiceAction.m */; };
+		1AD9C3B9189B791F00CA6210 /* GetUserAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3B8189B791F00CA6210 /* GetUserAction.m */; };
+		1AD9C3BC189B7A7500CA6210 /* HTTPResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3BB189B7A7500CA6210 /* HTTPResponseObject.m */; };
+		1AD9C3BF189B84B400CA6210 /* BaseAwayAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3BE189B84B400CA6210 /* BaseAwayAction.m */; };
+		1AD9C3C3189B855200CA6210 /* AwayWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3C2189B855200CA6210 /* AwayWebService.m */; };
 		35A96E2D1896B10B00DC1300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2C1896B10B00DC1300 /* Foundation.framework */; };
 		35A96E2F1896B10B00DC1300 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */; };
 		35A96E311896B10B00DC1300 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E301896B10B00DC1300 /* UIKit.framework */; };
@@ -44,6 +51,20 @@
 		1A965762189981CF00DB1D32 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		1A965764189981DB00DB1D32 /* Destination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Destination.h; sourceTree = "<group>"; };
 		1A965765189981DB00DB1D32 /* Destination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Destination.m; sourceTree = "<group>"; };
+		1AD9C3A9189B60A300CA6210 /* WebServiceHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceHTTPRequest.h; sourceTree = "<group>"; };
+		1AD9C3AA189B60A300CA6210 /* WebServiceHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceHTTPRequest.m; sourceTree = "<group>"; };
+		1AD9C3AC189B6E2900CA6210 /* RawHTTPDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RawHTTPDataParser.h; sourceTree = "<group>"; };
+		1AD9C3AD189B6E2900CA6210 /* RawHTTPDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RawHTTPDataParser.m; sourceTree = "<group>"; };
+		1AD9C3B0189B74F800CA6210 /* WebServiceAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceAction.h; sourceTree = "<group>"; };
+		1AD9C3B1189B74F800CA6210 /* WebServiceAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceAction.m; sourceTree = "<group>"; };
+		1AD9C3B7189B791F00CA6210 /* GetUserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserAction.h; sourceTree = "<group>"; };
+		1AD9C3B8189B791F00CA6210 /* GetUserAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserAction.m; sourceTree = "<group>"; };
+		1AD9C3BA189B7A7500CA6210 /* HTTPResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPResponseObject.h; sourceTree = "<group>"; };
+		1AD9C3BB189B7A7500CA6210 /* HTTPResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPResponseObject.m; sourceTree = "<group>"; };
+		1AD9C3BD189B84B400CA6210 /* BaseAwayAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAwayAction.h; sourceTree = "<group>"; };
+		1AD9C3BE189B84B400CA6210 /* BaseAwayAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAwayAction.m; sourceTree = "<group>"; };
+		1AD9C3C1189B855200CA6210 /* AwayWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwayWebService.h; sourceTree = "<group>"; };
+		1AD9C3C2189B855200CA6210 /* AwayWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwayWebService.m; sourceTree = "<group>"; };
 		35A96E291896B10B00DC1300 /* Away.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Away.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A96E2C1896B10B00DC1300 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,10 +146,13 @@
 		1A965760189981BB00DB1D32 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1AD9C3B6189B782000CA6210 /* WebServiceActions */,
 				1A965761189981CF00DB1D32 /* User.h */,
 				1A965762189981CF00DB1D32 /* User.m */,
 				1A965764189981DB00DB1D32 /* Destination.h */,
 				1A965765189981DB00DB1D32 /* Destination.m */,
+				1AD9C3C1189B855200CA6210 /* AwayWebService.h */,
+				1AD9C3C2189B855200CA6210 /* AwayWebService.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -136,6 +160,7 @@
 		1AD9C3A7189B4C1100CA6210 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1AD9C3AF189B73F200CA6210 /* Networking */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -147,6 +172,32 @@
 				35A96E3C1896B10B00DC1300 /* AppDelegate.m */,
 			);
 			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1AD9C3AF189B73F200CA6210 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1AD9C3A9189B60A300CA6210 /* WebServiceHTTPRequest.h */,
+				1AD9C3AA189B60A300CA6210 /* WebServiceHTTPRequest.m */,
+				1AD9C3AC189B6E2900CA6210 /* RawHTTPDataParser.h */,
+				1AD9C3AD189B6E2900CA6210 /* RawHTTPDataParser.m */,
+				1AD9C3B0189B74F800CA6210 /* WebServiceAction.h */,
+				1AD9C3B1189B74F800CA6210 /* WebServiceAction.m */,
+				1AD9C3BA189B7A7500CA6210 /* HTTPResponseObject.h */,
+				1AD9C3BB189B7A7500CA6210 /* HTTPResponseObject.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		1AD9C3B6189B782000CA6210 /* WebServiceActions */ = {
+			isa = PBXGroup;
+			children = (
+				1AD9C3B7189B791F00CA6210 /* GetUserAction.h */,
+				1AD9C3B8189B791F00CA6210 /* GetUserAction.m */,
+				1AD9C3BD189B84B400CA6210 /* BaseAwayAction.h */,
+				1AD9C3BE189B84B400CA6210 /* BaseAwayAction.m */,
+			);
+			name = WebServiceActions;
 			sourceTree = "<group>";
 		};
 		35A96E201896B10B00DC1300 = {
@@ -322,13 +373,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A965763189981CF00DB1D32 /* User.m in Sources */,
+				1AD9C3B9189B791F00CA6210 /* GetUserAction.m in Sources */,
 				35A96E701896B7CF00DC1300 /* MainViewController.m in Sources */,
+				1AD9C3AB189B60A300CA6210 /* WebServiceHTTPRequest.m in Sources */,
 				35A96E431896B10B00DC1300 /* LoginViewController.m in Sources */,
+				1AD9C3BF189B84B400CA6210 /* BaseAwayAction.m in Sources */,
+				1AD9C3AE189B6E2900CA6210 /* RawHTTPDataParser.m in Sources */,
 				35A96E791896B85000DC1300 /* SettingsViewController.m in Sources */,
 				1A965766189981DB00DB1D32 /* Destination.m in Sources */,
 				35A96E3D1896B10B00DC1300 /* AppDelegate.m in Sources */,
 				35A96E391896B10B00DC1300 /* main.m in Sources */,
 				35A96E761896B83500DC1300 /* FavoritesViewController.m in Sources */,
+				1AD9C3C3189B855200CA6210 /* AwayWebService.m in Sources */,
+				1AD9C3B2189B74F800CA6210 /* WebServiceAction.m in Sources */,
+				1AD9C3BC189B7A7500CA6210 /* HTTPResponseObject.m in Sources */,
 				35A96E731896B7EE00DC1300 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
