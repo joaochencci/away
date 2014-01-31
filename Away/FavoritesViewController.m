@@ -8,16 +8,9 @@
 
 #import "FavoritesViewController.h"
 #import "UserRepository.h"
+#import "FavoriteTableViewCell.h"
 
 @interface FavoritesViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *destinationImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *money1ImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *money2ImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *money3ImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *money4ImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *money5ImageView;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *numberFriendsLabel;
 
 @end
 
@@ -55,15 +48,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *MyIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    FavoriteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
+        cell = [[FavoriteTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
     }
     UserRepository *userRepo = [UserRepository sharedManager];
     Destination *dest = [userRepo.destinationsChoose objectAtIndex:indexPath.row];
     
     // Coloca os valores da célula
-    UILabel *name = (UILabel *)[cell viewWithTag:101];
+    UILabel *name = (UILabel *)[cell viewWithTag:102];
     name.text = dest.name;
     
     return cell;

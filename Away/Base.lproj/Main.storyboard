@@ -290,18 +290,18 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="65" id="Kw7-d3-TaZ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="65" id="Kw7-d3-TaZ" customClass="FavoriteTableViewCell">
                                         <rect key="frame" x="0.0" y="86" width="320" height="65"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kw7-d3-TaZ" id="1MB-Dg-M8I">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="64"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="rsl-D8-d3V">
+                                                <imageView userInteractionEnabled="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="rsl-D8-d3V">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome - distância" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7s-q5-7G6">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome - distância" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7s-q5-7G6">
                                                     <rect key="frame" x="68" y="-6" width="210" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -332,7 +332,7 @@
                                                     <rect key="frame" x="68" y="21" width="37" height="39"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59z-NX-376">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="103" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59z-NX-376">
                                                     <rect key="frame" x="109" y="24" width="37" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -341,25 +341,27 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="destinationImageView" destination="rsl-D8-d3V" id="AcQ-uA-hGN"/>
+                                            <outlet property="money1ImageView" destination="crc-n3-L83" id="l8Z-mn-obg"/>
+                                            <outlet property="money2ImageView" destination="AJh-Dh-so2" id="tKf-pQ-Lgk"/>
+                                            <outlet property="money3ImageView" destination="vkc-bZ-lVJ" id="nMI-hk-hKv"/>
+                                            <outlet property="money4ImageView" destination="bQx-iR-d7B" id="6uX-nR-dCi"/>
+                                            <outlet property="money5ImageView" destination="0r9-S2-oVq" id="2Ab-5X-sof"/>
+                                            <outlet property="nameLabel" destination="O7s-q5-7G6" id="0vr-tk-xGJ"/>
+                                            <outlet property="numberFriendsLabel" destination="59z-NX-376" id="YPO-xT-W8p"/>
                                             <segue destination="2an-SN-fFL" kind="push" trigger="accessoryAction" id="xlg-3n-gD9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rIV-eQ-0lo" id="9Y1-FL-nsQ"/>
+                                    <outlet property="delegate" destination="rIV-eQ-0lo" id="MsD-tC-j5K"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.96470588239999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="b4h-mq-4bd"/>
-                    <connections>
-                        <outlet property="destinationImageView" destination="rsl-D8-d3V" id="uYp-Cs-Gxb"/>
-                        <outlet property="money1ImageView" destination="crc-n3-L83" id="bKV-tB-qyX"/>
-                        <outlet property="money2ImageView" destination="AJh-Dh-so2" id="Vfy-QX-L2J"/>
-                        <outlet property="money3ImageView" destination="vkc-bZ-lVJ" id="JlG-W5-t6r"/>
-                        <outlet property="money4ImageView" destination="bQx-iR-d7B" id="M8d-Vj-yre"/>
-                        <outlet property="money5ImageView" destination="0r9-S2-oVq" id="FU9-tI-hhE"/>
-                        <outlet property="nameLabel" destination="O7s-q5-7G6" id="nqk-wQ-QbF"/>
-                        <outlet property="numberFriendsLabel" destination="59z-NX-376" id="pin-PD-ogz"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ab-93-Cy1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -432,32 +434,13 @@
     </scenes>
     <resources>
         <image name="icon_fb_friends" width="128" height="128"/>
-        <image name="icon_fb_friends" width="128" height="128"/>
-        <image name="icon_fb_friends" width="128" height="128"/>
         <image name="icon_info" width="1771" height="1771"/>
         <image name="icon_minus" width="1771" height="1771"/>
-        <image name="icon_minus" width="1771" height="1771"/>
-        <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_no" width="30" height="30"/>
         <image name="icon_money_no" width="30" height="30"/>
         <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_plus" width="1771" height="1771"/>
         <image name="icon_plus" width="1771" height="1771"/>
         <image name="icon_settings" width="80" height="80"/>
         <image name="logo_away" width="4724" height="2480"/>
-        <image name="placeholder" width="331" height="233"/>
-        <image name="placeholder" width="331" height="233"/>
         <image name="placeholder" width="331" height="233"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -466,6 +449,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xxe-9r-946"/>
+        <segue reference="xlg-3n-gD9"/>
     </inferredMetricsTieBreakers>
 </document>

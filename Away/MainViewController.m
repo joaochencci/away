@@ -73,8 +73,9 @@
     UserRepository *userRepo = [UserRepository sharedManager];
     Destination *dest = [[Destination alloc] init];
     dest.identifier = 1;
-    dest.name = @"Rio de Janeiro";
+    dest.name = @"Fortaleza";
     userRepo.destination = dest;
+    self.nameLabel.text = dest.name;
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,32 +84,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)chooseDestination {
+- (void)processSwipeInDirection: (UISwipeGestureRecognizerDirection) direction{
     UserRepository *userRepo = [UserRepository sharedManager];
     Destination *dest = userRepo.destination;
     
-    NSMutableArray *destinationsChoose = userRepo.destinationsChoose;
-    [destinationsChoose addObject:dest];
-    userRepo.destinationsChoose = destinationsChoose;
-    
-    Destination *newDest = [[Destination alloc] init];
-    newDest.identifier = 1;
-    newDest.name = @"São Paulo";
-    userRepo.destination = newDest;
-    
-    self.nameLabel.text = newDest.name;
-}
+    if (direction == UISwipeGestureRecognizerDirectionRight) {
+        // NSLog(@"Right Swipe");
+        NSMutableArray *destinationsChoose = userRepo.destinationsChoose;
+        [destinationsChoose addObject:dest];
+        userRepo.destinationsChoose = destinationsChoose;
+    }
+    if (direction == UISwipeGestureRecognizerDirectionLeft) {
+        // NSLog(@"Left Swipe");
+        NSMutableArray *destinationsReject = userRepo.destinationsReject;
+        [destinationsReject addObject:dest];
+        userRepo.destinationsReject = destinationsReject;
+    }
 
-- (void)rejectDestination {
-    UserRepository *userRepo = [UserRepository sharedManager];
-    Destination *dest = userRepo.destination;
-    
-    NSMutableArray *destinationsReject = userRepo.destinationsReject;
-    [destinationsReject addObject:dest];
-    userRepo.destinationsReject = destinationsReject;
-    
     Destination *newDest = [[Destination alloc] init];
-    newDest.identifier = 1;
+    newDest.identifier = 2;
     newDest.name = @"Curitiba";
     userRepo.destination = newDest;
     
@@ -116,11 +110,11 @@
 }
 
 - (IBAction)choose:(id)sender {
-    [self chooseDestination];
+    [self processSwipeInDirection: UISwipeGestureRecognizerDirectionRight];
 }
 
 - (IBAction)reject:(id)sender {
-    [self rejectDestination];
+    [self processSwipeInDirection: UISwipeGestureRecognizerDirectionLeft];
 }
 
 - (IBAction)settings:(id)sender {
@@ -140,14 +134,7 @@
 }
 
 - (IBAction)swipeView:(UISwipeGestureRecognizer*)swipe {
-    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
-        [self rejectDestination];
-//        NSLog(@"Left Swipe");
-    }
-    if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
-        [self chooseDestination];
-//        NSLog(@"Right Swipe");
-    }
+    [self processSwipeInDirection: swipe.direction];
 }
 
 @end
