@@ -14,7 +14,7 @@
 		1AD9C3B2189B74F800CA6210 /* WebServiceAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3B1189B74F800CA6210 /* WebServiceAction.m */; };
 		1AD9C3B9189B791F00CA6210 /* GetUserAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3B8189B791F00CA6210 /* GetUserAction.m */; };
 		1AD9C3BC189B7A7500CA6210 /* HTTPResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3BB189B7A7500CA6210 /* HTTPResponseObject.m */; };
-		1AD9C3BF189B84B400CA6210 /* BaseAwayAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3BE189B84B400CA6210 /* BaseAwayAction.m */; };
+		1AD9C3BF189B84B400CA6210 /* AwayBaseAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3BE189B84B400CA6210 /* AwayBaseAction.m */; };
 		1AD9C3C3189B855200CA6210 /* AwayWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3C2189B855200CA6210 /* AwayWebService.m */; };
 		35A96E2D1896B10B00DC1300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2C1896B10B00DC1300 /* Foundation.framework */; };
 		35A96E2F1896B10B00DC1300 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */; };
@@ -61,8 +61,8 @@
 		1AD9C3B8189B791F00CA6210 /* GetUserAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserAction.m; sourceTree = "<group>"; };
 		1AD9C3BA189B7A7500CA6210 /* HTTPResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPResponseObject.h; sourceTree = "<group>"; };
 		1AD9C3BB189B7A7500CA6210 /* HTTPResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPResponseObject.m; sourceTree = "<group>"; };
-		1AD9C3BD189B84B400CA6210 /* BaseAwayAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAwayAction.h; sourceTree = "<group>"; };
-		1AD9C3BE189B84B400CA6210 /* BaseAwayAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAwayAction.m; sourceTree = "<group>"; };
+		1AD9C3BD189B84B400CA6210 /* AwayBaseAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwayBaseAction.h; sourceTree = "<group>"; };
+		1AD9C3BE189B84B400CA6210 /* AwayBaseAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwayBaseAction.m; sourceTree = "<group>"; };
 		1AD9C3C1189B855200CA6210 /* AwayWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwayWebService.h; sourceTree = "<group>"; };
 		1AD9C3C2189B855200CA6210 /* AwayWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwayWebService.m; sourceTree = "<group>"; };
 		35A96E291896B10B00DC1300 /* Away.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Away.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,8 +194,8 @@
 			children = (
 				1AD9C3B7189B791F00CA6210 /* GetUserAction.h */,
 				1AD9C3B8189B791F00CA6210 /* GetUserAction.m */,
-				1AD9C3BD189B84B400CA6210 /* BaseAwayAction.h */,
-				1AD9C3BE189B84B400CA6210 /* BaseAwayAction.m */,
+				1AD9C3BD189B84B400CA6210 /* AwayBaseAction.h */,
+				1AD9C3BE189B84B400CA6210 /* AwayBaseAction.m */,
 			);
 			name = WebServiceActions;
 			sourceTree = "<group>";
@@ -377,7 +377,7 @@
 				35A96E701896B7CF00DC1300 /* MainViewController.m in Sources */,
 				1AD9C3AB189B60A300CA6210 /* WebServiceHTTPRequest.m in Sources */,
 				35A96E431896B10B00DC1300 /* LoginViewController.m in Sources */,
-				1AD9C3BF189B84B400CA6210 /* BaseAwayAction.m in Sources */,
+				1AD9C3BF189B84B400CA6210 /* AwayBaseAction.m in Sources */,
 				1AD9C3AE189B6E2900CA6210 /* RawHTTPDataParser.m in Sources */,
 				35A96E791896B85000DC1300 /* SettingsViewController.m in Sources */,
 				1A965766189981DB00DB1D32 /* Destination.m in Sources */,

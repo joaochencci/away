@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Marcelo Toledo. All rights reserved.
 //
 
-#import "BaseAwayAction.h"
+#import "AwayBaseAction.h"
 
-@interface GetUserAction : BaseAwayAction
+@interface GetUserAction : AwayBaseAction
 
 // Returns a user for a given facebook token.
 - ()getUserForFacebookToken:(NSString *)fbToken;
