@@ -11,6 +11,7 @@
 		1A965766189981DB00DB1D32 /* Destination.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965765189981DB00DB1D32 /* Destination.m */; };
 		1AD9C3C6189C619200CA6210 /* DestinationPresenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3C5189C619200CA6210 /* DestinationPresenterManager.m */; };
 		1AD9C3CD189C645E00CA6210 /* NSMutableArray+FIFOQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3CC189C645E00CA6210 /* NSMutableArray+FIFOQueue.m */; };
+		1AD9C3CF189C69B200CA6210 /* FIFOQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3CE189C69B200CA6210 /* FIFOQueueTest.m */; };
 		356AC3C2189A77B9000EEBBD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */; };
 		35A96E2D1896B10B00DC1300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2C1896B10B00DC1300 /* Foundation.framework */; };
 		35A96E2F1896B10B00DC1300 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */; };
@@ -51,6 +52,7 @@
 		1AD9C3C5189C619200CA6210 /* DestinationPresenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationPresenterManager.m; sourceTree = "<group>"; };
 		1AD9C3CB189C645E00CA6210 /* NSMutableArray+FIFOQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+FIFOQueue.h"; sourceTree = "<group>"; };
 		1AD9C3CC189C645E00CA6210 /* NSMutableArray+FIFOQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+FIFOQueue.m"; sourceTree = "<group>"; };
+		1AD9C3CE189C69B200CA6210 /* FIFOQueueTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIFOQueueTest.m; sourceTree = "<group>"; };
 		356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		35A96E291896B10B00DC1300 /* Away.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Away.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A96E2C1896B10B00DC1300 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -213,6 +215,7 @@
 		35A96E511896B10B00DC1300 /* AwayTests */ = {
 			isa = PBXGroup;
 			children = (
+				1AD9C3CE189C69B200CA6210 /* FIFOQueueTest.m */,
 				35A96E571896B10B00DC1300 /* AwayTests.m */,
 				35A96E521896B10B00DC1300 /* Supporting Files */,
 			);
@@ -344,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35A96E581896B10B00DC1300 /* AwayTests.m in Sources */,
+				1AD9C3CF189C69B200CA6210 /* FIFOQueueTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

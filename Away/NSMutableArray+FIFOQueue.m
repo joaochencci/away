@@ -20,7 +20,13 @@
 {
     // If Queue not empty, returns first object,
     // otherwise returns nil.
-    return [self firstObject];
+    id dequeuedObject = [self firstObject];
+    
+    if (dequeuedObject) {
+        [self removeObjectAtIndex:0];
+    }
+    
+    return dequeuedObject;
 }
 
 @end
