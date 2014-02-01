@@ -35,39 +35,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    UIImage *imagefavoritesButton = [UIImage imageNamed:@"icon_star"];
-    CGSize newSize = CGSizeMake(40, 40);
-    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
-    [imagefavoritesButton drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-    imagefavoritesButton = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithImage:imagefavoritesButton style:UIBarButtonItemStylePlain target:self action:@selector(favorites:)];
-
-    UIImage *imageSettingsButton = [UIImage imageNamed:@"icon_settings"];
-    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
-    [imageSettingsButton drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-    imageSettingsButton = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:imageSettingsButton style:UIBarButtonItemStylePlain target:self action:@selector(settings:)];
     
-
-    [self.navigationController setNavigationBarHidden:FALSE];
-    NSArray *buttons= [[NSArray alloc] initWithObjects:settingsButton,favoritesButton,nil];
-    self.navigationItem.rightBarButtonItems = buttons;
-
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapView:)];
-    tap.numberOfTapsRequired = 1;
-    [self.view addGestureRecognizer:tap];
-
-    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
-    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
-    [self.view addGestureRecognizer:swipeLeft];
-
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
-    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-    [self.view addGestureRecognizer:swipeRight];
+    
+//    UIImage *imagefavoritesButton = [UIImage imageNamed:@"icon_star"];
+//    CGSize newSize = CGSizeMake(40, 40);
+//    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+//    [imagefavoritesButton drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+//    imagefavoritesButton = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    UIBarButtonItem *favoritesButton = [[UIBarButtonItem alloc] initWithImage:imagefavoritesButton style:UIBarButtonItemStylePlain target:self action:@selector(favorites:)];
+//
+//    UIImage *imageSettingsButton = [UIImage imageNamed:@"icon_settings"];
+//    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
+//    [imageSettingsButton drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+//    imageSettingsButton = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:imageSettingsButton style:UIBarButtonItemStylePlain target:self action:@selector(settings:)];
+//    
+//
+//    [self.navigationController setNavigationBarHidden:FALSE];
+//    NSArray *buttons= [[NSArray alloc] initWithObjects:settingsButton,favoritesButton,nil];
+//    self.navigationItem.rightBarButtonItems = buttons;
+//
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapView:)];
+//    tap.numberOfTapsRequired = 1;
+//    [self.view addGestureRecognizer:tap];
+//
+//    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
+//    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+//    [self.view addGestureRecognizer:swipeLeft];
+//
+//    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
+//    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+//    [self.view addGestureRecognizer:swipeRight];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
