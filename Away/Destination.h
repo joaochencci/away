@@ -8,19 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
+#import "User.h"
+
 @interface Destination : NSObject
 
-@property(nonatomic, strong) NSString *_id;
-@property(nonatomic, strong) NSString *title;
-@property(nonatomic, strong) NSString *description;
+@property(nonatomic, strong, readonly) NSString *_id;
+@property(nonatomic, strong, readonly) NSString *title;
+@property(nonatomic, strong, readonly) NSString *description;
 
-@property(nonatomic) CGFloat geographicCoordinates;
 @property(nonatomic) NSInteger basePrice;
 @property(nonatomic) NSInteger numberOfFriends;
 
 @property(nonatomic, strong, readonly) UIImage *firstImage;
 
 - (id)initWithDictionary:(NSDictionary *)destinationDataDictionary;
+
 - (NSArray *)getAllImages;
+
+- (CGFloat)getDistanceFromPoint:(CGPoint *)point;
 
 @end

@@ -9,8 +9,12 @@
 #import "Destination.h"
 
 @interface Destination () {
-    NSArray *images;
+    NSArray *_images;
+    NSMutableArray *_tags;
+    CGFloat _geographicCoordinates;
+
 }
+
 
 @end
 
@@ -25,11 +29,27 @@
     return self;
 }
 
+- (id)initWithDictionary:(NSDictionary *)destinationDataDictionary
+{
+    self = [self init];
+    if (self) {
+        //
+    }
+    return self;
+}
+
 # pragma mark - Public
 - (NSArray *)getAllImages
 {
     //
-    return images;
+    return _images;
+}
+
+- (CGFloat)getDistanceFromPoint:(CGPoint *)point
+{
+    //
+    
+    return 0.0;
 }
 
 @end
