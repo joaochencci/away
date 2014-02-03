@@ -10,6 +10,4 @@
 
 @interface HTTPResponseObject : NSObject
 
-- 
-
 @end

@@ -36,10 +36,10 @@
             break;
     }
     
-    HTTPResponseObject *response = [[HTTPResponseObject alloc] initWithResponseData:responseData
-                                                                            dataTye:dataType
-                                                                              error:error];
-    return response;
+    //HTTPResponseObject *response = [[HTTPResponseObject alloc] initWithResponseData:responseData
+                                                                            //dataTye:dataType
+                                                                              //error:error];
+    return nil;//response;
     
 }
 

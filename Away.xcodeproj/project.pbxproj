@@ -16,6 +16,9 @@
 		1AD9C3BC189B7A7500CA6210 /* HTTPResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3BB189B7A7500CA6210 /* HTTPResponseObject.m */; };
 		1AD9C3BF189B84B400CA6210 /* AwayBaseAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3BE189B84B400CA6210 /* AwayBaseAction.m */; };
 		1AD9C3C3189B855200CA6210 /* AwayWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3C2189B855200CA6210 /* AwayWebService.m */; };
+		1AD9C3D5189F24C700CA6210 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3D4189F24C700CA6210 /* MyClass.m */; };
+		1AD9C3D8189F24D600CA6210 /* MySubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3D7189F24D600CA6210 /* MySubclass.m */; };
+		1AD9C3DA189F272E00CA6210 /* MyClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3D9189F272E00CA6210 /* MyClasses.m */; };
 		35A96E2D1896B10B00DC1300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2C1896B10B00DC1300 /* Foundation.framework */; };
 		35A96E2F1896B10B00DC1300 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */; };
 		35A96E311896B10B00DC1300 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E301896B10B00DC1300 /* UIKit.framework */; };
@@ -65,6 +68,11 @@
 		1AD9C3BE189B84B400CA6210 /* AwayBaseAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwayBaseAction.m; sourceTree = "<group>"; };
 		1AD9C3C1189B855200CA6210 /* AwayWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwayWebService.h; sourceTree = "<group>"; };
 		1AD9C3C2189B855200CA6210 /* AwayWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwayWebService.m; sourceTree = "<group>"; };
+		1AD9C3D3189F24C700CA6210 /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
+		1AD9C3D4189F24C700CA6210 /* MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
+		1AD9C3D6189F24D600CA6210 /* MySubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySubclass.h; sourceTree = "<group>"; };
+		1AD9C3D7189F24D600CA6210 /* MySubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySubclass.m; sourceTree = "<group>"; };
+		1AD9C3D9189F272E00CA6210 /* MyClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClasses.m; sourceTree = "<group>"; };
 		35A96E291896B10B00DC1300 /* Away.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Away.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A96E2C1896B10B00DC1300 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -161,6 +169,10 @@
 			isa = PBXGroup;
 			children = (
 				1AD9C3AF189B73F200CA6210 /* Networking */,
+				1AD9C3D3189F24C700CA6210 /* MyClass.h */,
+				1AD9C3D4189F24C700CA6210 /* MyClass.m */,
+				1AD9C3D6189F24D600CA6210 /* MySubclass.h */,
+				1AD9C3D7189F24D600CA6210 /* MySubclass.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -260,6 +272,7 @@
 		35A96E511896B10B00DC1300 /* AwayTests */ = {
 			isa = PBXGroup;
 			children = (
+				1AD9C3D9189F272E00CA6210 /* MyClasses.m */,
 				35A96E571896B10B00DC1300 /* AwayTests.m */,
 				35A96E521896B10B00DC1300 /* Supporting Files */,
 			);
@@ -373,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A965763189981CF00DB1D32 /* User.m in Sources */,
+				1AD9C3D8189F24D600CA6210 /* MySubclass.m in Sources */,
 				1AD9C3B9189B791F00CA6210 /* GetUserAction.m in Sources */,
 				35A96E701896B7CF00DC1300 /* MainViewController.m in Sources */,
 				1AD9C3AB189B60A300CA6210 /* WebServiceHTTPRequest.m in Sources */,
@@ -385,6 +399,7 @@
 				35A96E391896B10B00DC1300 /* main.m in Sources */,
 				35A96E761896B83500DC1300 /* FavoritesViewController.m in Sources */,
 				1AD9C3C3189B855200CA6210 /* AwayWebService.m in Sources */,
+				1AD9C3D5189F24C700CA6210 /* MyClass.m in Sources */,
 				1AD9C3B2189B74F800CA6210 /* WebServiceAction.m in Sources */,
 				1AD9C3BC189B7A7500CA6210 /* HTTPResponseObject.m in Sources */,
 				35A96E731896B7EE00DC1300 /* DetailViewController.m in Sources */,
@@ -395,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD9C3DA189F272E00CA6210 /* MyClasses.m in Sources */,
 				35A96E581896B10B00DC1300 /* AwayTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
