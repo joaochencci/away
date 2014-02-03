@@ -52,7 +52,6 @@
     imageSettingsButton = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc] initWithImage:imageSettingsButton style:UIBarButtonItemStylePlain target:self action:@selector(settings:)];
-    
 
     [self.navigationController setNavigationBarHidden:FALSE];
     NSArray *buttons= [[NSArray alloc] initWithObjects:settingsButton,favoritesButton,nil];
@@ -77,6 +76,7 @@
     userRepo.destination = dest;
     self.nameLabel.text = dest.name;
 }
+
 
 - (void)didReceiveMemoryWarning
 {

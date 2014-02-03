@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1A965763189981CF00DB1D32 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965762189981CF00DB1D32 /* User.m */; };
 		1A965766189981DB00DB1D32 /* Destination.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965765189981DB00DB1D32 /* Destination.m */; };
+		1AD9C3C6189C619200CA6210 /* DestinationPresenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3C5189C619200CA6210 /* DestinationPresenterManager.m */; };
+		1AD9C3CD189C645E00CA6210 /* NSMutableArray+FIFOQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3CC189C645E00CA6210 /* NSMutableArray+FIFOQueue.m */; };
+		1AD9C3CF189C69B200CA6210 /* FIFOQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3CE189C69B200CA6210 /* FIFOQueueTest.m */; };
+		1AD9C3D2189C92AC00CA6210 /* DestinationViewPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3D1189C92AC00CA6210 /* DestinationViewPoint.m */; };
 		356AC3C2189A77B9000EEBBD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */; };
 		356AC3C5189BD7AD000EEBBD /* UserRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 356AC3C4189BD7AD000EEBBD /* UserRepository.m */; };
 		356AC3C8189C03B3000EEBBD /* FavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356AC3C7189C03B3000EEBBD /* FavoriteTableViewCell.m */; };
@@ -47,6 +51,13 @@
 		1A965762189981CF00DB1D32 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		1A965764189981DB00DB1D32 /* Destination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Destination.h; sourceTree = "<group>"; };
 		1A965765189981DB00DB1D32 /* Destination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Destination.m; sourceTree = "<group>"; };
+		1AD9C3C4189C619200CA6210 /* DestinationPresenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationPresenterManager.h; sourceTree = "<group>"; };
+		1AD9C3C5189C619200CA6210 /* DestinationPresenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationPresenterManager.m; sourceTree = "<group>"; };
+		1AD9C3CB189C645E00CA6210 /* NSMutableArray+FIFOQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+FIFOQueue.h"; sourceTree = "<group>"; };
+		1AD9C3CC189C645E00CA6210 /* NSMutableArray+FIFOQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+FIFOQueue.m"; sourceTree = "<group>"; };
+		1AD9C3CE189C69B200CA6210 /* FIFOQueueTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIFOQueueTest.m; sourceTree = "<group>"; };
+		1AD9C3D0189C92AC00CA6210 /* DestinationViewPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationViewPoint.h; sourceTree = "<group>"; };
+		1AD9C3D1189C92AC00CA6210 /* DestinationViewPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationViewPoint.m; sourceTree = "<group>"; };
 		356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		356AC3C3189BD7AD000EEBBD /* UserRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRepository.h; sourceTree = "<group>"; };
 		356AC3C4189BD7AD000EEBBD /* UserRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRepository.m; sourceTree = "<group>"; };
@@ -141,8 +152,21 @@
 				1A965762189981CF00DB1D32 /* User.m */,
 				1A965764189981DB00DB1D32 /* Destination.h */,
 				1A965765189981DB00DB1D32 /* Destination.m */,
+				1AD9C3C4189C619200CA6210 /* DestinationPresenterManager.h */,
+				1AD9C3C5189C619200CA6210 /* DestinationPresenterManager.m */,
+				1AD9C3D0189C92AC00CA6210 /* DestinationViewPoint.h */,
+				1AD9C3D1189C92AC00CA6210 /* DestinationViewPoint.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		1AD9C3C7189C621800CA6210 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1AD9C3CB189C645E00CA6210 /* NSMutableArray+FIFOQueue.h */,
+				1AD9C3CC189C645E00CA6210 /* NSMutableArray+FIFOQueue.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		35A96E201896B10B00DC1300 = {
@@ -179,6 +203,7 @@
 		35A96E321896B10B00DC1300 /* Away */ = {
 			isa = PBXGroup;
 			children = (
+				1AD9C3C7189C621800CA6210 /* Helpers */,
 				1A965760189981BB00DB1D32 /* Model */,
 				35A96E3E1896B10B00DC1300 /* Main.storyboard */,
 				35A96E3B1896B10B00DC1300 /* AppDelegate.h */,
@@ -205,6 +230,7 @@
 		35A96E511896B10B00DC1300 /* AwayTests */ = {
 			isa = PBXGroup;
 			children = (
+				1AD9C3CE189C69B200CA6210 /* FIFOQueueTest.m */,
 				35A96E571896B10B00DC1300 /* AwayTests.m */,
 				35A96E521896B10B00DC1300 /* Supporting Files */,
 			);
@@ -318,12 +344,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A965763189981CF00DB1D32 /* User.m in Sources */,
+				1AD9C3C6189C619200CA6210 /* DestinationPresenterManager.m in Sources */,
 				35A96E701896B7CF00DC1300 /* MainViewController.m in Sources */,
 				35A96E431896B10B00DC1300 /* LoginViewController.m in Sources */,
 				35A96E791896B85000DC1300 /* SettingsViewController.m in Sources */,
 				1A965766189981DB00DB1D32 /* Destination.m in Sources */,
 				35A96E3D1896B10B00DC1300 /* AppDelegate.m in Sources */,
 				35A96E391896B10B00DC1300 /* main.m in Sources */,
+				1AD9C3D2189C92AC00CA6210 /* DestinationViewPoint.m in Sources */,
+				1AD9C3CD189C645E00CA6210 /* NSMutableArray+FIFOQueue.m in Sources */,
 				35A96E761896B83500DC1300 /* FavoritesViewController.m in Sources */,
 				356AC3C5189BD7AD000EEBBD /* UserRepository.m in Sources */,
 				356AC3C8189C03B3000EEBBD /* FavoriteTableViewCell.m in Sources */,
@@ -336,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35A96E581896B10B00DC1300 /* AwayTests.m in Sources */,
+				1AD9C3CF189C69B200CA6210 /* FIFOQueueTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +487,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
+					/Users/marcelotoledo/Desktop/Challenge2/away,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";
@@ -474,6 +505,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
+					/Users/marcelotoledo/Desktop/Challenge2/away,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";

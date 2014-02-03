@@ -8,7 +8,7 @@
 
 #import "DetailViewController.h"
 
-@interface DetailViewController ()
+@interface DetailViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *destinationImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money1ImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money2ImageView;
@@ -23,6 +23,25 @@
 @end
 
 @implementation DetailViewController
+
+#pragma mark - UICollectionView
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 6;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [collectionView dequeueReusableCellWithReuseIdentifier:@"fbCell" forIndexPath:indexPath];
+}
+
+# pragma mark
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,6 +67,7 @@
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
     [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.destinationImageView addGestureRecognizer:swipeRight];
+    
 
 }
 
