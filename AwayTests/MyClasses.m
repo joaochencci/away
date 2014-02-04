@@ -45,4 +45,13 @@
     XCTAssertTrue([subclass returnPrivateProperty] == 2, @" ");
 }
 
+- (void)testURL
+{
+    MyClass *myClass = [[MyClass alloc] init];
+    
+    NSURL *url = [myClass urlWithScheme:@"http" baseURL:@"httpbin.org" path:@"/" action:@"get" andParameters:@{@"key1": @"value1"}];
+    
+    XCTAssertTrue(TRUE, @"");
+}
+
 @end

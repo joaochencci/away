@@ -12,8 +12,8 @@
 @interface AbstractWebService () <HTTPRequesterDelegate> {
     
     NSString *_urlScheme; // http
-    NSString *_baseURL; // @"http://www.google.com/"
-    NSString *_path; // @"away/api"
+    NSString *_baseURL; // @"http://www.google.com"
+    NSString *_path; // @"/away/api"
     NSString *_action; // @"login";
     
     NSDictionary *_requestParams; //

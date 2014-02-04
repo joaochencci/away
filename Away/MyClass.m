@@ -7,6 +7,7 @@
 //
 
 #import "MyClass.h"
+#import "NSDictionary+URLArguments.h"
 
 @interface MyClass () {
     NSInteger _privateAtribute;
@@ -55,7 +56,21 @@
                   action:(NSString *)action
            andParameters:(NSDictionary *)parameters;
 {
-    return nil;
+    
+    NSMutableString *urlString = [NSMutableString stringWithFormat:@"%@://%@%@%@",
+                           urlScheme, baseURL, path, action];
+    
+    if (parameters) {
+        [urlString appendString:[parameters stringForURLEscapedArguments]];
+    }
+    
+    //NSString *escapedURLString = [urlString stringByEscapingForURLArgument];
+    
+    NSURL *myURL = [NSURL URLWithString:urlString];
+    
+    NSLog(@"%@", myURL);
+    
+    return myURL;
 }
 
 @end
