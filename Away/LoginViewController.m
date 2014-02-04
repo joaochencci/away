@@ -7,9 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
-#define FACEBOOK_CLIENTE_ID @"1400255183561773"
-#define FACEBOOK_CLIENTE_SECRET @"1d9e6d4fdf6b385a9614f2094081c962"
+#import "Session.h"
 
 @interface LoginViewController ()
 
@@ -47,6 +45,9 @@
 
 // Logged-in user experience
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
+    Session *session = [Session sharedSession];
+    CLLocation *location = [session.locationManager location];
+    NSLog(@"Coordinates: %f %f",location.coordinate.longitude, location.coordinate.latitude);
     [self performSegueWithIdentifier:@"doLogin" sender:self];
 }
 
@@ -92,7 +93,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"didReceiveMemory");
 }
 
 @end

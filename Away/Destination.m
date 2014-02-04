@@ -7,14 +7,14 @@
 //
 
 #import "Destination.h"
+#import "User.h"
 
 @interface Destination () {
-    NSArray *_images;
-    NSMutableArray *_tags;
-    CGFloat _geographicCoordinates;
-
+    NSArray *images;
+    NSMutableArray *tags;
+    CGFloat geographicCoordinates;
+    NSInteger numberOfFriends;
 }
-
 
 @end
 
@@ -33,7 +33,8 @@
 {
     self = [self init];
     if (self) {
-        //
+        
+        
     }
     return self;
 }
@@ -42,14 +43,21 @@
 - (NSArray *)getAllImages
 {
     //
-    return _images;
+    return images;
 }
 
 - (CGFloat)getDistanceFromPoint:(CGPoint *)point
 {
     //
-    
     return 0.0;
+}
+
+- (UIImage*)getFirstImage {
+    return [self.viewPoints objectAtIndex:0];
+}
+
+- (NSInteger)getNumberOfFriendsFromUser:(User*) user {
+    return [user getNumberOfFriendsFromDestination: self];
 }
 
 @end

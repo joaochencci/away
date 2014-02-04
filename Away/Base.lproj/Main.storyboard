@@ -16,10 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_away" translatesAutoresizingMaskIntoConstraints="NO" id="6X8-cT-aya">
-                                <rect key="frame" x="52" y="169" width="217" height="102"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_away_small" translatesAutoresizingMaskIntoConstraints="NO" id="6X8-cT-aya">
+                                <rect key="frame" x="52" y="152" width="217" height="102"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5N6-lx-uCb">
+                                <rect key="frame" x="137" y="348" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Scc-D5-IBz" kind="modal" identifier="doLogin" id="LnN-rl-fKj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.96470588239999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -63,6 +73,7 @@
                                 <state key="normal" title="Button" image="icon_plus">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" image="icon_plus_hover"/>
                                 <connections>
                                     <action selector="choose:" destination="QiY-YY-rXe" eventType="touchUpInside" id="PVQ-En-uHp"/>
                                 </connections>
@@ -73,27 +84,28 @@
                                 <state key="normal" title="Button" image="icon_minus">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" image="icon_minus_hover"/>
                                 <connections>
                                     <action selector="reject:" destination="QiY-YY-rXe" eventType="touchUpInside" id="3Gs-p2-K3f"/>
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gsE-la-ozG">
-                                <rect key="frame" x="20" y="99" width="280" height="44"/>
+                                <rect key="frame" x="20" y="103" width="280" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items/>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_fb_friends" translatesAutoresizingMaskIntoConstraints="NO" id="fPw-nh-NfK">
-                                <rect key="frame" x="127" y="109" width="21" height="25"/>
+                                <rect key="frame" x="127" y="113" width="21" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ehy-NQ-FQn">
-                                <rect key="frame" x="148" y="106" width="17" height="32"/>
+                                <rect key="frame" x="148" y="110" width="17" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fortaleza" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88N-f7-TKv">
-                                <rect key="frame" x="34" y="110" width="71" height="24"/>
+                                <rect key="frame" x="34" y="115" width="71" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="20"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -105,7 +117,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WFw-pP-Vu1">
-                                <rect key="frame" x="229" y="107" width="59" height="30"/>
+                                <rect key="frame" x="229" y="111" width="59" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_money_yes" translatesAutoresizingMaskIntoConstraints="NO" id="1RA-mB-uB2">
@@ -132,7 +144,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="800km" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NT-oq-Bxj">
-                                <rect key="frame" x="171" y="111" width="61" height="21"/>
+                                <rect key="frame" x="171" y="115" width="61" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -148,8 +160,8 @@
                             <rect key="frame" x="8" y="6" width="304" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_away_small" translatesAutoresizingMaskIntoConstraints="NO" id="Ha8-PJ-fu4">
-                                    <rect key="frame" x="14" y="0.0" width="94" height="36"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_away_header" translatesAutoresizingMaskIntoConstraints="NO" id="Ha8-PJ-fu4">
+                                    <rect key="frame" x="14" y="0.0" width="68" height="36"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </imageView>
                             </subviews>
@@ -164,7 +176,7 @@
                         <outlet property="money3ImageView" destination="B7w-9s-Dev" id="y5O-Qu-rjV"/>
                         <outlet property="money4ImageView" destination="kV4-8x-9Co" id="vtS-yh-6l4"/>
                         <outlet property="money5ImageView" destination="GAM-fD-ic0" id="HbH-cd-JFh"/>
-                        <outlet property="numberFriendsLabel" destination="Ehy-NQ-FQn" id="uhr-Ma-qSi"/>
+                        <outlet property="numberFriendsLabel" destination="88N-f7-TKv" id="aWv-Ow-1XY"/>
                         <segue destination="fdB-hD-jeq" kind="push" identifier="goToSettings" id="kLE-GA-8TB"/>
                         <segue destination="rIV-eQ-0lo" kind="push" identifier="goToFavorites" id="m7d-qB-HHK"/>
                         <segue destination="2an-SN-fFL" kind="push" identifier="goToDetail" id="xxe-9r-946"/>
@@ -191,7 +203,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Praia Iracema" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkx-7M-TtC">
-                                <rect key="frame" x="20" y="388" width="106" height="25"/>
+                                <rect key="frame" x="20" y="388" width="206" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -203,6 +215,7 @@
                                 <state key="normal" title="Button" image="icon_plus">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" image="icon_plus_hover"/>
                                 <connections>
                                     <action selector="choose:" destination="2an-SN-fFL" eventType="touchUpInside" id="Ngn-DG-4A8"/>
                                 </connections>
@@ -213,6 +226,7 @@
                                 <state key="normal" title="Button" image="icon_minus">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" image="icon_minus_hover"/>
                                 <connections>
                                     <action selector="reject:" destination="2an-SN-fFL" eventType="touchUpInside" id="WlK-mg-CwG"/>
                                 </connections>
@@ -275,8 +289,8 @@
                             <rect key="frame" x="8" y="6" width="304" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_away_small" translatesAutoresizingMaskIntoConstraints="NO" id="BAT-75-Gzv">
-                                    <rect key="frame" x="-14" y="0.0" width="94" height="36"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_away_header" translatesAutoresizingMaskIntoConstraints="NO" id="BAT-75-Gzv">
+                                    <rect key="frame" x="0.0" y="0.0" width="77" height="36"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </imageView>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fortaleza" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yT9-eF-uan">
@@ -318,9 +332,17 @@
                         </view>
                     </navigationItem>
                     <connections>
+                        <outlet property="chooseButton" destination="eU9-rb-HMm" id="a7Z-Q9-jmh"/>
                         <outlet property="destinationImageView" destination="Glj-a0-iTd" id="R9J-S9-9nv"/>
                         <outlet property="distanceLabel" destination="yYJ-MD-bEE" id="4Yk-U6-eAQ"/>
+                        <outlet property="money1ImageView" destination="brJ-Ca-TiB" id="mAO-8L-9gi"/>
+                        <outlet property="money2ImageView" destination="3bS-bx-3WH" id="6E7-YX-ct4"/>
+                        <outlet property="money3ImageView" destination="tHX-hk-jQf" id="5Ka-68-WbJ"/>
+                        <outlet property="money4ImageView" destination="MtI-99-OYi" id="pfq-gp-yWn"/>
+                        <outlet property="money5ImageView" destination="9db-ov-Zho" id="zmi-46-kYy"/>
                         <outlet property="nameLabel" destination="Dkx-7M-TtC" id="a2a-6d-P33"/>
+                        <outlet property="rejectButton" destination="SSK-k1-akv" id="veM-pM-5ar"/>
+                        <outlet property="titleLabel" destination="yT9-eF-uan" id="TJq-im-3uW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgu-6r-6nT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -394,6 +416,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" red="0.058823529409999999" green="0.42352941179999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="destinationImageView" destination="rsl-D8-d3V" id="AcQ-uA-hGN"/>
                                             <outlet property="money1ImageView" destination="crc-n3-L83" id="l8Z-mn-obg"/>
@@ -403,7 +426,7 @@
                                             <outlet property="money5ImageView" destination="0r9-S2-oVq" id="2Ab-5X-sof"/>
                                             <outlet property="nameLabel" destination="O7s-q5-7G6" id="0vr-tk-xGJ"/>
                                             <outlet property="numberFriendsLabel" destination="59z-NX-376" id="YPO-xT-W8p"/>
-                                            <segue destination="2an-SN-fFL" kind="push" trigger="accessoryAction" id="xlg-3n-gD9"/>
+                                            <segue destination="2an-SN-fFL" kind="push" identifier="goToDetailsFromTable" trigger="accessoryAction" id="xlg-3n-gD9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -448,10 +471,12 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uL0-nX-cUx">
                                 <rect key="frame" x="18" y="115" width="284" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.058823529409999999" green="0.42352941179999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bbR-6U-dbk">
                                 <rect key="frame" x="18" y="199" width="284" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.058823529409999999" green="0.42352941179999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.96470588239999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -496,6 +521,7 @@
                     <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" id="XC6-Ui-V9V">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.058823529409999999" green="0.42352941179999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.94117647059999998" green="0.96470588239999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
@@ -513,14 +539,37 @@
     </scenes>
     <resources>
         <image name="icon_fb_friends" width="128" height="128"/>
+        <image name="icon_fb_friends" width="128" height="128"/>
+        <image name="icon_fb_friends" width="128" height="128"/>
         <image name="icon_info" width="1771" height="1771"/>
         <image name="icon_minus" width="1771" height="1771"/>
+        <image name="icon_minus" width="1771" height="1771"/>
+        <image name="icon_minus_hover" width="1771" height="1771"/>
+        <image name="icon_minus_hover" width="1771" height="1771"/>
+        <image name="icon_money_no" width="30" height="30"/>
+        <image name="icon_money_no" width="30" height="30"/>
+        <image name="icon_money_no" width="30" height="30"/>
+        <image name="icon_money_no" width="30" height="30"/>
+        <image name="icon_money_no" width="30" height="30"/>
         <image name="icon_money_no" width="30" height="30"/>
         <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
         <image name="icon_plus" width="1771" height="1771"/>
-        <image name="icon_settings" width="80" height="80"/>
-        <image name="logo_away" width="4724" height="2480"/>
+        <image name="icon_plus" width="1771" height="1771"/>
+        <image name="icon_plus_hover" width="1771" height="1771"/>
+        <image name="icon_plus_hover" width="1771" height="1771"/>
+        <image name="logo_away_header" width="350" height="180"/>
+        <image name="logo_away_header" width="350" height="180"/>
         <image name="logo_away_small" width="500" height="262"/>
+        <image name="placeholder" width="331" height="233"/>
+        <image name="placeholder" width="331" height="233"/>
         <image name="placeholder" width="331" height="233"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -529,6 +578,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xxe-9r-946"/>
+        <segue reference="xlg-3n-gD9"/>
     </inferredMetricsTieBreakers>
 </document>

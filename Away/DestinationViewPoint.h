@@ -10,4 +10,8 @@
 
 @interface DestinationViewPoint : NSObject
 
+@property(nonatomic, strong, readonly) NSString *name;
+@property(nonatomic, readonly) CGPoint *coordinates;
+@property(nonatomic, strong, readonly) NSString *imageUrl;
+
 @end

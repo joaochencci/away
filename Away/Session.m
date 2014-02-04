@@ -1,28 +1,31 @@
 //
-//  UserRepository.m
+//  Session.m
 //  Away
 //
 //  Created by Wesley Ide on 31/01/14.
 //  Copyright (c) 2014 Wesley Ide. All rights reserved.
 //
 
-#import "UserRepository.h"
+#import "Session.h"
 
-@implementation UserRepository
+@implementation Session
 
+@synthesize user;
 @synthesize destination;
 @synthesize destinationsChoose;
 @synthesize destinationsReject;
+@synthesize currentLocation;
+@synthesize locationManager;
 
 #pragma mark Singleton Methods
 
-+ (id)sharedManager {
-    static UserRepository *sharedUserAux = nil;
++ (id)sharedSession {
+    static Session *sharedSession = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedUserAux = [[self alloc] init];
+        sharedSession = [[self alloc] init];
     });
-    return sharedUserAux;
+    return sharedSession;
 }
 
 - (id)init {
@@ -30,9 +33,28 @@
         destination = [[Destination alloc] init];
         destinationsChoose = [[NSMutableArray alloc] init];
         destinationsReject = [[NSMutableArray alloc] init];
+
+        currentLocation = [[CLLocation alloc] init];
+        locationManager = [[CLLocationManager alloc] init];
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
+        locationManager.delegate = self;
+        [locationManager startUpdatingLocation];
     }
     return self;
 }
+
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    //if the time interval returned from core location is more than two minutes we ignore it because it might be from an old session
+//    if ( abs((int) [newLocation.timestamp timeIntervalSinceDate: [NSDate date]]) < 120) {
+        self.currentLocation = newLocation;
+//    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    //    [[[UIAlertView alloc] initWithTitle:@"Error" message:[error description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+}
+
 
 ///* - (BOOL) containsUserInSession:(User*)user
 //    Verifica se determinado usuário está na sessão.

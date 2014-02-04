@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "Session.h"
 
 @interface DetailViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *destinationImageView;
@@ -19,6 +20,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *rejectButton;
+@property (weak, nonatomic) IBOutlet UIButton *chooseButton;
 
 @end
 
@@ -60,15 +64,39 @@
 
     [self.destinationImageView setUserInteractionEnabled:YES];
     
-    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
-    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
-    [self.destinationImageView addGestureRecognizer:swipeLeft];
-    
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
-    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-    [self.destinationImageView addGestureRecognizer:swipeRight];
-    
+//    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
+//    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+//    [self.destinationImageView addGestureRecognizer:swipeLeft];
+//    
+//    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
+//    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
+//    [self.destinationImageView addGestureRecognizer:swipeRight];
 
+}
+
+- (void)processSwipeInDirection: (UISwipeGestureRecognizerDirection) direction{
+    Session *session = [Session sharedSession];
+    Destination *dest = session.destination;
+    
+    if (direction == UISwipeGestureRecognizerDirectionRight) {
+        // NSLog(@"Right Swipe");
+        NSMutableArray *destinationsChoose = session.destinationsChoose;
+        [destinationsChoose addObject:dest];
+        session.destinationsChoose = destinationsChoose;
+    }
+    if (direction == UISwipeGestureRecognizerDirectionLeft) {
+        // NSLog(@"Left Swipe");
+        NSMutableArray *destinationsReject = session.destinationsReject;
+        [destinationsReject addObject:dest];
+        session.destinationsReject = destinationsReject;
+    }
+    
+    Destination *newDest = [[Destination alloc] init];
+    newDest._id = @"2";
+    newDest.title = @"Curitiba";
+    session.destination = newDest;
+    
+    self.nameLabel.text = newDest.title;
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,22 +106,24 @@
 }
 
 - (IBAction)choose:(id)sender {
+    [self processSwipeInDirection: UISwipeGestureRecognizerDirectionRight];
 }
 
 - (IBAction)reject:(id)sender {
+    [self processSwipeInDirection: UISwipeGestureRecognizerDirectionLeft];
 }
 
 - (IBAction)showFriends:(id)sender {
 }
 
-- (IBAction)swipeView:(UISwipeGestureRecognizer*)swipe {
-    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
-        NSLog(@"Left Swipe");
-        
-    }
-    if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
-        NSLog(@"Right Swipe");
-    }
-}
+//- (IBAction)swipeView:(UISwipeGestureRecognizer*)swipe {
+//    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
+//        NSLog(@"Left Swipe");
+//        
+//    }
+//    if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
+//        NSLog(@"Right Swipe");
+//    }
+//}
 
 @end

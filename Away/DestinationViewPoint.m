@@ -8,6 +8,31 @@
 
 #import "DestinationViewPoint.h"
 
+@interface DestinationViewPoint () {
+    UIImage *image;
+    CGFloat *distance;
+}
+
+@end
+
 @implementation DestinationViewPoint
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
+- (id)initWithDictionary:(NSDictionary *)viewPointDataDictionary
+{
+    self = [self init];
+    if (self) {
+        //
+    }
+    return self;
+}
 
 @end

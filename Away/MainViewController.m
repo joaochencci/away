@@ -7,7 +7,7 @@
 //
 
 #import "MainViewController.h"
-#import "UserRepository.h"
+#import "Session.h"
 #import "Destination.h"
 
 @interface MainViewController ()
@@ -69,12 +69,12 @@
     [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.view addGestureRecognizer:swipeRight];
 
-    UserRepository *userRepo = [UserRepository sharedManager];
+    Session *session = [Session sharedSession];
     Destination *dest = [[Destination alloc] init];
-    dest.identifier = 1;
-    dest.name = @"Fortaleza";
-    userRepo.destination = dest;
-    self.nameLabel.text = dest.name;
+    dest._id = @"1";
+    dest.title = @"Fortaleza";
+    session.destination = dest;
+    self.nameLabel.text = dest.title;
 }
 
 
@@ -85,28 +85,28 @@
 }
 
 - (void)processSwipeInDirection: (UISwipeGestureRecognizerDirection) direction{
-    UserRepository *userRepo = [UserRepository sharedManager];
-    Destination *dest = userRepo.destination;
+    Session *session = [Session sharedSession];
+    Destination *dest = session.destination;
     
     if (direction == UISwipeGestureRecognizerDirectionRight) {
         // NSLog(@"Right Swipe");
-        NSMutableArray *destinationsChoose = userRepo.destinationsChoose;
+        NSMutableArray *destinationsChoose = session.destinationsChoose;
         [destinationsChoose addObject:dest];
-        userRepo.destinationsChoose = destinationsChoose;
+        session.destinationsChoose = destinationsChoose;
     }
     if (direction == UISwipeGestureRecognizerDirectionLeft) {
         // NSLog(@"Left Swipe");
-        NSMutableArray *destinationsReject = userRepo.destinationsReject;
+        NSMutableArray *destinationsReject = session.destinationsReject;
         [destinationsReject addObject:dest];
-        userRepo.destinationsReject = destinationsReject;
+        session.destinationsReject = destinationsReject;
     }
 
     Destination *newDest = [[Destination alloc] init];
-    newDest.identifier = 2;
-    newDest.name = @"Curitiba";
-    userRepo.destination = newDest;
+    newDest._id = @"2";
+    newDest.title = @"Curitiba";
+    session.destination = newDest;
     
-    self.nameLabel.text = newDest.name;
+    self.nameLabel.text = newDest.title;
 }
 
 - (IBAction)choose:(id)sender {

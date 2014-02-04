@@ -30,6 +30,25 @@
     [super viewDidLoad];
 
     self.navigationItem.title = @"Configurações";
+
+    FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"basic_info", @"email", @"user_likes"]];
+    
+    // Set this loginUIViewController to be the loginView button's delegate
+    loginView.delegate = self;
+    
+    // Align the button in the center horizontally
+    loginView.frame = CGRectOffset(loginView.frame, (self.view.center.x - (loginView.frame.size.width / 2)), 5);
+    
+    // Align the button in the center vertically
+    loginView.center = self.view.center;
+    
+    // Add the button to the view
+    [self.view addSubview:loginView];
+
+}
+
+- (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

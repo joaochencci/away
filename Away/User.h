@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+    
+@class Destination;
 
 @interface User : NSObject
+
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSMutableArray *likes;
+@property (nonatomic, strong) NSMutableArray *friends;
+@property (nonatomic, strong) NSString *token;
+
+- (id)initWithDictionary:(NSDictionary *)userDataDictionary;
+- (NSInteger)getNumberOfFriendsFromDestination:(Destination*) destination;
 
 @end

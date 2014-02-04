@@ -7,7 +7,7 @@
 //
 
 #import "FavoritesViewController.h"
-#import "UserRepository.h"
+#import "Session.h"
 #import "FavoriteTableViewCell.h"
 
 @interface FavoritesViewController ()
@@ -31,8 +31,6 @@
 
     self.navigationItem.title = @"Favoritos";
 
-//    UserRepository *userRepo = [UserRepository sharedManager];
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,8 +40,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    UserRepository *userRepo = [UserRepository sharedManager];
-    return [userRepo.destinationsChoose count];
+    Session *session = [Session sharedSession];
+    return [session.destinationsChoose count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -52,14 +50,26 @@
     if (cell == nil) {
         cell = [[FavoriteTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
     }
-    UserRepository *userRepo = [UserRepository sharedManager];
-    Destination *dest = [userRepo.destinationsChoose objectAtIndex:indexPath.row];
+    Session *session = [Session sharedSession];
+    Destination *dest = [session.destinationsChoose objectAtIndex:indexPath.row];
     
     // Coloca os valores da célula
+    UIImageView *imageView = (UIImageView*)[cell viewWithTag:101];
     UILabel *name = (UILabel *)[cell viewWithTag:102];
-    name.text = dest.name;
+    UILabel *numberOfFriends = (UILabel *)[cell viewWithTag:103];
+    imageView.image = [dest getFirstImage];
+    name.text = dest.title;
+    numberOfFriends.text = [NSString stringWithFormat:@"%d", [dest getNumberOfFriendsFromUser:session.user]];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Session *session = [Session sharedSession];
+    Destination *dest = [session.destinationsChoose objectAtIndex:indexPath.row];
+    session.destination = dest;
+    [self performSegueWithIdentifier:@"goToDetailsFromTable" sender:self];
 }
 
 @end
