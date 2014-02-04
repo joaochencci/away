@@ -35,7 +35,7 @@
 // For GET HTTP Requests pass a dictionary containing all parameters
 // to be passed via URL. Otherwise, pass nil.
 - (NSURL *)urlWithScheme:(NSString *)urlScheme
-                 baseURL:(NSString *)baseURL
+                 hostURL:(NSString *)hostURL
                      path:(NSString *)path
                    action:(NSString *)action
             andParameters:(NSDictionary *)parameters;

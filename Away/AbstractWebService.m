@@ -8,9 +8,34 @@
 
 #import "AbstractWebServicePrivate.h"
 
+#import "NSDictionary+URLArguments.h"
+
 @implementation AbstractWebService
 
+# pragma mark - Private Interface
 # pragma mark - URL construction methods
+- (NSURL *)urlWithScheme:(NSString *)urlScheme
+                 hostURL:(NSString *)hostURL
+                    path:(NSString *)path
+                  action:(NSString *)action
+           andParameters:(NSDictionary *)parameters
+{
+    // Acceped urlSchemes: http
+    //
+    NSMutableString *urlString = [NSMutableString stringWithFormat:@"%@://%@%@%@",
+                                  urlScheme, hostURL, path, action];
+    
+    if (parameters) {
+        [urlString appendString:[parameters stringForURLEscapedArguments]];
+    }
+    
+    NSURL *myURL = [NSURL URLWithString:urlString];
+    
+    NSLog(@"%@", myURL);
+    
+    return myURL;
+}
+
 
 # pragma mark - URL Request construction methods
 
