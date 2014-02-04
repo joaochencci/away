@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WebServiceAction : NSObject
+@interface AbstractWebService : NSObject
 
 // Defaults to 3.
 @property(nonatomic, readonly) NSInteger maxRetries;

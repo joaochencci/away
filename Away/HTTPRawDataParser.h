@@ -14,7 +14,7 @@ typedef enum {
     RawHTTPDataTypeJSON
 }RawHTTPDataType;
 
-@interface RawHTTPDataParser : NSObject
+@interface HTTPRawDataParser : NSObject
 
 + (HTTPResponseObject *)parseData:(NSData *)dataToParse forDataType:(RawHTTPDataType)dataType;
 

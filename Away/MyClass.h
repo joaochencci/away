@@ -14,4 +14,10 @@
 
 - (void)publicMethod;
 
+- (NSURL *)urlWithScheme:(NSString *)urlScheme
+                 baseURL:(NSString *)baseURL
+                    path:(NSString *)path
+                  action:(NSString *)action
+           andParameters:(NSDictionary *)parameters;
+
 @end

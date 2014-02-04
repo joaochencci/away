@@ -8,19 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RawHTTPDataParser.h"
+#import "HTTPRawDataParser.h"
 #import "HTTPResponseObject.h"
 
-@class WebServiceHTTPRequest;
+@class HTTPRequester;
 /*
  WebServiceHTTPRequest class encapsulates URL connection,
- HTTP errors, timeout and data parse handling.
+ HTTP errors and data parse handling.
  
  
  */
-@protocol WebServiceHTTPRequestDelegate <NSObject>
 
-- (void)requestDidFailWithError:(NSError *)error;
+@protocol HTTPRequesterDelegate <NSObject>
+
+- (void)requestDidFailWithError:(NSError *)error andResponseObject:(HTTPResponseObject *)responseObject;
 - (void)requestDidFinishWithResponseObject:(HTTPResponseObject *)responseObject;
 
 @optional
@@ -28,13 +29,13 @@
 
 @end
 
-@interface WebServiceHTTPRequest : NSObject
+@interface HTTPRequester : NSObject
 
 // Defaults to RawDataParserTypeJSON - only supported format so far.
 @property(nonatomic, readonly) RawHTTPDataType httpDataType;
 
 
-- (id)initWithDelegate:(id<WebServiceHTTPRequestDelegate>)delegate;
+- (id)initWithDelegate:(id<HTTPRequesterDelegate>)delegate;
 //TODO(mingatos): create inits to enable setting readonly properties.
 
 - (void)makeRequest:(NSURLRequest *)request;

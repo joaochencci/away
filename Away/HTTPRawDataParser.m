@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Marcelo Toledo. All rights reserved.
 //
 
-#import "RawHTTPDataParser.h"
+#import "HTTPRawDataParser.h"
 
-@interface RawHTTPDataParser () {
+@interface HTTPRawDataParser () {
     RawHTTPDataType _dataType;
 }
 
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation RawHTTPDataParser
+@implementation HTTPRawDataParser
 
 # pragma mark - Public
 
@@ -29,7 +29,7 @@
     
     switch (dataType) {
         case RawHTTPDataTypeJSON:
-            responseData = [RawHTTPDataParser jsonParser:dataToParse error:error];
+            responseData = [HTTPRawDataParser jsonParser:dataToParse error:error];
             break;
             
         default:

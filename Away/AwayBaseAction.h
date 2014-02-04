@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Marcelo Toledo. All rights reserved.
 //
 
-#import "WebServiceAction.h"
+#import "AbstractWebService.h"
 
-@interface AwayBaseAction : WebServiceAction
+@interface AwayBaseAction : AbstractWebService
 
 @end

@@ -6,18 +6,22 @@
 //  Copyright (c) 2014 Marcelo Toledo. All rights reserved.
 //
 
-#import "WebServiceHTTPRequest.h"
+#import "HTTPRequester.h"
 
-@interface WebServiceHTTPRequest ()
+@interface HTTPRequester () <NSURLConnectionDataDelegate, NSURLConnectionDelegate>
 
 // readwrite to enable setting properties from within class (during init).
 @property(nonatomic, readwrite) NSInteger maxRetries;
 @property(nonatomic, readwrite) NSTimeInterval requestTimeout;
 @property(nonatomic, readwrite) RawHTTPDataType httpDataType;
 
+
+
 @end
 
 
-@implementation WebServiceHTTPRequest
+@implementation HTTPRequester
+
+
 
 @end

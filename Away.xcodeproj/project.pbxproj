@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		1A965763189981CF00DB1D32 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965762189981CF00DB1D32 /* User.m */; };
 		1A965766189981DB00DB1D32 /* Destination.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965765189981DB00DB1D32 /* Destination.m */; };
-		1AD9C3AB189B60A300CA6210 /* WebServiceHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3AA189B60A300CA6210 /* WebServiceHTTPRequest.m */; };
-		1AD9C3AE189B6E2900CA6210 /* RawHTTPDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3AD189B6E2900CA6210 /* RawHTTPDataParser.m */; };
-		1AD9C3B2189B74F800CA6210 /* WebServiceAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3B1189B74F800CA6210 /* WebServiceAction.m */; };
+		1AD9C3AB189B60A300CA6210 /* HTTPRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3AA189B60A300CA6210 /* HTTPRequester.m */; };
+		1AD9C3AE189B6E2900CA6210 /* HTTPRawDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3AD189B6E2900CA6210 /* HTTPRawDataParser.m */; };
+		1AD9C3B2189B74F800CA6210 /* AbstractWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3B1189B74F800CA6210 /* AbstractWebService.m */; };
 		1AD9C3B9189B791F00CA6210 /* GetUserAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3B8189B791F00CA6210 /* GetUserAction.m */; };
 		1AD9C3BC189B7A7500CA6210 /* HTTPResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3BB189B7A7500CA6210 /* HTTPResponseObject.m */; };
 		1AD9C3BF189B84B400CA6210 /* AwayBaseAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3BE189B84B400CA6210 /* AwayBaseAction.m */; };
@@ -50,16 +50,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A82FD3318A10CCF001FBE8F /* AbstractWebServicePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractWebServicePrivate.h; sourceTree = "<group>"; };
 		1A965761189981CF00DB1D32 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		1A965762189981CF00DB1D32 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		1A965764189981DB00DB1D32 /* Destination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Destination.h; sourceTree = "<group>"; };
 		1A965765189981DB00DB1D32 /* Destination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Destination.m; sourceTree = "<group>"; };
-		1AD9C3A9189B60A300CA6210 /* WebServiceHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceHTTPRequest.h; sourceTree = "<group>"; };
-		1AD9C3AA189B60A300CA6210 /* WebServiceHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceHTTPRequest.m; sourceTree = "<group>"; };
-		1AD9C3AC189B6E2900CA6210 /* RawHTTPDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RawHTTPDataParser.h; sourceTree = "<group>"; };
-		1AD9C3AD189B6E2900CA6210 /* RawHTTPDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RawHTTPDataParser.m; sourceTree = "<group>"; };
-		1AD9C3B0189B74F800CA6210 /* WebServiceAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebServiceAction.h; sourceTree = "<group>"; };
-		1AD9C3B1189B74F800CA6210 /* WebServiceAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebServiceAction.m; sourceTree = "<group>"; };
+		1AD9C3A9189B60A300CA6210 /* HTTPRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequester.h; sourceTree = "<group>"; };
+		1AD9C3AA189B60A300CA6210 /* HTTPRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequester.m; sourceTree = "<group>"; };
+		1AD9C3AC189B6E2900CA6210 /* HTTPRawDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRawDataParser.h; sourceTree = "<group>"; };
+		1AD9C3AD189B6E2900CA6210 /* HTTPRawDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRawDataParser.m; sourceTree = "<group>"; };
+		1AD9C3B0189B74F800CA6210 /* AbstractWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractWebService.h; sourceTree = "<group>"; };
+		1AD9C3B1189B74F800CA6210 /* AbstractWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractWebService.m; sourceTree = "<group>"; };
 		1AD9C3B7189B791F00CA6210 /* GetUserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserAction.h; sourceTree = "<group>"; };
 		1AD9C3B8189B791F00CA6210 /* GetUserAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserAction.m; sourceTree = "<group>"; };
 		1AD9C3BA189B7A7500CA6210 /* HTTPResponseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPResponseObject.h; sourceTree = "<group>"; };
@@ -189,14 +190,15 @@
 		1AD9C3AF189B73F200CA6210 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				1AD9C3A9189B60A300CA6210 /* WebServiceHTTPRequest.h */,
-				1AD9C3AA189B60A300CA6210 /* WebServiceHTTPRequest.m */,
-				1AD9C3AC189B6E2900CA6210 /* RawHTTPDataParser.h */,
-				1AD9C3AD189B6E2900CA6210 /* RawHTTPDataParser.m */,
-				1AD9C3B0189B74F800CA6210 /* WebServiceAction.h */,
-				1AD9C3B1189B74F800CA6210 /* WebServiceAction.m */,
+				1AD9C3A9189B60A300CA6210 /* HTTPRequester.h */,
+				1AD9C3AA189B60A300CA6210 /* HTTPRequester.m */,
+				1AD9C3AC189B6E2900CA6210 /* HTTPRawDataParser.h */,
+				1AD9C3AD189B6E2900CA6210 /* HTTPRawDataParser.m */,
+				1AD9C3B0189B74F800CA6210 /* AbstractWebService.h */,
+				1AD9C3B1189B74F800CA6210 /* AbstractWebService.m */,
 				1AD9C3BA189B7A7500CA6210 /* HTTPResponseObject.h */,
 				1AD9C3BB189B7A7500CA6210 /* HTTPResponseObject.m */,
+				1A82FD3318A10CCF001FBE8F /* AbstractWebServicePrivate.h */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -389,10 +391,10 @@
 				1AD9C3D8189F24D600CA6210 /* MySubclass.m in Sources */,
 				1AD9C3B9189B791F00CA6210 /* GetUserAction.m in Sources */,
 				35A96E701896B7CF00DC1300 /* MainViewController.m in Sources */,
-				1AD9C3AB189B60A300CA6210 /* WebServiceHTTPRequest.m in Sources */,
+				1AD9C3AB189B60A300CA6210 /* HTTPRequester.m in Sources */,
 				35A96E431896B10B00DC1300 /* LoginViewController.m in Sources */,
 				1AD9C3BF189B84B400CA6210 /* AwayBaseAction.m in Sources */,
-				1AD9C3AE189B6E2900CA6210 /* RawHTTPDataParser.m in Sources */,
+				1AD9C3AE189B6E2900CA6210 /* HTTPRawDataParser.m in Sources */,
 				35A96E791896B85000DC1300 /* SettingsViewController.m in Sources */,
 				1A965766189981DB00DB1D32 /* Destination.m in Sources */,
 				35A96E3D1896B10B00DC1300 /* AppDelegate.m in Sources */,
@@ -400,7 +402,7 @@
 				35A96E761896B83500DC1300 /* FavoritesViewController.m in Sources */,
 				1AD9C3C3189B855200CA6210 /* AwayWebService.m in Sources */,
 				1AD9C3D5189F24C700CA6210 /* MyClass.m in Sources */,
-				1AD9C3B2189B74F800CA6210 /* WebServiceAction.m in Sources */,
+				1AD9C3B2189B74F800CA6210 /* AbstractWebService.m in Sources */,
 				1AD9C3BC189B7A7500CA6210 /* HTTPResponseObject.m in Sources */,
 				35A96E731896B7EE00DC1300 /* DetailViewController.m in Sources */,
 			);

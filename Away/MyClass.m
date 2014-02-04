@@ -49,4 +49,13 @@
     NSLog(@"%d %d %d", _privateAtribute, self.privateProperty, self.publicInteger);
 }
 
+- (NSURL *)urlWithScheme:(NSString *)urlScheme
+                 baseURL:(NSString *)baseURL
+                    path:(NSString *)path
+                  action:(NSString *)action
+           andParameters:(NSDictionary *)parameters;
+{
+    return nil;
+}
+
 @end
