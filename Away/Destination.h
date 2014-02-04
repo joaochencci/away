@@ -15,13 +15,13 @@
 @property(strong, nonatomic) NSString *name;
 
 @property(nonatomic, strong, readonly) NSString *_id;
-@property(nonatomic, strong, readonly) NSString *title;
+@property(nonatomic, strong) NSString *title;
 @property(nonatomic, strong, readonly) NSString *description;
 
 @property(nonatomic) NSInteger basePrice;
 @property(nonatomic) NSInteger numberOfFriends;
 
-@property(nonatomic, strong, readonly) UIImage *firstImage;
+@property(nonatomic, strong) UIImage *firstImage;
 
 - (id)initWithDictionary:(NSDictionary *)destinationDataDictionary;
 

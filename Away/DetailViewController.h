@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import "Destination.h"
 
 @interface DetailViewController : UIViewController
+
+@property(nonatomic,strong) Destination *destination;
 
 @end

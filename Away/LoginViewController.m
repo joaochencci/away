@@ -8,9 +8,6 @@
 
 #import "LoginViewController.h"
 
-#define FACEBOOK_CLIENTE_ID @"1400255183561773"
-#define FACEBOOK_CLIENTE_SECRET @"1d9e6d4fdf6b385a9614f2094081c962"
-
 @interface LoginViewController ()
 
 @end

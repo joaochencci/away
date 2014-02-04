@@ -70,11 +70,12 @@
     [self.view addGestureRecognizer:swipeRight];
 
     UserRepository *userRepo = [UserRepository sharedManager];
-    Destination *dest = [[Destination alloc] init];
-    dest.identifier = 1;
-    dest.name = @"Fortaleza";
-    userRepo.destination = dest;
+    Destination *dest = [userRepo.destinations objectAtIndex:(userRepo.indexDestinations % 4)];
+
     self.nameLabel.text = dest.name;
+//    self.destinationImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"placeholder%d", (userRepo.indexDestinations % 4) + 1]];
+    self.destinationImageView.image = dest.firstImage;
+    self.numberFriendsLabel.text = [NSString stringWithFormat:@"%ld", (long)dest.numberOfFriends];
 }
 
 
@@ -86,27 +87,29 @@
 
 - (void)processSwipeInDirection: (UISwipeGestureRecognizerDirection) direction{
     UserRepository *userRepo = [UserRepository sharedManager];
-    Destination *dest = userRepo.destination;
+
+    Destination *dest = [userRepo.destinations objectAtIndex:(userRepo.indexDestinations % 4)];
     
     if (direction == UISwipeGestureRecognizerDirectionRight) {
-        // NSLog(@"Right Swipe");
+        NSLog(@"Right Swipe");
         NSMutableArray *destinationsChoose = userRepo.destinationsChoose;
         [destinationsChoose addObject:dest];
         userRepo.destinationsChoose = destinationsChoose;
     }
     if (direction == UISwipeGestureRecognizerDirectionLeft) {
-        // NSLog(@"Left Swipe");
+        NSLog(@"Left Swipe");
         NSMutableArray *destinationsReject = userRepo.destinationsReject;
         [destinationsReject addObject:dest];
         userRepo.destinationsReject = destinationsReject;
     }
-
-    Destination *newDest = [[Destination alloc] init];
-    newDest.identifier = 2;
-    newDest.name = @"Curitiba";
-    userRepo.destination = newDest;
+    
+    userRepo.indexDestinations++;
+    Destination *newDest = [userRepo.destinations objectAtIndex:(userRepo.indexDestinations % 4)];
     
     self.nameLabel.text = newDest.name;
+//    self.destinationImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"placeholder%d", (userRepo.indexDestinations % 4) + 1]];
+    self.destinationImageView.image = newDest.firstImage;
+    self.numberFriendsLabel.text = [NSString stringWithFormat:@"%ld", (long)dest.numberOfFriends];
 }
 
 - (IBAction)choose:(id)sender {

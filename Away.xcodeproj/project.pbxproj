@@ -13,9 +13,10 @@
 		1AD9C3CD189C645E00CA6210 /* NSMutableArray+FIFOQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3CC189C645E00CA6210 /* NSMutableArray+FIFOQueue.m */; };
 		1AD9C3CF189C69B200CA6210 /* FIFOQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3CE189C69B200CA6210 /* FIFOQueueTest.m */; };
 		1AD9C3D2189C92AC00CA6210 /* DestinationViewPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3D1189C92AC00CA6210 /* DestinationViewPoint.m */; };
-		356AC3C2189A77B9000EEBBD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */; };
+		356AC3C2189A77B9000EEBBD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		356AC3C5189BD7AD000EEBBD /* UserRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 356AC3C4189BD7AD000EEBBD /* UserRepository.m */; };
 		356AC3C8189C03B3000EEBBD /* FavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356AC3C7189C03B3000EEBBD /* FavoriteTableViewCell.m */; };
+		35828699189FF75E002DAB34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35828698189FF75E002DAB34 /* Images.xcassets */; };
 		35A96E2D1896B10B00DC1300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2C1896B10B00DC1300 /* Foundation.framework */; };
 		35A96E2F1896B10B00DC1300 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */; };
 		35A96E311896B10B00DC1300 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E301896B10B00DC1300 /* UIKit.framework */; };
@@ -24,7 +25,6 @@
 		35A96E3D1896B10B00DC1300 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E3C1896B10B00DC1300 /* AppDelegate.m */; };
 		35A96E401896B10B00DC1300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E3E1896B10B00DC1300 /* Main.storyboard */; };
 		35A96E431896B10B00DC1300 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E421896B10B00DC1300 /* LoginViewController.m */; };
-		35A96E451896B10B00DC1300 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E441896B10B00DC1300 /* Images.xcassets */; };
 		35A96E4C1896B10B00DC1300 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E4B1896B10B00DC1300 /* XCTest.framework */; };
 		35A96E4D1896B10B00DC1300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2C1896B10B00DC1300 /* Foundation.framework */; };
 		35A96E4E1896B10B00DC1300 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E301896B10B00DC1300 /* UIKit.framework */; };
@@ -63,6 +63,7 @@
 		356AC3C4189BD7AD000EEBBD /* UserRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRepository.m; sourceTree = "<group>"; };
 		356AC3C6189C03B3000EEBBD /* FavoriteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteTableViewCell.h; sourceTree = "<group>"; };
 		356AC3C7189C03B3000EEBBD /* FavoriteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteTableViewCell.m; sourceTree = "<group>"; };
+		35828698189FF75E002DAB34 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		35A96E291896B10B00DC1300 /* Away.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Away.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A96E2C1896B10B00DC1300 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -76,7 +77,6 @@
 		35A96E3F1896B10B00DC1300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35A96E411896B10B00DC1300 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		35A96E421896B10B00DC1300 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		35A96E441896B10B00DC1300 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		35A96E4A1896B10B00DC1300 /* AwayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35A96E4B1896B10B00DC1300 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		35A96E531896B10B00DC1300 /* AwayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AwayTests-Info.plist"; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 				35A96E3C1896B10B00DC1300 /* AppDelegate.m */,
 				1A3199131897E3B60080261C /* View */,
 				1A3199141897E3BB0080261C /* Controller */,
-				35A96E441896B10B00DC1300 /* Images.xcassets */,
+				35828698189FF75E002DAB34 /* Images.xcassets */,
 				35A96E331896B10B00DC1300 /* Supporting Files */,
 			);
 			path = Away;
@@ -322,7 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35A96E451896B10B00DC1300 /* Images.xcassets in Resources */,
+				35828699189FF75E002DAB34 /* Images.xcassets in Resources */,
 				35A96E371896B10B00DC1300 /* InfoPlist.strings in Resources */,
 				35A96E401896B10B00DC1300 /* Main.storyboard in Resources */,
 			);
@@ -487,7 +487,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
-					/Users/marcelotoledo/Desktop/Challenge2/away,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";
@@ -505,7 +504,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
-					/Users/marcelotoledo/Desktop/Challenge2/away,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";

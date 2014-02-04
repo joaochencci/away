@@ -9,6 +9,7 @@
 #import "FavoritesViewController.h"
 #import "UserRepository.h"
 #import "FavoriteTableViewCell.h"
+#import "DetailViewController.h"
 
 @interface FavoritesViewController ()
 
@@ -56,10 +57,23 @@
     Destination *dest = [userRepo.destinationsChoose objectAtIndex:indexPath.row];
     
     // Coloca os valores da célula
+    UIImageView *imageView = (UIImageView*)[cell viewWithTag:101];
     UILabel *name = (UILabel *)[cell viewWithTag:102];
+    UILabel *numberOfFriends = (UILabel *)[cell viewWithTag:103];
     name.text = dest.name;
+//    imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"placeholder%d", (indexPath.row % 4) + 1]];
+    imageView.image = dest.firstImage;
+    numberOfFriends.text = [NSString stringWithFormat:@"%ld", (long)dest.numberOfFriends];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UserRepository *userRepo = [UserRepository sharedManager];
+    Destination *dest = [userRepo.destinationsChoose objectAtIndex:indexPath.row];
+    userRepo.destination = dest;
+    [self performSegueWithIdentifier:@"goToDetailsFromTable" sender:self];
 }
 
 @end

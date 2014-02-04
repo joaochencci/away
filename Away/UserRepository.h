@@ -11,11 +11,15 @@
 
 @interface UserRepository : NSObject{
     Destination *destination;
+    NSUInteger indexDestinations;
+    NSMutableArray *destinations;
     NSMutableArray *destinationsChoose;
     NSMutableArray *destinationsReject;
 }
 
 @property (nonatomic, retain) Destination *destination;
+@property (nonatomic) NSUInteger indexDestinations;
+@property (nonatomic, retain) NSMutableArray *destinations;
 @property (nonatomic, retain) NSMutableArray *destinationsChoose;
 @property (nonatomic, retain) NSMutableArray *destinationsReject;
 
