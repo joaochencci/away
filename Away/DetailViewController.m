@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "DetailFriendCustomCell.h"
 #import "Session.h"
 
 @interface DetailViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -26,13 +27,17 @@
 
 @end
 
-@implementation DetailViewController
+@implementation DetailViewController {
+    NSOperationQueue *queue;
+}
 
 #pragma mark - UICollectionView
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 6;
+//    Session *session = [Session sharedSession];
+//    return [session.user getNumberOfFriendsFromDestination:session.destination];
+    return 3;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -42,7 +47,22 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [collectionView dequeueReusableCellWithReuseIdentifier:@"fbCell" forIndexPath:indexPath];
+    static NSString *cellIdentifier = @"fbCell";
+    DetailFriendCustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+
+    NSString *url = @"http://graph.facebook.com/#ID#/picture?type=square";
+    // TRAZER LISTA DE AMIGOS QUE CURTIRAM TAMBÉM ESSE DESTINO, PRA PEGAR O ID, PARA USAR NA IMAGEM.
+    url = [url stringByReplacingOccurrencesOfString:@"#ID#" withString:@"100001257114590"];
+
+    NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
+            cell.friendImageView.image = [UIImage imageWithData: imageData];
+            [[collectionView cellForItemAtIndexPath:indexPath] setBackgroundView:cell.friendImageView];
+        }];
+    }];
+    [queue addOperation:operation];
+    return cell;
 }
 
 # pragma mark
@@ -63,6 +83,7 @@
     self.navigationItem.title = @"Detalhes";
 
     [self.destinationImageView setUserInteractionEnabled:YES];
+    queue = [[NSOperationQueue alloc] init];
     
 //    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
 //    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];

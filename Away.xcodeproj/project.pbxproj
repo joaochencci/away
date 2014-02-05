@@ -13,6 +13,11 @@
 		1AD9C3CD189C645E00CA6210 /* NSMutableArray+FIFOQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3CC189C645E00CA6210 /* NSMutableArray+FIFOQueue.m */; };
 		1AD9C3CF189C69B200CA6210 /* FIFOQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3CE189C69B200CA6210 /* FIFOQueueTest.m */; };
 		1AD9C3D2189C92AC00CA6210 /* DestinationViewPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3D1189C92AC00CA6210 /* DestinationViewPoint.m */; };
+<<<<<<< Updated upstream
+=======
+		355FA24818A26B5300F903BF /* DetailFriendCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 355FA24718A26B5300F903BF /* DetailFriendCustomCell.m */; };
+		356AC3C2189A77B9000EEBBD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */; };
+>>>>>>> Stashed changes
 		356AC3C5189BD7AD000EEBBD /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 356AC3C4189BD7AD000EEBBD /* Session.m */; };
 		356AC3C8189C03B3000EEBBD /* FavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356AC3C7189C03B3000EEBBD /* FavoriteTableViewCell.m */; };
 		35A96E2D1896B10B00DC1300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2C1896B10B00DC1300 /* Foundation.framework */; };
@@ -58,6 +63,8 @@
 		1AD9C3CE189C69B200CA6210 /* FIFOQueueTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIFOQueueTest.m; sourceTree = "<group>"; };
 		1AD9C3D0189C92AC00CA6210 /* DestinationViewPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationViewPoint.h; sourceTree = "<group>"; };
 		1AD9C3D1189C92AC00CA6210 /* DestinationViewPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationViewPoint.m; sourceTree = "<group>"; };
+		355FA24618A26B5300F903BF /* DetailFriendCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailFriendCustomCell.h; sourceTree = "<group>"; };
+		355FA24718A26B5300F903BF /* DetailFriendCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailFriendCustomCell.m; sourceTree = "<group>"; };
 		356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		356AC3C3189BD7AD000EEBBD /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
 		356AC3C4189BD7AD000EEBBD /* Session.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Session.m; sourceTree = "<group>"; };
@@ -122,6 +129,8 @@
 			children = (
 				356AC3C6189C03B3000EEBBD /* FavoriteTableViewCell.h */,
 				356AC3C7189C03B3000EEBBD /* FavoriteTableViewCell.m */,
+				355FA24618A26B5300F903BF /* DetailFriendCustomCell.h */,
+				355FA24718A26B5300F903BF /* DetailFriendCustomCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -343,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355FA24818A26B5300F903BF /* DetailFriendCustomCell.m in Sources */,
 				1A965763189981CF00DB1D32 /* User.m in Sources */,
 				1AD9C3C6189C619200CA6210 /* DestinationPresenterManager.m in Sources */,
 				35A96E701896B7CF00DC1300 /* MainViewController.m in Sources */,

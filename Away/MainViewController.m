@@ -69,6 +69,12 @@
     [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.view addGestureRecognizer:swipeRight];
 
+//    CALayer *layer = self.destinationImageView.layer;
+//    layer.cornerRadius = 5.0;
+//    layer.borderColor = [[UIColor grayColor] CGColor];
+//    layer.borderWidth = 3;
+//    layer.frame = CGRectMake(-3, -3, CGRectGetWidth(self.destinationImageView.frame), CGRectGetHeight(self.destinationImageView.frame)+2);
+
     Session *session = [Session sharedSession];
     
     Destination *dest = [[Destination alloc] init];
