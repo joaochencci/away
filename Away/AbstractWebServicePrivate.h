@@ -7,7 +7,7 @@
 //
 
 #import "AbstractWebService.h"
-#import "HTTPRequester.h"
+#import "HTTPRequest.h"
 
 @interface AbstractWebService () <HTTPRequesterDelegate> {
     
@@ -26,14 +26,19 @@
     NSInteger _maxRequestTries; // 3
     NSInteger _tryCounter;
     
+    // TODO(mingatos): MutableDictionary tracking all request, connection and
+    // responses. When completed, remove from dict, this way can manage
+    // multiple requests and connections. Use handler objects to handle
+    // response
     NSURLRequest *_request;
+    NSURLConnection *_connection;
     BOOL _requestFired;
     
 }
 
 - (void)loadGETRequest;
 - (void)loadPOSTRequest;
-- (void)executeRequest:(NSURLRequest *)request;
+- (void)executeRequest:(NSURLRequest *)request withHandler;
 
 
 // For GET HTTP Requests pass a dictionary containing all parameters
