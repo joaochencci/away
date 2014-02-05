@@ -49,9 +49,9 @@
 {
     MyClass *myClass = [[MyClass alloc] init];
     
-    NSURL *url = [myClass urlWithScheme:@"http" baseURL:@"httpbin.org" path:@"/" action:@"get" andParameters:@{@"key1": @"value1"}];
+    NSURL *url = [myClass urlWithScheme:@"http" baseURL:@"httpbin.org" path:@"/" action:@"get" andParameters:@{@"key1": @"value1", @"key2": @"value2"}];
     
-    XCTAssertTrue(TRUE, @"");
+    XCTAssertTrue(YES, @"");
 }
 
 @end
