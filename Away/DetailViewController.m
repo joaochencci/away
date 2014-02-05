@@ -76,7 +76,7 @@
 
 - (void)processSwipeInDirection: (UISwipeGestureRecognizerDirection) direction{
     Session *session = [Session sharedSession];
-    Destination *dest = session.destination;
+    Destination *dest = session.currentDestination;
     
     if (direction == UISwipeGestureRecognizerDirectionRight) {
         // NSLog(@"Right Swipe");
@@ -94,7 +94,7 @@
     Destination *newDest = [[Destination alloc] init];
     newDest._id = @"2";
     newDest.title = @"Curitiba";
-    session.destination = newDest;
+    session.currentDestination = newDest;
     
     self.nameLabel.text = newDest.title;
 }

@@ -13,7 +13,6 @@
 		1AD9C3CD189C645E00CA6210 /* NSMutableArray+FIFOQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3CC189C645E00CA6210 /* NSMutableArray+FIFOQueue.m */; };
 		1AD9C3CF189C69B200CA6210 /* FIFOQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3CE189C69B200CA6210 /* FIFOQueueTest.m */; };
 		1AD9C3D2189C92AC00CA6210 /* DestinationViewPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3D1189C92AC00CA6210 /* DestinationViewPoint.m */; };
-		356AC3C2189A77B9000EEBBD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */; };
 		356AC3C5189BD7AD000EEBBD /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 356AC3C4189BD7AD000EEBBD /* Session.m */; };
 		356AC3C8189C03B3000EEBBD /* FavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356AC3C7189C03B3000EEBBD /* FavoriteTableViewCell.m */; };
 		35A96E2D1896B10B00DC1300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2C1896B10B00DC1300 /* Foundation.framework */; };
@@ -34,6 +33,7 @@
 		35A96E731896B7EE00DC1300 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E721896B7EE00DC1300 /* DetailViewController.m */; };
 		35A96E761896B83500DC1300 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E751896B83500DC1300 /* FavoritesViewController.m */; };
 		35A96E791896B85000DC1300 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E781896B85000DC1300 /* SettingsViewController.m */; };
+		4245744A18A258C400E557F1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				356AC3C2189A77B9000EEBBD /* FacebookSDK.framework in Frameworks */,
+				4245744A18A258C400E557F1 /* FacebookSDK.framework in Frameworks */,
 				35A96E2F1896B10B00DC1300 /* CoreGraphics.framework in Frameworks */,
 				35A96E311896B10B00DC1300 /* UIKit.framework in Frameworks */,
 				35A96E2D1896B10B00DC1300 /* Foundation.framework in Frameworks */,
@@ -487,6 +487,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
+					/Users/joaovictorchenccimarques/Documents/projects/away,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";
@@ -504,6 +505,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
+					/Users/joaovictorchenccimarques/Documents/projects/away,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";

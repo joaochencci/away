@@ -19,7 +19,9 @@
 }
 
 @property (nonatomic, retain) User *user;
-@property (nonatomic, retain) Destination *destination;
+@property (nonatomic, retain) Destination *currentDestination;
+@property (nonatomic, retain) NSMutableArray *destinations;
+
 @property (nonatomic, retain) NSMutableArray *destinationsChoose;
 @property (nonatomic, retain) NSMutableArray *destinationsReject;
 @property (nonatomic, retain) CLLocation *currentLocation;

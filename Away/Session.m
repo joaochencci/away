@@ -11,7 +11,9 @@
 @implementation Session
 
 @synthesize user;
-@synthesize destination;
+@synthesize currentDestination;
+@synthesize destinations;
+
 @synthesize destinationsChoose;
 @synthesize destinationsReject;
 @synthesize currentLocation;

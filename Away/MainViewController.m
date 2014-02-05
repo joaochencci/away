@@ -70,11 +70,23 @@
     [self.view addGestureRecognizer:swipeRight];
 
     Session *session = [Session sharedSession];
+    
     Destination *dest = [[Destination alloc] init];
     dest._id = @"1";
     dest.title = @"Fortaleza";
-    session.destination = dest;
+    session.currentDestination = dest;
     self.nameLabel.text = dest.title;
+
+
+// # request dos primeiros destinos # //
+    
+//    NSMutableArray *destinations = [[NSMutableArray alloc] init];
+//    destinations = HTTP REQUEST;
+    
+//    session.currentDestination = [destinations objectAtIndex:0];
+//    [destinations removeObjectAtIndex:0];
+//    session.destinations = destinations;
+    
 }
 
 
@@ -86,7 +98,7 @@
 
 - (void)processSwipeInDirection: (UISwipeGestureRecognizerDirection) direction{
     Session *session = [Session sharedSession];
-    Destination *dest = session.destination;
+    Destination *dest = session.currentDestination;
     
     if (direction == UISwipeGestureRecognizerDirectionRight) {
         // NSLog(@"Right Swipe");
@@ -104,9 +116,30 @@
     Destination *newDest = [[Destination alloc] init];
     newDest._id = @"2";
     newDest.title = @"Curitiba";
-    session.destination = newDest;
+    session.currentDestination = newDest;
     
     self.nameLabel.text = newDest.title;
+}
+
+- (void) selectNextDestination {
+    Session *session = [Session sharedSession];
+    NSMutableArray *destinations = session.destinations;
+    
+    session.currentDestination = [destinations objectAtIndex:0];
+    [destinations removeObjectAtIndex:0];
+    
+//    Destination *newDestination = HTTP REQUEST ;
+    
+//    [destinations addObject: newDestination];
+    
+    session.destinations = destinations;
+}
+
+- (void) populateView {
+    Session *session = [Session sharedSession];
+    Destination *destination = session.currentDestination;
+    
+    self.nameLabel.text = destination.title;
 }
 
 - (IBAction)choose:(id)sender {
