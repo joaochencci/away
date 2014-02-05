@@ -17,6 +17,11 @@
 @property (nonatomic, strong) NSMutableArray *friends;
 @property (nonatomic, strong) NSString *token;
 
+@property (nonatomic, strong) NSNumber *maxDistance;
+@property (nonatomic, strong) NSNumber *maxValue;
+@property (nonatomic, strong) NSMutableArray *location; // [0] = LAT  |  [1] = LNG
+
+
 - (id)initWithDictionary:(NSDictionary *)userDataDictionary;
 - (NSInteger)getNumberOfFriendsFromDestination:(Destination*) destination;
 
