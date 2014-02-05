@@ -14,18 +14,29 @@
 - (NSString *)stringForURLEscapedArguments
 {
     // Transforms a dictionary of http arguments into a string
-    // joined by ? and =.
+    // joined by ?, & and =.
     // Returns empty string "" in case of empty dictionary.
     
     // TODO(mingatos): check if all keys are string.
     
+    BOOL isEmpty = ([self count] == 0);
+    
     NSMutableString *getArgumentsString = [NSMutableString stringWithFormat:@""];
     
-    for (NSString *key in self) {
-        NSString *value = [self objectForKey:key];
-        [getArgumentsString appendString:[NSString stringWithFormat:@"&%@=%@",
-                                          [key stringByEscapingForURLArgument],
-                                          [value stringByEscapingForURLArgument]]];
+    if (!isEmpty) {
+        
+        [getArgumentsString appendString:@"?"];
+        
+        NSMutableArray *arguments = [[NSMutableArray alloc] init];
+        
+        for (NSString *key in self) {
+            NSString *value = [self objectForKey:key];
+            [arguments addObject:[NSString stringWithFormat:@"%@=%@",
+                                  [key stringByEscapingForURLArgument],
+                                  [value stringByEscapingForURLArgument]]];
+        }
+        
+        [getArgumentsString appendString:[arguments componentsJoinedByString:@"&"]];
     }
     
     return getArgumentsString;

@@ -7,7 +7,7 @@
 //
 
 #import "AbstractWebService.h"
-#import "HTTPRequester.h"
+#import "HTTPRequest.h"
 
 @interface AbstractWebService () <HTTPRequesterDelegate> {
     
@@ -23,22 +23,30 @@
     NSString *_userAgent; // away-app-ios
     NSString *_contentType; // application/json
     
-    NSInteger maxRequestTries; // 3
-    NSInteger tryCounter;
+    NSInteger _maxRequestTries; // 3
+    NSInteger _tryCounter;
+    
+    // TODO(mingatos): MutableDictionary tracking all request, connection and
+    // responses. When completed, remove from dict, this way can manage
+    // multiple requests and connections. Use handler objects to handle
+    // response
+    NSURLRequest *_request;
+    NSURLConnection *_connection;
+    BOOL _requestFired;
     
 }
 
-- (void)executeRequest:(NSURLRequest *)request;
-- (void)executeGETRequest:(NSURLRequest *)getRequest;
-- (void)executePOSTRequest:(NSURLRequest *)postRequest;
+- (void)loadGETRequest;
+- (void)loadPOSTRequest;
+- (void)executeRequest:(NSURLRequest *)request withHandler;
 
 // For GET HTTP Requests pass a dictionary containing all parameters
 // to be passed via URL. Otherwise, pass nil.
-- (NSURL *)urlWithScheme:(NSString *)urlScheme
-                 hostURL:(NSString *)hostURL
-                     path:(NSString *)path
-                   action:(NSString *)action
-            andParameters:(NSDictionary *)parameters;
+- (NSString *)urlStringWithScheme:(NSString *)urlScheme
+                          hostURL:(NSString *)hostURL
+                             path:(NSString *)path
+                           action:(NSString *)action
+                    andParameters:(NSDictionary *)parameters;
 
 // HTTPRequesterDelegate - To be implemented by subclass.
 - (void)requestDidFailWithError:(NSError *)error andResponseObject:(HTTPResponseObject *)responseObject;

@@ -15,5 +15,8 @@
 // Defaults to  20 seconds.
 @property(nonatomic, readonly) NSTimeInterval requestTimeout;
 
++ (AbstractWebService *)sharedWebService;
+//- (void)setWebServiceUrl,scheme...
+
 
 @end

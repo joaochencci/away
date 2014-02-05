@@ -9,7 +9,6 @@
 #import "AwayWebService.h"
 
 // Importing Actions
-#import "GetUserAction.h"
 
 @interface AwayWebService ()
 
