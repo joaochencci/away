@@ -59,7 +59,7 @@
     UILabel *numberOfFriends = (UILabel *)[cell viewWithTag:103];
     imageView.image = [dest getFirstImage];
     name.text = dest.title;
-    numberOfFriends.text = [NSString stringWithFormat:@"%d", [dest getNumberOfFriendsFromUser:session.user]];
+    numberOfFriends.text = [NSString stringWithFormat:@"%ld", (long)[dest getNumberOfFriendsFromUser:session.user]];
     
     return cell;
 }

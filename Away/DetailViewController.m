@@ -28,7 +28,7 @@
 @end
 
 @implementation DetailViewController {
-    NSOperationQueue *queue;
+//    NSOperationQueue *queue;
 }
 
 #pragma mark - UICollectionView
@@ -54,14 +54,14 @@
     // TRAZER LISTA DE AMIGOS QUE CURTIRAM TAMBÉM ESSE DESTINO, PRA PEGAR O ID, PARA USAR NA IMAGEM.
     url = [url stringByReplacingOccurrencesOfString:@"#ID#" withString:@"100001257114590"];
 
-    NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//    NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
+//        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
             cell.friendImageView.image = [UIImage imageWithData: imageData];
-            [[collectionView cellForItemAtIndexPath:indexPath] setBackgroundView:cell.friendImageView];
-        }];
-    }];
-    [queue addOperation:operation];
+//            [[collectionView cellForItemAtIndexPath:indexPath] setBackgroundView:cell.friendImageView];
+//        }];
+//    }];
+//    [queue addOperation:operation];
     return cell;
 }
 
@@ -83,7 +83,7 @@
     self.navigationItem.title = @"Detalhes";
 
     [self.destinationImageView setUserInteractionEnabled:YES];
-    queue = [[NSOperationQueue alloc] init];
+//    queue = [[NSOperationQueue alloc] init];
     
 //    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
 //    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
