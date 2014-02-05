@@ -23,22 +23,26 @@
     NSString *_userAgent; // away-app-ios
     NSString *_contentType; // application/json
     
-    NSInteger maxRequestTries; // 3
-    NSInteger tryCounter;
+    NSInteger _maxRequestTries; // 3
+    NSInteger _tryCounter;
+    
+    NSURLRequest *_request;
+    BOOL _requestFired;
     
 }
 
+- (void)loadGETRequest;
+- (void)loadPOSTRequest;
 - (void)executeRequest:(NSURLRequest *)request;
-- (void)executeGETRequest:(NSURLRequest *)getRequest;
-- (void)executePOSTRequest:(NSURLRequest *)postRequest;
+
 
 // For GET HTTP Requests pass a dictionary containing all parameters
 // to be passed via URL. Otherwise, pass nil.
-- (NSURL *)urlWithScheme:(NSString *)urlScheme
-                 baseURL:(NSString *)baseURL
-                     path:(NSString *)path
-                   action:(NSString *)action
-            andParameters:(NSDictionary *)parameters;
+- (NSString *)urlStringWithScheme:(NSString *)urlScheme
+                          hostURL:(NSString *)hostURL
+                             path:(NSString *)path
+                           action:(NSString *)action
+                    andParameters:(NSDictionary *)parameters;
 
 // HTTPRequesterDelegate - To be implemented by subclass.
 - (void)requestDidFailWithError:(NSError *)error andResponseObject:(HTTPResponseObject *)responseObject;
