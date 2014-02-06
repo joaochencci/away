@@ -156,7 +156,7 @@
                                 contentType:@"application/json"
                                     timeout:TIMEOUT
                                  maxRetries:MAXTRIES];
-    [_testWebService loadGETRequest];
+    [_testWebService loadGETRequestWithParameters:_requestParams];
     
     [_testWebService executeWithHandler:self];
     
