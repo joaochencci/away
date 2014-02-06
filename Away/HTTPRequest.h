@@ -36,7 +36,7 @@
 
 - (id)initWithRequest:(NSURLRequest *)request andDelegate:(id<HTTPRequestDelegate>)delegate;
 
-- (void)makeRequestParsingData:(RawHTTPDataType)httpDataType asynch:(BOOL)asynch;
+- (void)executeRequestParsingData:(RawHTTPDataType)httpDataType asynch:(BOOL)asynch;
 - (void)retryRequest;
 
 @end

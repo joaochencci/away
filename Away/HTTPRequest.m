@@ -59,7 +59,7 @@
 
 # pragma mark - NSURLRequest execution
 
-- (void)makeRequestParsingData:(RawHTTPDataType)httpDataType asynch:(BOOL)asynch
+- (void)executeRequestParsingData:(RawHTTPDataType)httpDataType asynch:(BOOL)asynch
 {
     //
     
@@ -112,7 +112,7 @@
 {
     // The request is complete and data has been received
     // You can parse the stuff in your instance variable now
-    if (ASYNCHPARSE) {
+    if (_asynchParse) {
         [self parseDataAsynch];
     } else {
         [self parseDataSynch];
