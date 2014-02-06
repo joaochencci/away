@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "User.h"
+#import "AbstractWebServicePrivate.h"
 
-@interface AwayWebService : NSObject
+@interface AwayWebService : AbstractWebService
 
 // Returns a user for a given facebook token.
-- (User *)getUserForFacebookToken:(NSString *)fbToken;
+- (void)getUserForFacebookToken:(NSString *)fbToken withHandler:(id<HTTPRequestDelegate>)handler;
 
 @end

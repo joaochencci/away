@@ -126,8 +126,9 @@ static AbstractWebService *_webService = nil;
 
 # pragma mark - URL Request construction methods
 
-- (void)loadGETRequest
+- (void)loadGETRequestWithParameters:(NSDictionary *)parameters
 {
+    _requestParams = parameters;
     NSString *urlString = [self urlStringWithScheme:_urlScheme
                                             hostURL:_hostURL
                                                path:_path

@@ -52,7 +52,7 @@
                        timeout:(NSTimeInterval)timeout
                     maxRetries:(NSInteger)maxRequestTries;
 
-- (void)loadGETRequest;
+- (void)loadGETRequestWithParameters:(NSDictionary *)parametesrs;
 - (void)loadPOSTRequest;
 - (void)executeWithHandler:(id<HTTPRequestDelegate>)handler;
 - (void)executeRequest:(NSURLRequest *)request withHandler:(id<HTTPRequestDelegate>)handler;
