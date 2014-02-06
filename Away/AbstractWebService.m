@@ -10,6 +10,8 @@
 
 #import "NSDictionary+URLArguments.h"
 
+#define DEFAULTTIMEOUT 15
+
 @implementation AbstractWebService
 
 #pragma mark - Singleton
@@ -34,7 +36,6 @@ static AbstractWebService *_webService = nil;
 -(id)init
 {
     self = [super init];
-    
     if (self){
         _urlScheme = nil;
         _hostURL = nil;
@@ -46,6 +47,7 @@ static AbstractWebService *_webService = nil;
         _userAgent = nil;
         _contentType = nil;
         
+        _timeout = DEFAULTTIMEOUT;
         _maxRequestTries = 0;
         _tryCounter = 0;
         
@@ -56,6 +58,35 @@ static AbstractWebService *_webService = nil;
     return self;
 }
 
+# pragma mark - Configuring WebService
+
+- (void)configWebServiceScheme:(NSString *)urlScheme
+                          host:(NSString *)hostURL
+                          path:(NSString *)path
+                        action:(NSString *)action
+                    parameters:(NSDictionary *)params
+                        method:(NSString *)requestMethod
+                     userAgent:(NSString *)userAgent
+                   contentType:(NSString *)contentType
+                       timeout:(NSTimeInterval)timeout
+                    maxRetries:(NSInteger)maxRequestTries
+{
+    //
+    _urlScheme = urlScheme;
+    _hostURL = hostURL;
+    _path = path;
+    _action = action;
+    _requestParams = params;
+    _requestMethod = requestMethod;
+    _userAgent = userAgent;
+    if (timeout) {
+        _timeout = timeout;
+    }
+    if (maxRequestTries) {
+        _maxRequestTries = maxRequestTries;
+    }
+}
+
 # pragma mark - URL construction methods
 
 - (NSString *)urlStringWithScheme:(NSString *)urlScheme
@@ -64,6 +95,19 @@ static AbstractWebService *_webService = nil;
                         action:(NSString *)action
                  andParameters:(NSDictionary *)parameters
 {
+    if (!urlScheme) {
+        urlScheme = @"http";
+    }
+    
+    if (!hostURL) {
+        NSLog(@"No Host url for url string construction");
+        //throw
+    }
+    
+    if (!path) {
+        path = @"/";
+    }
+    
     //
     if (!action) {
         action = @"";
@@ -90,6 +134,7 @@ static AbstractWebService *_webService = nil;
                                              action:_action
                                       andParameters:_requestParams];
     NSURL *getURL = [NSURL URLWithString:urlString];
+    _tryCounter = 1;
     _request = [NSMutableURLRequest requestWithURL:getURL];
     
 }
@@ -101,6 +146,7 @@ static AbstractWebService *_webService = nil;
                                              action:_action
                                       andParameters:nil];
     NSURL *postURL = [NSURL URLWithString:urlString];
+    _tryCounter = 1;
     _request = [NSMutableURLRequest requestWithURL:postURL];
     
     // TODO(mingatos): finish loading Post Request
@@ -108,10 +154,15 @@ static AbstractWebService *_webService = nil;
 
 # pragma mark - URL Request requisition
 
+- (void)executeWithHandler:(id<HTTPRequestDelegate>)handler
+{
+    _httpRequest = [[HTTPRequest alloc] initWithRequest:_request andDelegate:handler];
+    [_httpRequest executeRequestParsingData:RawHTTPDataTypeJSON asynch:YES];
+}
+
 - (void)executeRequest:(NSURLRequest *)request withHandler:(id<HTTPRequestDelegate>)handler
 {
     //
-    
     
     _httpRequest = [[HTTPRequest alloc] initWithRequest:_request andDelegate:handler];
 }
