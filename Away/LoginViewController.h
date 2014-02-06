@@ -12,6 +12,4 @@
 
 @interface LoginViewController : UIViewController <FBLoginViewDelegate>
 
-//- (void)authorize:(NSArray *)permissions delegate:(id<FBSessionDelegate>)delegate;
-
 @end
