@@ -54,23 +54,41 @@
                  baseURL:(NSString *)baseURL
                     path:(NSString *)path
                   action:(NSString *)action
-           andParameters:(NSDictionary *)parameters;
+           andParameters:(NSDictionary *)parameters
 {
     
-    NSMutableString *urlString = [NSMutableString stringWithFormat:@"%@://%@%@%@",
-                           urlScheme, baseURL, path, action];
-    
-    if (parameters) {
-        [urlString appendString:[parameters stringForURLEscapedArguments]];
-    }
-    
-    //NSString *escapedURLString = [urlString stringByEscapingForURLArgument];
+    NSString *urlString = [self urlStringWithScheme:urlScheme
+                                            baseURL:baseURL
+                                               path:path
+                                             action:action
+                                      andParameters:parameters];
     
     NSURL *myURL = [NSURL URLWithString:urlString];
     
     NSLog(@"%@", myURL);
     
     return myURL;
+}
+
+- (NSString *)urlStringWithScheme:(NSString *)urlScheme
+                       baseURL:(NSString *)baseURL
+                          path:(NSString *)path
+                        action:(NSString *)action
+                 andParameters:(NSDictionary *)parameters
+{
+    
+    if (!action) {
+        action = @"";
+    }
+    
+    NSMutableString *urlString = [NSMutableString stringWithFormat:@"%@://%@%@%@",
+                                  urlScheme, baseURL, path, action];
+    
+    if (parameters) {
+        [urlString appendString:[parameters stringForURLEscapedArguments]];
+    }
+    
+    return urlString;
 }
 
 @end

@@ -37,7 +37,7 @@ static AbstractWebService *_webService = nil;
     
     if (self){
         _urlScheme = nil;
-        _baseURL = nil;
+        _hostURL = nil;
         _path = nil;
         
         _requestParams = nil;
@@ -56,31 +56,7 @@ static AbstractWebService *_webService = nil;
     return self;
 }
 
-//- (void)setupScheme:hostURL:path...
-
 # pragma mark - URL construction methods
-- (NSURL *)urlWithScheme:(NSString *)urlScheme
-                 hostURL:(NSString *)hostURL
-                    path:(NSString *)path
-                  action:(NSString *)action
-           andParameters:(NSDictionary *)parameters
-{
-    // Acceped urlSchemes: http
-    //
-    NSMutableString *urlString = [NSMutableString stringWithFormat:@"%@://%@%@%@",
-                                  urlScheme, hostURL, path, action];
-    
-    if (parameters) {
-        [urlString appendString:[parameters stringForURLEscapedArguments]];
-    }
-    
-    NSURL *myURL = [NSURL URLWithString:urlString];
-    
-    NSLog(@"%@", myURL);
-    
-    return myURL;
-}
-
 
 - (NSString *)urlStringWithScheme:(NSString *)urlScheme
                        hostURL:(NSString *)hostURL
@@ -88,6 +64,11 @@ static AbstractWebService *_webService = nil;
                         action:(NSString *)action
                  andParameters:(NSDictionary *)parameters
 {
+    //
+    if (!action) {
+        action = @"";
+    }
+    
     NSMutableString *urlString = [NSMutableString stringWithFormat:@"%@://%@%@%@",
                                   urlScheme, hostURL, path, action];
     
@@ -103,27 +84,43 @@ static AbstractWebService *_webService = nil;
 
 - (void)loadGETRequest
 {
+    NSString *urlString = [self urlStringWithScheme:_urlScheme
+                                            hostURL:_hostURL
+                                               path:_path
+                                             action:_action
+                                      andParameters:_requestParams];
+    NSURL *getURL = [NSURL URLWithString:urlString];
+    _request = [NSMutableURLRequest requestWithURL:getURL];
     
 }
 - (void)loadPOSTRequest
 {
+    NSString *urlString = [self urlStringWithScheme:_urlScheme
+                                            hostURL:_hostURL
+                                               path:_path
+                                             action:_action
+                                      andParameters:nil];
+    NSURL *postURL = [NSURL URLWithString:urlString];
+    _request = [NSMutableURLRequest requestWithURL:postURL];
     
+    // TODO(mingatos): finish loading Post Request
 }
 
 # pragma mark - URL Request requisition
 
-//- (void)executeRequest:(NSURLRequest *)request withDelegate:
-//{
-//    //
-//    //_connection = [NSURLConnection connectionWithRequest:request delegate:(id<NS>)]
-//    
-//}
+- (void)executeRequest:(NSURLRequest *)request withHandler:(id<HTTPRequestDelegate>)handler
+{
+    //
+    
+    
+    _httpRequest = [[HTTPRequest alloc] initWithRequest:_request andDelegate:handler];
+}
 
 
 # pragma mark - Abstract methods
 # pragma mark - HTTPRequesterDelegate methods
 // Must be implemented in subclass.
-- (void)requestDidFailWithError:(NSError *)error
+- (void)request:(HTTPRequest *)request didFailWithError:(NSError *)error
 {
     //
     @throw [NSException exceptionWithName:NSInternalInconsistencyException
@@ -132,7 +129,7 @@ static AbstractWebService *_webService = nil;
     
 }
 
-- (void)requestDidFinishWithResponseObject:(HTTPResponseObject *)responseObject
+- (void)request:(HTTPRequest *)request didFinishWithResponseObject:(HTTPResponseObject *)responseObject
 {
     //
     @throw [NSException exceptionWithName:NSInternalInconsistencyException

@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+#import "HTTPResponseObject.h"
+
+@protocol WebServiceResponseHandler <NSObject>
+
+- (void)handleResponse:(HTTPResponseObject *)response;
+
+@end
+
+
 @interface AbstractWebService : NSObject
 
 // Defaults to 3.

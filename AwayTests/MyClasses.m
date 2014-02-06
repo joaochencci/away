@@ -45,13 +45,22 @@
     XCTAssertTrue([subclass returnPrivateProperty] == 2, @" ");
 }
 
-- (void)testURL
+- (void)testGETURL
 {
     MyClass *myClass = [[MyClass alloc] init];
     
-    NSURL *url = [myClass urlWithScheme:@"http" baseURL:@"httpbin.org" path:@"/" action:@"get" andParameters:@{@"key1": @"value1", @"key2": @"value2"}];
+    NSString *url = [myClass urlStringWithScheme:@"http" baseURL:@"httpbin.org" path:@"/" action:@"get" andParameters:@{@"key1": @"value1", @"key2": @"value2"}];
     
-    XCTAssertTrue(YES, @"");
+    XCTAssertEqualObjects(url, @"http://httpbin.org/get?key2=value2&key1=value1", @"");
+}
+
+- (void)testPOSTURL
+{
+    MyClass *myClass = [[MyClass alloc] init];
+    
+    NSString *url = [myClass urlStringWithScheme:@"http" baseURL:@"httpbin.org" path:@"/" action:nil andParameters:@{}];
+    
+    XCTAssertEqualObjects(url, @"http://httpbin.org/", @"");
 }
 
 @end

@@ -12,7 +12,7 @@
 @interface AbstractWebService () <HTTPRequestDelegate> {
     
     NSString *_urlScheme; // http
-    NSString *_baseURL; // @"http://www.google.com"
+    NSString *_hostURL; // @"http://www.google.com"
     NSString *_path; // @"/away/api"
     NSString *_action; // @"login";
     
@@ -30,6 +30,10 @@
     // responses. When completed, remove from dict, this way can manage
     // multiple requests and connections. Use handler objects to handle
     // response
+    
+    // Array receiveing requests, when one request is fired, go through array
+    // firing others in line
+    HTTPRequest *_httpRequest;
     NSURLRequest *_request;
     NSURLConnection *_connection;
     BOOL _requestFired;
@@ -38,7 +42,7 @@
 
 - (void)loadGETRequest;
 - (void)loadPOSTRequest;
-//- (void)executeRequest:(NSURLRequest *)request withHandler;
+- (void)executeRequest:(NSURLRequest *)request withDelegate:(id<HTTPRequestDelegate>)handler;
 
 // For GET HTTP Requests pass a dictionary containing all parameters
 // to be passed via URL. Otherwise, pass nil.
@@ -49,8 +53,8 @@
                     andParameters:(NSDictionary *)parameters;
 
 // HTTPRequesterDelegate - To be implemented by subclass.
-- (void)requestDidFailWithError:(NSError *)error;
-- (void)requestDidFinishWithResponseObject:(HTTPResponseObject *)responseObject;
+- (void)request:(HTTPRequest *)request didFailWithError:(NSError *)error;
+- (void)request:(HTTPRequest *)request didFinishWithResponseObject:(HTTPResponseObject *)responseObject;
 
 
 @end

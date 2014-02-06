@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A15F18A18A2BACB005238BF /* HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F18918A2BACB005238BF /* HTTPRequest.m */; };
+		1A15F18C18A3CC81005238BF /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A15F18B18A3CC81005238BF /* WebService.m */; };
 		1A82FD3A18A154FF001FBE8F /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A82FD3618A154FF001FBE8F /* UIImage+ImageEffects.m */; };
 		1A82FD3F18A158CC001FBE8F /* NSString+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A82FD3E18A158CC001FBE8F /* NSString+URLArguments.m */; };
 		1A82FD4218A16734001FBE8F /* NSDictionary+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A82FD4118A16734001FBE8F /* NSDictionary+URLArguments.m */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		1A15F18818A2BACB005238BF /* HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRequest.h; sourceTree = "<group>"; };
 		1A15F18918A2BACB005238BF /* HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequest.m; sourceTree = "<group>"; };
+		1A15F18B18A3CC81005238BF /* WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebService.m; sourceTree = "<group>"; };
 		1A82FD3318A10CCF001FBE8F /* AbstractWebServicePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractWebServicePrivate.h; sourceTree = "<group>"; };
 		1A82FD3518A154FF001FBE8F /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		1A82FD3618A154FF001FBE8F /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 		35A96E511896B10B00DC1300 /* AwayTests */ = {
 			isa = PBXGroup;
 			children = (
+				1A15F18B18A3CC81005238BF /* WebService.m */,
 				1AD9C3DC18A336AE00CA6210 /* HTTPRequests.m */,
 				1AD9C3D9189F272E00CA6210 /* MyClasses.m */,
 				35A96E571896B10B00DC1300 /* AwayTests.m */,
@@ -441,6 +444,7 @@
 			files = (
 				1AD9C3DA189F272E00CA6210 /* MyClasses.m in Sources */,
 				1AD9C3DD18A336AE00CA6210 /* HTTPRequests.m in Sources */,
+				1A15F18C18A3CC81005238BF /* WebService.m in Sources */,
 				35A96E581896B10B00DC1300 /* AwayTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
