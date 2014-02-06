@@ -12,6 +12,6 @@
 
 @property(nonatomic, strong, readonly) NSString *name;
 @property(nonatomic, readonly) CGPoint *coordinates;
-@property(nonatomic, strong, readonly) NSString *imageUrl;
+@property(nonatomic, strong) NSString *imageUrl;
 
 @end

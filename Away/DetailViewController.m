@@ -8,10 +8,10 @@
 
 #import "DetailViewController.h"
 #import "DetailFriendCustomCell.h"
+#import "DestinationViewPoint.h"
 #import "Session.h"
 
 @interface DetailViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
-@property (weak, nonatomic) IBOutlet UIImageView *destinationImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money1ImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money2ImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money3ImageView;
@@ -22,8 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UIButton *rejectButton;
-@property (weak, nonatomic) IBOutlet UIButton *chooseButton;
+@property (weak, nonatomic) IBOutlet UIScrollView *imageScrollView;
 
 @end
 
@@ -82,7 +81,21 @@
 
     self.navigationItem.title = @"Detalhes";
 
-    [self.destinationImageView setUserInteractionEnabled:YES];
+    Session *session = [Session sharedSession];
+    Destination *dest = session.currentDestination;
+
+//    for (int i = 0; i < [dest.viewPoints count]; i++) {
+    for (int i = 0; i < 3; i++) {
+        CGFloat xOrigin = i * self.imageScrollView.frame.size.width;
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(xOrigin, 0, self.imageScrollView.frame.size.width, self.imageScrollView.frame.size.height)];
+//        DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:i];
+//        imageView.image = dvp.image;
+        imageView.image = [UIImage imageNamed:@"placeholder"];
+        [self.imageScrollView addSubview:imageView];
+    }
+//    self.imageScrollView.contentSize = CGSizeMake(self.imageScrollView.frame.size.width * [dest.viewPoints count], self.imageScrollView.frame.size.height);
+    self.imageScrollView.contentSize = CGSizeMake(self.imageScrollView.frame.size.width * 3, self.imageScrollView.frame.size.height);
+
 //    queue = [[NSOperationQueue alloc] init];
     
 //    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
@@ -135,6 +148,10 @@
 }
 
 - (IBAction)showFriends:(id)sender {
+}
+
+- (IBAction)back:(id)sender {
+    [self.navigationController popViewControllerAnimated:TRUE];
 }
 
 //- (IBAction)swipeView:(UISwipeGestureRecognizer*)swipe {

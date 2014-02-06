@@ -57,6 +57,21 @@
     //    [[[UIAlertView alloc] initWithTitle:@"Error" message:[error description] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 
+- (BOOL)isDestination: (Destination*)dest in: (NSMutableArray*)dests {
+    for (Destination *d in dests) {
+        if ([d._id isEqualToString:dest._id]){
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
+- (void)removeDestinationAtIndex:(NSInteger)index
+{
+    if (index >= 0 && index < [self.destinationsChoose count]){
+        [self.destinationsChoose removeObjectAtIndex:index];
+    }
+}
 
 ///* - (BOOL) containsUserInSession:(User*)user
 //    Verifica se determinado usuário está na sessão.

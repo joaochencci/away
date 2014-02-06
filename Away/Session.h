@@ -28,5 +28,7 @@
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
 + (id)sharedSession;
+- (BOOL)isDestination: (Destination*)dest in: (NSMutableArray*)dests;
+- (void)removeDestinationAtIndex:(NSInteger)index;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "Destination.h"
+#import "DestinationViewPoint.h"
 #import "User.h"
 
 @interface Destination () {
@@ -24,7 +25,10 @@
 {
     self = [super init];
     if (self) {
-        
+//        DestinationViewPoint *dvp = [[DestinationViewPoint alloc] init];
+//        NSMutableArray *viewPoints = [[NSMutableArray alloc] init];
+//        [viewPoints addObject:dvp];
+//        self.viewPoints = viewPoints;
     }
     return self;
 }
@@ -53,7 +57,10 @@
 }
 
 - (UIImage*)getFirstImage {
-    return [self.viewPoints objectAtIndex:0];
+//    DestinationViewPoint *dvp = [self.viewPoints objectAtIndex:0];
+//    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
+//    return [UIImage imageWithData:imageData];
+    return nil;
 }
 
 - (NSInteger)getNumberOfFriendsFromUser:(User*) user {

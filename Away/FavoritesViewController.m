@@ -60,8 +60,31 @@
     imageView.image = [dest getFirstImage];
     name.text = dest.title;
     numberOfFriends.text = [NSString stringWithFormat:@"%ld", (long)[dest getNumberOfFriendsFromUser:session.user]];
-    
+
     return cell;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return @"Apagar";
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row % 2 == 0){
+        cell.backgroundColor = [UIColor colorWithRed:15 green:108 blue:105 alpha:1];
+    }
+}
+
+/* Método chamado quando acontece algum tipo de edição em alguma célula do tableView */
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Verifica se a ação corresponde a deleção.
+    if (editingStyle == UITableViewCellEditingStyleDelete){
+        Session *session = [Session sharedSession];
+        [session removeDestinationAtIndex:indexPath.row];
+        
+        // Remove do tableView
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
