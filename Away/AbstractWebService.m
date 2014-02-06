@@ -112,18 +112,18 @@ static AbstractWebService *_webService = nil;
 
 # pragma mark - URL Request requisition
 
-- (void)executeRequest:(NSURLRequest *)request withDelegate:
-{
-    //
-    _connection = [NSURLConnection connectionWithRequest:request delegate:(id<NS>)]
-    
-}
+//- (void)executeRequest:(NSURLRequest *)request withDelegate:
+//{
+//    //
+//    //_connection = [NSURLConnection connectionWithRequest:request delegate:(id<NS>)]
+//    
+//}
 
 
 # pragma mark - Abstract methods
 # pragma mark - HTTPRequesterDelegate methods
 // Must be implemented in subclass.
-- (void)requestDidFailWithError:(NSError *)error andResponseObject:(HTTPResponseObject *)responseObject
+- (void)requestDidFailWithError:(NSError *)error
 {
     //
     @throw [NSException exceptionWithName:NSInternalInconsistencyException

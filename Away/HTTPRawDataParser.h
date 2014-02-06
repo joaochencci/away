@@ -9,10 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #import "HTTPResponseObject.h"
+#import "HTTPRawDataType.h"
 
-typedef enum {
-    RawHTTPDataTypeJSON
-}RawHTTPDataType;
 
 @interface HTTPRawDataParser : NSObject
 

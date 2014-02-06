@@ -23,23 +23,23 @@
 + (HTTPResponseObject *)parseData:(NSData *)dataToParse forDataType:(RawHTTPDataType)dataType
 {
     //
-    NSError *error;
+    NSError *parseError = nil;
     
     NSDictionary *responseData;
     
     switch (dataType) {
         case RawHTTPDataTypeJSON:
-            responseData = [HTTPRawDataParser jsonParser:dataToParse error:error];
+            responseData = [HTTPRawDataParser jsonParser:dataToParse error:parseError];
             break;
             
         default:
             break;
     }
     
-    //HTTPResponseObject *response = [[HTTPResponseObject alloc] initWithResponseData:responseData
-                                                                            //dataTye:dataType
-                                                                              //error:error];
-    return nil;//response;
+    HTTPResponseObject *response = [[HTTPResponseObject alloc] initWithResponseData:responseData
+                                                                            dataTye:dataType
+                                                                         parseError:parseError];
+    return response;
     
 }
 

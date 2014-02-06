@@ -9,7 +9,7 @@
 #import "AbstractWebService.h"
 #import "HTTPRequest.h"
 
-@interface AbstractWebService () <HTTPRequesterDelegate> {
+@interface AbstractWebService () <HTTPRequestDelegate> {
     
     NSString *_urlScheme; // http
     NSString *_baseURL; // @"http://www.google.com"
@@ -38,7 +38,7 @@
 
 - (void)loadGETRequest;
 - (void)loadPOSTRequest;
-- (void)executeRequest:(NSURLRequest *)request withHandler;
+//- (void)executeRequest:(NSURLRequest *)request withHandler;
 
 // For GET HTTP Requests pass a dictionary containing all parameters
 // to be passed via URL. Otherwise, pass nil.
@@ -49,7 +49,7 @@
                     andParameters:(NSDictionary *)parameters;
 
 // HTTPRequesterDelegate - To be implemented by subclass.
-- (void)requestDidFailWithError:(NSError *)error andResponseObject:(HTTPResponseObject *)responseObject;
+- (void)requestDidFailWithError:(NSError *)error;
 - (void)requestDidFinishWithResponseObject:(HTTPResponseObject *)responseObject;
 
 
