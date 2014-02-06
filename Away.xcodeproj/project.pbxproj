@@ -18,9 +18,6 @@
 		1AD9C3B2189B74F800CA6210 /* AbstractWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3B1189B74F800CA6210 /* AbstractWebService.m */; };
 		1AD9C3BC189B7A7500CA6210 /* HTTPResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3BB189B7A7500CA6210 /* HTTPResponseObject.m */; };
 		1AD9C3C3189B855200CA6210 /* AwayWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3C2189B855200CA6210 /* AwayWebService.m */; };
-		1AD9C3D5189F24C700CA6210 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3D4189F24C700CA6210 /* MyClass.m */; };
-		1AD9C3D8189F24D600CA6210 /* MySubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3D7189F24D600CA6210 /* MySubclass.m */; };
-		1AD9C3DA189F272E00CA6210 /* MyClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3D9189F272E00CA6210 /* MyClasses.m */; };
 		1AD9C3DD18A336AE00CA6210 /* HTTPRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3DC18A336AE00CA6210 /* HTTPRequests.m */; };
 		35A96E2D1896B10B00DC1300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2C1896B10B00DC1300 /* Foundation.framework */; };
 		35A96E2F1896B10B00DC1300 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2E1896B10B00DC1300 /* CoreGraphics.framework */; };
@@ -35,7 +32,6 @@
 		35A96E4D1896B10B00DC1300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E2C1896B10B00DC1300 /* Foundation.framework */; };
 		35A96E4E1896B10B00DC1300 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A96E301896B10B00DC1300 /* UIKit.framework */; };
 		35A96E561896B10B00DC1300 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35A96E541896B10B00DC1300 /* InfoPlist.strings */; };
-		35A96E581896B10B00DC1300 /* AwayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E571896B10B00DC1300 /* AwayTests.m */; };
 		35A96E701896B7CF00DC1300 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E6F1896B7CF00DC1300 /* MainViewController.m */; };
 		35A96E731896B7EE00DC1300 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E721896B7EE00DC1300 /* DetailViewController.m */; };
 		35A96E761896B83500DC1300 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35A96E751896B83500DC1300 /* FavoritesViewController.m */; };
@@ -75,11 +71,6 @@
 		1AD9C3BB189B7A7500CA6210 /* HTTPResponseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPResponseObject.m; sourceTree = "<group>"; };
 		1AD9C3C1189B855200CA6210 /* AwayWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwayWebService.h; sourceTree = "<group>"; };
 		1AD9C3C2189B855200CA6210 /* AwayWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwayWebService.m; sourceTree = "<group>"; };
-		1AD9C3D3189F24C700CA6210 /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
-		1AD9C3D4189F24C700CA6210 /* MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
-		1AD9C3D6189F24D600CA6210 /* MySubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySubclass.h; sourceTree = "<group>"; };
-		1AD9C3D7189F24D600CA6210 /* MySubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySubclass.m; sourceTree = "<group>"; };
-		1AD9C3D9189F272E00CA6210 /* MyClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClasses.m; sourceTree = "<group>"; };
 		1AD9C3DB18A3295A00CA6210 /* HTTPRawDataType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPRawDataType.h; sourceTree = "<group>"; };
 		1AD9C3DC18A336AE00CA6210 /* HTTPRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequests.m; sourceTree = "<group>"; };
 		35A96E291896B10B00DC1300 /* Away.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Away.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,7 +91,6 @@
 		35A96E4B1896B10B00DC1300 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		35A96E531896B10B00DC1300 /* AwayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AwayTests-Info.plist"; sourceTree = "<group>"; };
 		35A96E551896B10B00DC1300 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		35A96E571896B10B00DC1300 /* AwayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwayTests.m; sourceTree = "<group>"; };
 		35A96E6E1896B7CF00DC1300 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		35A96E6F1896B7CF00DC1300 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		35A96E711896B7EE00DC1300 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -197,10 +187,6 @@
 			children = (
 				1A82FD3418A154E1001FBE8F /* Categories */,
 				1AD9C3AF189B73F200CA6210 /* Networking */,
-				1AD9C3D3189F24C700CA6210 /* MyClass.h */,
-				1AD9C3D4189F24C700CA6210 /* MyClass.m */,
-				1AD9C3D6189F24D600CA6210 /* MySubclass.h */,
-				1AD9C3D7189F24D600CA6210 /* MySubclass.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -303,8 +289,6 @@
 			children = (
 				1A15F18B18A3CC81005238BF /* WebService.m */,
 				1AD9C3DC18A336AE00CA6210 /* HTTPRequests.m */,
-				1AD9C3D9189F272E00CA6210 /* MyClasses.m */,
-				35A96E571896B10B00DC1300 /* AwayTests.m */,
 				35A96E521896B10B00DC1300 /* Supporting Files */,
 			);
 			path = AwayTests;
@@ -419,7 +403,6 @@
 				1A82FD4218A16734001FBE8F /* NSDictionary+URLArguments.m in Sources */,
 				1A82FD3F18A158CC001FBE8F /* NSString+URLArguments.m in Sources */,
 				1A965763189981CF00DB1D32 /* User.m in Sources */,
-				1AD9C3D8189F24D600CA6210 /* MySubclass.m in Sources */,
 				1A82FD3A18A154FF001FBE8F /* UIImage+ImageEffects.m in Sources */,
 				35A96E701896B7CF00DC1300 /* MainViewController.m in Sources */,
 				35A96E431896B10B00DC1300 /* LoginViewController.m in Sources */,
@@ -430,7 +413,6 @@
 				35A96E391896B10B00DC1300 /* main.m in Sources */,
 				35A96E761896B83500DC1300 /* FavoritesViewController.m in Sources */,
 				1AD9C3C3189B855200CA6210 /* AwayWebService.m in Sources */,
-				1AD9C3D5189F24C700CA6210 /* MyClass.m in Sources */,
 				1A15F18A18A2BACB005238BF /* HTTPRequest.m in Sources */,
 				1AD9C3B2189B74F800CA6210 /* AbstractWebService.m in Sources */,
 				1AD9C3BC189B7A7500CA6210 /* HTTPResponseObject.m in Sources */,
@@ -442,10 +424,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AD9C3DA189F272E00CA6210 /* MyClasses.m in Sources */,
 				1AD9C3DD18A336AE00CA6210 /* HTTPRequests.m in Sources */,
 				1A15F18C18A3CC81005238BF /* WebService.m in Sources */,
-				35A96E581896B10B00DC1300 /* AwayTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
