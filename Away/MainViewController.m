@@ -84,7 +84,7 @@
     self.nameLabel.text = dest.title;
     NSString *url = @"https://i.imgur.com/St5x1Az.jpg";
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
-    self.destinationImageView.image = [UIImage imageWithData:imageData];
+    //self.destinationImageView.image = [UIImage imageWithData:imageData];
 
 // # request dos primeiros destinos # //
     

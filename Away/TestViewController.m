@@ -10,11 +10,18 @@
 #import <QuartzCore/QuartzCore.h>
 
 
-@interface TestViewController ()
+@interface TestViewController () <UIScrollViewDelegate> {
+    NSInteger _pageChanges;
+    NSArray *_images;
+}
 
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UIScrollView *_scroll;
 @property (weak, nonatomic) IBOutlet UIView *shadow;
+@property (weak, nonatomic) IBOutlet UIImageView *backImage;
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIView *header;
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 
 @end
 
@@ -34,6 +41,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    _pageChanges = 0;
+    _images = [NSArray arrayWithObjects:[UIImage imageNamed:@"placeholder"],
+               [UIImage imageNamed:@"placeholder2"],
+               [UIImage imageNamed:@"placeholder3"], nil];
+    
+    self._scroll.delegate = self;
+    
     self.image.layer.masksToBounds = YES;
     self.shadow.layer.cornerRadius = 10.0;
     self.shadow.layer.shadowColor = [[UIColor blackColor] CGColor];
@@ -41,12 +55,15 @@
     self.shadow.layer.shadowRadius = 10.0;
     self.shadow.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
     
+    //self.image.image = [UIImage imageNamed:@"placeholder2"];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    self._scroll.contentSize = CGSizeMake(640,177);
+    self._scroll.contentSize = CGSizeMake(self.view.frame.size.width * 3, self._scroll.frame.size.height);
+    self._scroll.contentOffset = CGPointMake(self.view.frame.size.width, 0.0);
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,4 +72,94 @@
     // Dispose of any resources that can be recreated.
 }
 
+# pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSLog(@"(%f, %f)", scrollView.contentOffset.x, scrollView.contentOffset.y);
+    if (scrollView.contentOffset.x < 320) {
+        NSLog(@"LEFT PAGE");
+        [self nextImage];
+    } else if (scrollView.contentOffset.x >= 640) {
+        NSLog(@"RIGHT PAGE");
+        [self nextImage];
+    } else {
+        NSLog(@"CENTER PAGE");
+    }
+}
+
+# pragma mark - Flu
+
+- (void)nextImage
+{
+    _pageChanges++;
+    
+    NSInteger currentIndex = _pageChanges % [_images count];
+    
+    self.image.image = [_images objectAtIndex:(currentIndex)];
+    [self.image setNeedsDisplay];
+    
+    self.image.alpha = 0.0;
+    self.shadow.alpha = 0.0;
+    
+    self.label.alpha = 0.0;
+    self.header.alpha = 0.0;
+    
+    NSString *title;
+    self.headerLabel.text = [NSString stringWithFormat:@"%d", currentIndex];
+    switch (currentIndex) {
+        case 0:
+            title = @"Fortaleza";
+            break;
+        case 1:
+            title = @"Rio de Janeiro";
+            break;
+        case 2:
+            title = @"São Paulo";
+            break;
+        default:
+            break;
+    }
+    
+    self.label.text = title;
+    
+    
+    [self._scroll setContentOffset:CGPointMake(320.0, 0.0) animated:NO];
+    
+    
+    
+//    double delayInSeconds = 0.05;
+//    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+//    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//        
+//        
+//    });
+    
+    [UIView animateWithDuration:0.2
+                     animations:^{
+                         self.image.alpha = 1.0;
+                         self.shadow.alpha = 1.0;
+                         self.label.alpha = 1.0;
+                         self.header.alpha = 1.0;
+                     } completion:^(BOOL finished){
+                         self.backImage.image = [_images objectAtIndex:((_pageChanges + 1) % [_images count])];
+                     }];
+    
+    
+}
+
+
+- (IBAction)buttonPress:(id)sender {
+    [self._scroll setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
+    //[self nextImage];
+    [self performSelector:@selector(nextImage) withObject:Nil afterDelay:0.2];
+}
+
+- (IBAction)buu:(id)sender {
+    [self._scroll setContentOffset:CGPointMake(640.0, 0.0) animated:YES];
+    [self performSelector:@selector(nextImage) withObject:Nil afterDelay:0.2];
+    //[self nextImage];
+}
+
+
 @end
+ //218, 213

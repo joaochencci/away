@@ -17,7 +17,6 @@
 		1A4B760518A41F8C00304125 /* AbstractWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B75FE18A41F8C00304125 /* AbstractWebService.m */; };
 		1A4B760618A41F8C00304125 /* HTTPResponseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B75FF18A41F8C00304125 /* HTTPResponseObject.m */; };
 		1A4B760C18A50F7B00304125 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B760B18A50F7B00304125 /* TestViewController.m */; };
-		1A4B760F18A51D6700304125 /* UIView+bla.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B760E18A51D6700304125 /* UIView+bla.m */; };
 		1A965763189981CF00DB1D32 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965762189981CF00DB1D32 /* User.m */; };
 		1A965766189981DB00DB1D32 /* Destination.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965765189981DB00DB1D32 /* Destination.m */; };
 		1AD9C3C6189C619200CA6210 /* DestinationPresenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3C5189C619200CA6210 /* DestinationPresenterManager.m */; };
@@ -78,7 +77,6 @@
 		1A4B760218A41F8C00304125 /* AbstractWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractWebService.h; sourceTree = "<group>"; };
 		1A4B760A18A50F7B00304125 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		1A4B760B18A50F7B00304125 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		1A4B760E18A51D6700304125 /* UIView+bla.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+bla.m"; sourceTree = "<group>"; };
 		1A965761189981CF00DB1D32 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		1A965762189981CF00DB1D32 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		1A965764189981DB00DB1D32 /* Destination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Destination.h; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 				356AC3C7189C03B3000EEBBD /* FavoriteTableViewCell.m */,
 				355FA24618A26B5300F903BF /* DetailFriendCustomCell.h */,
 				355FA24718A26B5300F903BF /* DetailFriendCustomCell.m */,
-				1A4B760E18A51D6700304125 /* UIView+bla.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -432,7 +429,6 @@
 				1A4B75F418A41F4600304125 /* NSString+URLArguments.m in Sources */,
 				35A96E761896B83500DC1300 /* FavoritesViewController.m in Sources */,
 				356AC3C5189BD7AD000EEBBD /* Session.m in Sources */,
-				1A4B760F18A51D6700304125 /* UIView+bla.m in Sources */,
 				1A4B760318A41F8C00304125 /* HTTPRequest.m in Sources */,
 				1A4B75F818A41F6400304125 /* NSDictionary+URLArguments.m in Sources */,
 				356AC3C8189C03B3000EEBBD /* FavoriteTableViewCell.m in Sources */,
