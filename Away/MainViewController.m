@@ -10,7 +10,11 @@
 #import "Session.h"
 #import "Destination.h"
 
-@interface MainViewController ()
+@interface MainViewController () <UIScrollViewDelegate> {
+    NSInteger _pageChanges;
+    NSArray *_images;
+}
+
 @property (weak, nonatomic) IBOutlet UIImageView *destinationImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money1ImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money2ImageView;
@@ -20,6 +24,24 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberFriendsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+
+// ----
+@property (weak, nonatomic) IBOutlet UIButton *infoButton;
+@property (weak, nonatomic) IBOutlet UIButton *goAwayButton;
+@property (weak, nonatomic) IBOutlet UIButton *dontGoAwayButton;
+@property (weak, nonatomic) IBOutlet UILabel *destinationTitleLabel;
+
+@property (weak, nonatomic) IBOutlet UIImageView *nextDestinationPlaceholderImageView;
+@property (weak, nonatomic) IBOutlet UIView *currentDestinationShadow;
+@property (weak, nonatomic) IBOutlet UIImageView *currentDestinationImage;
+
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
+
+@property (weak, nonatomic) IBOutlet UIImageView *transportationImage;
+
+@property (weak, nonatomic) IBOutlet UILabel *numberOfFriendsLabel;
 
 @end
 
@@ -85,7 +107,7 @@
     NSString *url = @"https://i.imgur.com/St5x1Az.jpg";
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
     self.destinationImageView.image = [UIImage imageWithData:imageData];
-
+    
 // # request dos primeiros destinos # //
     
 //    NSMutableArray *destinations = [[NSMutableArray alloc] init];
@@ -95,8 +117,31 @@
 //    [destinations removeObjectAtIndex:0];
 //    session.destinations = destinations;
     
+    _pageChanges = 0;
+    _images = [NSArray arrayWithObjects:[UIImage imageNamed:@"placeholder"],
+               [UIImage imageNamed:@"placeholder2"],
+               [UIImage imageNamed:@"placeholder3"], nil];
+    
+    self.currentDestinationImage.image = [UIImage imageNamed:@"placeholder"];
+
+    
+    self.scrollView.delegate = self;
+    
+    self.currentDestinationImage.layer.masksToBounds = YES;
+    self.currentDestinationShadow.layer.cornerRadius = 10.0;
+    self.currentDestinationShadow.layer.shadowColor = [[UIColor blackColor] CGColor];
+    self.currentDestinationShadow.layer.shadowOpacity = 1.0;
+    self.currentDestinationShadow.layer.shadowRadius = 10.0;
+    self.currentDestinationShadow.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
+    
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 3, self.scrollView.frame.size.height);
+    self.scrollView.contentOffset = CGPointMake(self.view.frame.size.width, 0.0);
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -177,5 +222,87 @@
 - (IBAction)swipeView:(UISwipeGestureRecognizer*)swipe {
     [self processSwipeInDirection: swipe.direction];
 }
+
+# pragma mark - Firulas Layout
+# pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSLog(@"(%f, %f)", scrollView.contentOffset.x, scrollView.contentOffset.y);
+    if (scrollView.contentOffset.x < 320) {
+        NSLog(@"LEFT PAGE");
+        [self nextImage];
+    } else if (scrollView.contentOffset.x >= 640) {
+        NSLog(@"RIGHT PAGE");
+        [self nextImage];
+    } else {
+        NSLog(@"CENTER PAGE");
+    }
+}
+
+# pragma mark - Flu
+
+- (void)nextImage
+{
+    _pageChanges++;
+    
+    NSInteger currentIndex = _pageChanges % [_images count];
+    
+    self.currentDestinationImage.image = [_images objectAtIndex:(currentIndex)];
+    [self.currentDestinationImage setNeedsDisplay];
+    
+    self.currentDestinationImage.alpha = 0.0;
+    self.currentDestinationShadow.alpha = 0.0;
+    
+    self.destinationTitleLabel.alpha = 0.0;
+    self.toolBar.alpha = 0.0;
+    
+    NSString *title;
+    //self.headerLabel.text = [NSString stringWithFormat:@"%d", currentIndex];
+    switch (currentIndex) {
+        case 0:
+            title = @"Fortaleza";
+            break;
+        case 1:
+            title = @"Rio de Janeiro";
+            break;
+        case 2:
+            title = @"São Paulo";
+            break;
+        default:
+            break;
+    }
+    
+    self.destinationTitleLabel.text = title;
+    
+    
+    [self.scrollView setContentOffset:CGPointMake(320.0, 0.0) animated:NO];
+    
+    [UIView animateWithDuration:0.2
+                     animations:^{
+                         self.currentDestinationImage.alpha = 1.0;
+                         self.currentDestinationShadow.alpha = 1.0;
+                         self.destinationTitleLabel.alpha = 1.0;
+                         self.toolBar.alpha = 1.0;
+                     } completion:^(BOOL finished){
+                         self.nextDestinationPlaceholderImageView.image = [_images objectAtIndex:((_pageChanges + 1) % [_images count])];
+                     }];
+    
+    
+}
+
+
+- (IBAction)goAway:(id)sender {
+    [self.scrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
+    //[self nextImage];
+    [self performSelector:@selector(nextImage) withObject:Nil afterDelay:0.2];
+}
+
+- (IBAction)dontGoAway:(id)sender {
+    [self.scrollView setContentOffset:CGPointMake(640.0, 0.0) animated:YES];
+    [self performSelector:@selector(nextImage) withObject:Nil afterDelay:0.2];
+    //[self nextImage];
+}
+
+
 
 @end
