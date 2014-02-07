@@ -559,7 +559,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
-					/Users/marcelotoledo/Desktop/away,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";
@@ -577,7 +576,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
-					/Users/marcelotoledo/Desktop/away,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";

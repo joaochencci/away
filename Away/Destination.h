@@ -20,7 +20,7 @@
 @property(nonatomic, strong) NSMutableArray *viewPoints;
 
 - (id)initWithDictionary:(NSDictionary *)destinationDataDictionary;
-- (NSArray *)getAllImages;
+//- (NSArray *)getAllImages;
 - (CGFloat)getDistanceFromPoint:(CGPoint *)point;
 - (UIImage*)getFirstImage;
 - (NSInteger)getNumberOfFriendsFromUser:(User*)user;

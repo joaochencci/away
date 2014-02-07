@@ -9,7 +9,6 @@
 #import "DestinationViewPoint.h"
 
 @interface DestinationViewPoint () {
-    UIImage *image;
     CGFloat *distance;
 }
 

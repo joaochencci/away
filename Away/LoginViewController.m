@@ -23,7 +23,7 @@
 
     // Create a FBLoginView to log the user in with basic, email and likes permissions
     // You should ALWAYS ask for basic permissions (basic_info) when logging the user in
-    FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"basic_info", @"email", @"user_likes"]];
+    FBLoginView *loginView = [[FBLoginView alloc] initWithReadPermissions:@[@"basic_info", @"email", @"user_likes", @"friends_likes", @"user_friends"]];
     
     // Set this loginUIViewController to be the loginView button's delegate
     loginView.delegate = self;
@@ -39,16 +39,18 @@
 }
 
 // This method will be called when the user information has been fetched
-- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
-    NSString *accessToken = [[[FBSession activeSession] accessTokenData] accessToken];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:3000/api/user/login?provider=facebook&token=%@",accessToken]];
-    HTTPRequest *request = [[HTTPRequest alloc] initWithRequest:[NSURLRequest requestWithURL:url] andDelegate:self];
-    [request executeRequestParsingData:RawHTTPDataTypeJSON asynch:NO];
-    NSLog(@"%@", accessToken);
-}
+//- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
+//}
 
 // Logged-in user experience
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
+    NSString *accessToken = [[[FBSession activeSession] accessTokenData] accessToken];
+    NSLog(@"AccessToken: %@", accessToken);
+
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:3000/api/user/login?provider=facebook&token=%@",accessToken]];
+    HTTPRequest *request = [[HTTPRequest alloc] initWithRequest:[NSURLRequest requestWithURL:url] andDelegate:self];
+    [request executeRequestParsingData:RawHTTPDataTypeJSON asynch:NO];
+
     Session *session = [Session sharedSession];
     CLLocation *location = [session.locationManager location];
     
@@ -56,8 +58,6 @@
     
     [session.user.location insertObject:[NSNumber numberWithFloat:location.coordinate.latitude] atIndex:0];
     [session.user.location insertObject:[NSNumber numberWithFloat:location.coordinate.longitude] atIndex:1];
-    
-    [self performSegueWithIdentifier:@"doLogin" sender:self];
 }
 
 // Handle possible errors that can occur during login
@@ -99,6 +99,11 @@
     }
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    NSLog(@"didReceiveMemory");
+}
 
 # pragma mark - HTTPRequest Delegate
 
@@ -109,15 +114,19 @@
 
 - (void)request:(HTTPRequest *)request didFinishWithResponseObject:(HTTPResponseObject *)responseObject
 {
-//    NSLog(@"%@",responseObject.data);
     Session *session = [Session sharedSession];
-    session.user = [[User alloc] initWithDictionary:responseObject.data];
-}
+    NSLog(@"%@", responseObject.data);
+    if (session.user.name == nil){
+        session.user = [session.user initWithDictionary:responseObject.data];
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    NSLog(@"didReceiveMemory");
+        NSURL *url = [NSURL URLWithString:@"http://localhost:3000/api/destination/next"];
+        HTTPRequest *request = [[HTTPRequest alloc] initWithRequest:[NSURLRequest requestWithURL:url] andDelegate:self];
+        [request executeRequestParsingData:RawHTTPDataTypeJSON asynch:NO];
+
+        [self performSegueWithIdentifier:@"doLogin" sender:self];
+    }else{
+        session.destinations = [session initializeDestinationsWithDictionary:responseObject.data];
+    }
 }
 
 @end

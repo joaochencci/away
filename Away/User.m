@@ -20,17 +20,27 @@
 {
     self = [super init];
     if (self) {
-        
+        self.location = [[NSMutableArray alloc] init];
+        self.matches = [[NSMutableArray alloc] init];
+        self.friends = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
-- (id)initWithDictionary:(NSDictionary *)userDataDictionary
+- (id)initWithDictionary:(NSDictionary *)dict
 {
     self = [self init];
     if (self) {
-        //
-    }
+        NSDictionary *userDict = dict[@"user"];
+        self.name = userDict[@"name"];
+        NSDictionary *matchesArray = userDict[@"matches"];
+        for (NSDictionary *match in matchesArray) {
+//            NSString *type = match[@"type"];
+            Destination *dest = [[Destination alloc] init];
+            dest.title = match[@"name"];
+            dest.description = match[@"info"];
+        }
+    };
     return self;
 }
 

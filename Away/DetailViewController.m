@@ -34,9 +34,8 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-//    Session *session = [Session sharedSession];
-//    return [session.user getNumberOfFriendsFromDestination:session.destination];
-    return 3;
+    Session *session = [Session sharedSession];
+    return [session.user getNumberOfFriendsFromDestination:session.currentDestinationDetail];
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -82,55 +81,21 @@
     self.navigationItem.title = @"Detalhes";
 
     Session *session = [Session sharedSession];
-    Destination *dest = session.currentDestination;
 
-//    for (int i = 0; i < [dest.viewPoints count]; i++) {
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < [session.currentDestinationDetail.viewPoints count]; i++) {
+//    for (int i = 0; i < 3; i++) {
         CGFloat xOrigin = i * self.imageScrollView.frame.size.width;
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(xOrigin, 0, self.imageScrollView.frame.size.width, self.imageScrollView.frame.size.height)];
-//        DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:i];
-//        imageView.image = dvp.image;
-        imageView.image = [UIImage imageNamed:@"placeholder"];
+        DestinationViewPoint *dvp = [session.currentDestinationDetail.viewPoints objectAtIndex:i];
+        imageView.image = dvp.image;
+//        imageView.image = [UIImage imageNamed:@"placeholder"];
         [self.imageScrollView addSubview:imageView];
     }
-//    self.imageScrollView.contentSize = CGSizeMake(self.imageScrollView.frame.size.width * [dest.viewPoints count], self.imageScrollView.frame.size.height);
-    self.imageScrollView.contentSize = CGSizeMake(self.imageScrollView.frame.size.width * 3, self.imageScrollView.frame.size.height);
+    self.imageScrollView.contentSize = CGSizeMake(self.imageScrollView.frame.size.width * [session.currentDestinationDetail.viewPoints count], self.imageScrollView.frame.size.height);
+//    self.imageScrollView.contentSize = CGSizeMake(self.imageScrollView.frame.size.width * 3, self.imageScrollView.frame.size.height);
 
 //    queue = [[NSOperationQueue alloc] init];
     
-//    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
-//    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
-//    [self.destinationImageView addGestureRecognizer:swipeLeft];
-//    
-//    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
-//    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-//    [self.destinationImageView addGestureRecognizer:swipeRight];
-
-}
-
-- (void)processSwipeInDirection: (UISwipeGestureRecognizerDirection) direction{
-    Session *session = [Session sharedSession];
-    Destination *dest = session.currentDestination;
-    
-    if (direction == UISwipeGestureRecognizerDirectionRight) {
-        // NSLog(@"Right Swipe");
-        NSMutableArray *destinationsChoose = session.destinationsChoose;
-        [destinationsChoose addObject:dest];
-        session.destinationsChoose = destinationsChoose;
-    }
-    if (direction == UISwipeGestureRecognizerDirectionLeft) {
-        // NSLog(@"Left Swipe");
-        NSMutableArray *destinationsReject = session.destinationsReject;
-        [destinationsReject addObject:dest];
-        session.destinationsReject = destinationsReject;
-    }
-    
-    Destination *newDest = [[Destination alloc] init];
-    newDest._id = @"2";
-    newDest.title = @"Curitiba";
-    session.currentDestination = newDest;
-    
-    self.nameLabel.text = newDest.title;
 }
 
 - (void)didReceiveMemoryWarning
@@ -139,29 +104,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)choose:(id)sender {
-    [self processSwipeInDirection: UISwipeGestureRecognizerDirectionRight];
-}
-
-- (IBAction)reject:(id)sender {
-    [self processSwipeInDirection: UISwipeGestureRecognizerDirectionLeft];
-}
-
 - (IBAction)showFriends:(id)sender {
 }
 
 - (IBAction)back:(id)sender {
     [self.navigationController popViewControllerAnimated:TRUE];
 }
-
-//- (IBAction)swipeView:(UISwipeGestureRecognizer*)swipe {
-//    if (swipe.direction == UISwipeGestureRecognizerDirectionLeft) {
-//        NSLog(@"Left Swipe");
-//        
-//    }
-//    if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
-//        NSLog(@"Right Swipe");
-//    }
-//}
 
 @end

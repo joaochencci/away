@@ -12,6 +12,7 @@
 
 @synthesize user;
 @synthesize currentDestination;
+@synthesize currentDestinationDetail;
 @synthesize destinations;
 
 @synthesize destinationsChoose;
@@ -32,7 +33,10 @@
 
 - (id)init {
     if (self = [super init]) {
-        destination = [[Destination alloc] init];
+        user = [[User alloc] init];
+        currentDestination = [[Destination alloc] init];
+        currentDestinationDetail = [[Destination alloc] init];
+        destinations = [[NSMutableArray alloc] init];
         destinationsChoose = [[NSMutableArray alloc] init];
         destinationsReject = [[NSMutableArray alloc] init];
 
@@ -45,6 +49,10 @@
     return self;
 }
 
+- (NSMutableArray*)initializeDestinationsWithDictionary:(NSDictionary *)dict
+{
+    return self.destinations;
+}
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     //if the time interval returned from core location is more than two minutes we ignore it because it might be from an old session

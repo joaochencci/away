@@ -12,14 +12,16 @@
 #import "User.h"
 
 @interface Session : NSObject <CLLocationManagerDelegate> {
-    Destination *destination;
+    Destination *currentDestination;
     NSMutableArray *destinationsChoose;
     NSMutableArray *destinationsReject;
     CLLocation *currentLocation;
+    Destination *currentDestinationDetail;
 }
 
 @property (nonatomic, retain) User *user;
 @property (nonatomic, retain) Destination *currentDestination;
+@property (nonatomic, retain) Destination *currentDestinationDetail;
 @property (nonatomic, retain) NSMutableArray *destinations;
 
 @property (nonatomic, retain) NSMutableArray *destinationsChoose;
@@ -28,6 +30,7 @@
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
 + (id)sharedSession;
+- (NSMutableArray*)initializeDestinationsWithDictionary:(NSDictionary *)dict;
 - (BOOL)isDestination: (Destination*)dest in: (NSMutableArray*)dests;
 - (void)removeDestinationAtIndex:(NSInteger)index;
 

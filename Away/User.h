@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-    
-@class Destination;
+#import "Destination.h"
 
 @interface User : NSObject
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSMutableArray *likes;
+@property (nonatomic, strong) NSMutableArray *matches;
 @property (nonatomic, strong) NSMutableArray *friends;
 @property (nonatomic, strong) NSString *token;
 
@@ -22,7 +21,7 @@
 @property (nonatomic, strong) NSMutableArray *location; // [0] = LAT  |  [1] = LNG
 
 
-- (id)initWithDictionary:(NSDictionary *)userDataDictionary;
+- (id)initWithDictionary:(NSDictionary *)dict;
 - (NSInteger)getNumberOfFriendsFromDestination:(Destination*) destination;
 
 @end

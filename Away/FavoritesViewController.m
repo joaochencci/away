@@ -91,7 +91,7 @@
 {
     Session *session = [Session sharedSession];
     Destination *dest = [session.destinationsChoose objectAtIndex:indexPath.row];
-    session.currentDestination = dest;
+    session.currentDestinationDetail = dest;
     [self performSegueWithIdentifier:@"goToDetailsFromTable" sender:self];
 }
 

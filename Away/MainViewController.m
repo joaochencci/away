@@ -9,8 +9,9 @@
 #import "MainViewController.h"
 #import "Session.h"
 #import "Destination.h"
+#import "HTTPRequest.h"
 
-@interface MainViewController ()
+@interface MainViewController () <HTTPRequestDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *destinationImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money1ImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money2ImageView;
@@ -69,34 +70,17 @@
     [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
     [self.view addGestureRecognizer:swipeRight];
 
+    Session *session = [Session sharedSession];
+    session.currentDestination = [session.destinations objectAtIndex:0];;
+    [self populateView];
+
 //    CALayer *layer = self.destinationImageView.layer;
 //    layer.cornerRadius = 5.0;
 //    layer.borderColor = [[UIColor grayColor] CGColor];
 //    layer.borderWidth = 3;
 //    layer.frame = CGRectMake(-3, -3, CGRectGetWidth(self.destinationImageView.frame), CGRectGetHeight(self.destinationImageView.frame)+2);
 
-    Session *session = [Session sharedSession];
-    
-    Destination *dest = [[Destination alloc] init];
-    dest._id = @"1";
-    dest.title = @"Fortaleza";
-    session.currentDestination = dest;
-    self.nameLabel.text = dest.title;
-    NSString *url = @"https://i.imgur.com/St5x1Az.jpg";
-    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
-    self.destinationImageView.image = [UIImage imageWithData:imageData];
-
-// # request dos primeiros destinos # //
-    
-//    NSMutableArray *destinations = [[NSMutableArray alloc] init];
-//    destinations = HTTP REQUEST;
-    
-//    session.currentDestination = [destinations objectAtIndex:0];
-//    [destinations removeObjectAtIndex:0];
-//    session.destinations = destinations;
-    
 }
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -121,12 +105,8 @@
         session.destinationsReject = destinationsReject;
     }
 
-    Destination *newDest = [[Destination alloc] init];
-    newDest._id = @"2";
-    newDest.title = @"Curitiba";
-    session.currentDestination = newDest;
-    
-    self.nameLabel.text = newDest.title;
+    [self selectNextDestination];
+    [self populateView];
 }
 
 - (void) selectNextDestination {
@@ -136,18 +116,21 @@
     session.currentDestination = [destinations objectAtIndex:0];
     [destinations removeObjectAtIndex:0];
     
-//    Destination *newDestination = HTTP REQUEST ;
-    
-//    [destinations addObject: newDestination];
+    NSURL *url = [NSURL URLWithString:@"http://localhost:3000/api/destination/next"];
+    HTTPRequest *request = [[HTTPRequest alloc] initWithRequest:[NSURLRequest requestWithURL:url] andDelegate:self];
+    [request executeRequestParsingData:RawHTTPDataTypeJSON asynch:NO];
     
     session.destinations = destinations;
 }
 
 - (void) populateView {
     Session *session = [Session sharedSession];
-    Destination *destination = session.currentDestination;
-    
-    self.nameLabel.text = destination.title;
+    session.currentDestination = [session.destinations objectAtIndex:0];
+    //    NSString *url = @"https://i.imgur.com/St5x1Az.jpg";
+    //    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
+    //    self.destinationImageView.image = [UIImage imageWithData:imageData];
+    self.destinationImageView.image = [session.currentDestination getFirstImage];
+    self.nameLabel.text = session.currentDestination.title;
 }
 
 - (IBAction)choose:(id)sender {
@@ -176,6 +159,21 @@
 
 - (IBAction)swipeView:(UISwipeGestureRecognizer*)swipe {
     [self processSwipeInDirection: swipe.direction];
+}
+
+# pragma mark - HTTPRequest Delegate
+
+- (void)request:(HTTPRequest *)request didFailWithError:(NSError *)error
+{
+    NSLog(@"error");
+}
+
+- (void)request:(HTTPRequest *)request didFinishWithResponseObject:(HTTPResponseObject *)responseObject
+{
+    Session *session = [Session sharedSession];
+    Destination *newDestination = [[Destination alloc] initWithDictionary:responseObject.data];
+    [session.destinations addObject: newDestination];
+    NSLog(@"%@", responseObject.data);
 }
 
 @end

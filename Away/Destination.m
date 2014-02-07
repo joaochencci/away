@@ -10,14 +10,6 @@
 #import "DestinationViewPoint.h"
 #import "User.h"
 
-@interface Destination () {
-    NSArray *images;
-    NSMutableArray *tags;
-    CGFloat geographicCoordinates;
-    NSInteger numberOfFriends;
-}
-
-@end
 
 @implementation Destination
 
@@ -25,30 +17,30 @@
 {
     self = [super init];
     if (self) {
-//        DestinationViewPoint *dvp = [[DestinationViewPoint alloc] init];
-//        NSMutableArray *viewPoints = [[NSMutableArray alloc] init];
-//        [viewPoints addObject:dvp];
-//        self.viewPoints = viewPoints;
+        DestinationViewPoint *dvp = [[DestinationViewPoint alloc] init];
+        NSMutableArray *viewPoints = [[NSMutableArray alloc] init];
+        [viewPoints addObject:dvp];
+        self.viewPoints = viewPoints;
     }
     return self;
 }
 
-- (id)initWithDictionary:(NSDictionary *)destinationDataDictionary
+- (id)initWithDictionary:(NSDictionary *)dict
 {
     self = [self init];
     if (self) {
-        
-        
+        self.title = dict[@"name"];
+        self.description = dict[@"info"];
     }
     return self;
 }
 
-# pragma mark - Public
-- (NSArray *)getAllImages
-{
-    //
-    return images;
-}
+//# pragma mark - Public
+//- (NSArray *)getAllImages
+//{
+//    //
+//    return images;
+//}
 
 - (CGFloat)getDistanceFromPoint:(CGPoint *)point
 {
@@ -57,10 +49,9 @@
 }
 
 - (UIImage*)getFirstImage {
-//    DestinationViewPoint *dvp = [self.viewPoints objectAtIndex:0];
-//    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
-//    return [UIImage imageWithData:imageData];
-    return nil;
+    DestinationViewPoint *dvp = [self.viewPoints objectAtIndex:0];
+    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
+    return [UIImage imageWithData:imageData];
 }
 
 - (NSInteger)getNumberOfFriendsFromUser:(User*) user {
