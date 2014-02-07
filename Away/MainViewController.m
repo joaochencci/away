@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *money5ImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberFriendsLabel;
-@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *transportImageView;
 
 // ----
 @property (weak, nonatomic) IBOutlet UIButton *infoButton;
@@ -98,16 +98,10 @@
 //    layer.frame = CGRectMake(-3, -3, CGRectGetWidth(self.destinationImageView.frame), CGRectGetHeight(self.destinationImageView.frame)+2);
 
     Session *session = [Session sharedSession];
-    
-    Destination *dest = [[Destination alloc] init];
-    dest._id = @"1";
-    dest.title = @"Fortaleza";
-    session.currentDestination = dest;
-    self.nameLabel.text = dest.title;
-    NSString *url = @"https://i.imgur.com/St5x1Az.jpg";
-    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
-    self.destinationImageView.image = [UIImage imageWithData:imageData];
-    
+
+    session.currentDestination = [session.destinations objectAtIndex:0];
+    [self populateView];
+
 // # request dos primeiros destinos # //
     
 //    NSMutableArray *destinations = [[NSMutableArray alloc] init];
@@ -166,12 +160,9 @@
         session.destinationsReject = destinationsReject;
     }
 
-    Destination *newDest = [[Destination alloc] init];
-    newDest._id = @"2";
-    newDest.title = @"Curitiba";
-    session.currentDestination = newDest;
-    
-    self.nameLabel.text = newDest.title;
+    [session.destinations removeObjectAtIndex:0];
+    session.currentDestination = [session.destinations objectAtIndex:0];
+    [self populateView];
 }
 
 - (void) selectNextDestination {
@@ -193,6 +184,16 @@
     Destination *destination = session.currentDestination;
     
     self.nameLabel.text = destination.title;
+    DestinationViewPoint *dvp = [destination.viewPoints objectAtIndex:0];
+    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
+    dvp.image = [UIImage imageWithData: imageData];
+    self.destinationImageView.image = dvp.image;
+
+    if (destination.basePrice >= 200){
+        self.transportImageView.image = [UIImage imageNamed:@"icon_plane"];
+    }else{
+        self.transportImageView.image = [UIImage imageNamed:@"icon_car"];
+    }
 }
 
 - (IBAction)choose:(id)sender {
@@ -212,10 +213,14 @@
 }
 
 - (IBAction)details:(id)sender {
+    Session *session = [Session sharedSession];
+    session.currentDestinationDetail = session.currentDestination;
     [self performSegueWithIdentifier:@"goToDetail" sender:self];
 }
 
 - (IBAction)tapView:(UITapGestureRecognizer*)tap {
+    Session *session = [Session sharedSession];
+    session.currentDestinationDetail = session.currentDestination;
     [self performSegueWithIdentifier:@"goToDetail" sender:self];
 }
 
