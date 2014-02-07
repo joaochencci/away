@@ -12,6 +12,7 @@
 
 @synthesize user;
 @synthesize currentDestination;
+@synthesize currentDestinationDetail;
 @synthesize destinations;
 
 @synthesize destinationsChoose;
@@ -33,6 +34,7 @@
 - (id)init {
     if (self = [super init]) {
         destination = [[Destination alloc] init];
+        destinations = [[NSMutableArray alloc] init];
         destinationsChoose = [[NSMutableArray alloc] init];
         destinationsReject = [[NSMutableArray alloc] init];
 
@@ -41,10 +43,60 @@
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
         locationManager.delegate = self;
         [locationManager startUpdatingLocation];
+
+        [self populateDestinations];
     }
     return self;
 }
 
+- (void)populateDestinations {
+    [destinations addObject:[self addDestinationWithName:@"Belo Horizonte"
+                                               basePrice:200
+                                          viewPointsName:@[@"Estádio Mineirão",@"Pq. Ecológico da Pampulha",@"Praça da Liberdade",@"Gruta da Lapinha"]
+                                   andViewPointsImageUrl:@[@"https://i.imgur.com/St5x1Az.jpg",@"https://i.imgur.com/HCicHCK.jpg",@"https://i.imgur.com/Rjhnrj9.jpg",@"https://i.imgur.com/PK0cJLC.jpg"]
+                             ]];
+
+    [destinations addObject:[self addDestinationWithName:@"Brasília"
+                                               basePrice:300
+                                          viewPointsName:@[@"Pontão do Lago Sul",@"Ponte J. Kubitschek",@"Congresso Nacional",@"Estádio Mané Garrincha"]
+                                   andViewPointsImageUrl:@[@"https://i.imgur.com/UKFBAO8.jpg",@"https://i.imgur.com/H61XkiU.jpg",@"https://i.imgur.com/Lj3K9We.jpg",@"https://i.imgur.com/L4TI6IA.jpg"]
+                             ]];
+
+    [destinations addObject:[self addDestinationWithName:@"Cuiabá"
+                                               basePrice:250
+                                          viewPointsName:@[@"Centro Histórico",@"Arena Pantanal",@"Parque Massairo Okamura"]
+                                   andViewPointsImageUrl:@[@"https://i.imgur.com/TsS3G28.jpg",@"https://i.imgur.com/1zdHHht.jpg",@"https://i.imgur.com/gJmHDZz.jpg"]
+                             ]];
+
+    [destinations addObject:[self addDestinationWithName:@"Curitiba"
+                                               basePrice:100
+                                          viewPointsName:@[@"Arena da Baixada",@"Cataratas do Iguaçu",@"Bosque Alemão",@"Jardim Botânico de Curitiba"]
+                                   andViewPointsImageUrl:@[@"https://i.imgur.com/7je6Rnr.jpg",@"https://i.imgur.com/AzOirqE.jpg",@"https://i.imgur.com/MvywTqn.jpg",@"https://i.imgur.com/J5UovPl.jpg"]
+                             ]];
+
+    [destinations addObject:[self addDestinationWithName:@"Fortaleza"
+                                               basePrice:500
+                                          viewPointsName:@[@"Praia das Fontes",@"Feira Beira Mar",@"Estádio Castelão",@"Praia do Futuro"]
+                                   andViewPointsImageUrl:@[@"https://i.imgur.com/Bd6JUBR.jpg",@"https://i.imgur.com/iVWeyuV.jpg",@"https://i.imgur.com/e4yN0gt.jpg",@"https://i.imgur.com/f6Px5tN.jpg"]
+                             ]];
+
+}
+
+- (Destination*)addDestinationWithName:(NSString*)name basePrice:(int)basePrice viewPointsName:(NSArray*)viewPointsName andViewPointsImageUrl:(NSArray*)viewPointsImageUrl
+{
+    Destination *dest = [[Destination alloc] init];
+    dest.title = name;
+    dest.description = @"Lorem ipsum";
+    dest.basePrice = basePrice;
+
+    for (int i = 0 ; i < [viewPointsName count]; i++) {
+        DestinationViewPoint *vp = [[DestinationViewPoint alloc] init];
+        vp.name = viewPointsName[i];
+        vp.imageUrl = viewPointsImageUrl[i];
+        [dest.viewPoints addObject:vp];
+    }
+    return dest;
+}
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     //if the time interval returned from core location is more than two minutes we ignore it because it might be from an old session

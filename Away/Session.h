@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "Destination.h"
+#import "DestinationViewPoint.h"
 #import "User.h"
 
 @interface Session : NSObject <CLLocationManagerDelegate> {
     Destination *destination;
+    Destination *currentDestination;
+    Destination *currentDestinationDetail;
     NSMutableArray *destinationsChoose;
     NSMutableArray *destinationsReject;
     CLLocation *currentLocation;
@@ -20,6 +23,7 @@
 
 @property (nonatomic, retain) User *user;
 @property (nonatomic, retain) Destination *currentDestination;
+@property (nonatomic, retain) Destination *currentDestinationDetail;
 @property (nonatomic, retain) NSMutableArray *destinations;
 
 @property (nonatomic, retain) NSMutableArray *destinationsChoose;

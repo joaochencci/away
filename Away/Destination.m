@@ -25,10 +25,7 @@
 {
     self = [super init];
     if (self) {
-//        DestinationViewPoint *dvp = [[DestinationViewPoint alloc] init];
-//        NSMutableArray *viewPoints = [[NSMutableArray alloc] init];
-//        [viewPoints addObject:dvp];
-//        self.viewPoints = viewPoints;
+        self.viewPoints = [[NSMutableArray alloc] init];
     }
     return self;
 }

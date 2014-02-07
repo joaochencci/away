@@ -57,7 +57,11 @@
     UIImageView *imageView = (UIImageView*)[cell viewWithTag:101];
     UILabel *name = (UILabel *)[cell viewWithTag:102];
     UILabel *numberOfFriends = (UILabel *)[cell viewWithTag:103];
-    imageView.image = [dest getFirstImage];
+    
+    DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:0];
+    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
+    dvp.image = [UIImage imageWithData: imageData];
+    imageView.image = dvp.image;
     name.text = dest.title;
     numberOfFriends.text = [NSString stringWithFormat:@"%ld", (long)[dest getNumberOfFriendsFromUser:session.user]];
 
@@ -91,7 +95,7 @@
 {
     Session *session = [Session sharedSession];
     Destination *dest = [session.destinationsChoose objectAtIndex:indexPath.row];
-    session.currentDestination = dest;
+    session.currentDestinationDetail = dest;
     [self performSegueWithIdentifier:@"goToDetailsFromTable" sender:self];
 }
 

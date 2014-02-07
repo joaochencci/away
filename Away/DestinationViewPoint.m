@@ -9,7 +9,6 @@
 #import "DestinationViewPoint.h"
 
 @interface DestinationViewPoint () {
-    UIImage *image;
     CGFloat *distance;
 }
 
@@ -21,7 +20,9 @@
 {
     self = [super init];
     if (self) {
-        
+//        self.image = [[UIImage alloc] init];
+//        self.imageUrl = [[NSString alloc] init];
+//        self.name = [[NSString alloc] init];
     }
     return self;
 }

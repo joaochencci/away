@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uOQ-TF-nxe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uOQ-TF-nxe">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -92,7 +92,7 @@
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gsE-la-ozG">
-                                <rect key="frame" x="20" y="62" width="280" height="44"/>
+                                <rect key="frame" x="20" y="66" width="280" height="90"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="vAM-xt-7Hl"/>
@@ -148,13 +148,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="800km" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NT-oq-Bxj">
-                                <rect key="frame" x="130" y="117" width="61" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_car" translatesAutoresizingMaskIntoConstraints="NO" id="UHc-m2-NKg">
+                                <rect key="frame" x="138" y="111" width="40" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.96470588235294119" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -179,7 +176,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="destinationImageView" destination="Np8-cq-9ck" id="sRr-AY-CCS"/>
-                        <outlet property="distanceLabel" destination="7NT-oq-Bxj" id="CTc-r0-mPs"/>
                         <outlet property="money1ImageView" destination="1RA-mB-uB2" id="Kr1-Br-2si"/>
                         <outlet property="money2ImageView" destination="tNW-6R-75V" id="xdG-UY-syg"/>
                         <outlet property="money3ImageView" destination="B7w-9s-Dev" id="y5O-Qu-rjV"/>
@@ -187,6 +183,7 @@
                         <outlet property="money5ImageView" destination="GAM-fD-ic0" id="HbH-cd-JFh"/>
                         <outlet property="nameLabel" destination="88N-f7-TKv" id="cb8-se-TmG"/>
                         <outlet property="numberFriendsLabel" destination="88N-f7-TKv" id="aWv-Ow-1XY"/>
+                        <outlet property="transportImageView" destination="UHc-m2-NKg" id="RuB-Ww-w05"/>
                         <segue destination="fdB-hD-jeq" kind="push" identifier="goToSettings" id="kLE-GA-8TB"/>
                         <segue destination="rIV-eQ-0lo" kind="push" identifier="goToFavorites" id="m7d-qB-HHK"/>
                         <segue destination="2an-SN-fFL" kind="push" identifier="goToDetail" id="xxe-9r-946"/>
@@ -297,23 +294,13 @@
                             <rect key="frame" x="8" y="6" width="304" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fortaleza" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yT9-eF-uan">
-                                    <rect key="frame" x="89" y="5" width="71" height="24"/>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fortaleza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yT9-eF-uan">
+                                    <rect key="frame" x="-30" y="0.0" width="304" height="33"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="20"/>
                                     <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uu-ww-K5D">
-                                    <rect key="frame" x="-16" y="0.0" width="75" height="33"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button" image="logo_away_header">
-                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="back:" destination="2an-SN-fFL" eventType="touchUpInside" id="qrw-2z-rMW"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
@@ -526,6 +513,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon_car" width="141" height="94"/>
         <image name="icon_fb_friends" width="128" height="128"/>
         <image name="icon_info" width="1771" height="1771"/>
         <image name="icon_info_hover" width="1771" height="1771"/>
