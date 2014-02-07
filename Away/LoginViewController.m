@@ -8,8 +8,9 @@
 
 #import "LoginViewController.h"
 #import "Session.h"
+#import "HTTPRequest.h"
 
-@interface LoginViewController ()
+@interface LoginViewController () <HTTPRequestDelegate>
 
 @end
 
@@ -40,6 +41,9 @@
 // This method will be called when the user information has been fetched
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
     NSString *accessToken = [[[FBSession activeSession] accessTokenData] accessToken];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:3000/api/user/login?provider=facebook&token=%@",accessToken]];
+    HTTPRequest *request = [[HTTPRequest alloc] initWithRequest:[NSURLRequest requestWithURL:url] andDelegate:self];
+    [request executeRequestParsingData:RawHTTPDataTypeJSON asynch:NO];
     NSLog(@"%@", accessToken);
 }
 
@@ -93,6 +97,21 @@
     if (alertMessage) {
         [[[UIAlertView alloc] initWithTitle:alertTitle message:alertMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     }
+}
+
+
+# pragma mark - HTTPRequest Delegate
+
+- (void)request:(HTTPRequest *)request didFailWithError:(NSError *)error
+{
+    NSLog(@"error");
+}
+
+- (void)request:(HTTPRequest *)request didFinishWithResponseObject:(HTTPResponseObject *)responseObject
+{
+//    NSLog(@"%@",responseObject.data);
+    Session *session = [Session sharedSession];
+    session.user = [[User alloc] initWithDictionary:responseObject.data];
 }
 
 - (void)didReceiveMemoryWarning
