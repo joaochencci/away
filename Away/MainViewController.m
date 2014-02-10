@@ -9,39 +9,33 @@
 #import "MainViewController.h"
 #import "Session.h"
 #import "Destination.h"
+#import "NSMutableArray+FIFOQueue.h"
 
 @interface MainViewController () <UIScrollViewDelegate> {
     NSInteger _pageChanges;
-    NSArray *_images;
 }
 
-@property (weak, nonatomic) IBOutlet UIImageView *destinationImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money1ImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money2ImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money3ImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money4ImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money5ImageView;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *numberFriendsLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *transportImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *nextDestinationPlaceholderImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *currentDestinationImage;
+@property (weak, nonatomic) IBOutlet UIImageView *transportationImage;
+@property (weak, nonatomic) IBOutlet UIImageView *friendsImageView;
 
-// ----
 @property (weak, nonatomic) IBOutlet UIButton *infoButton;
 @property (weak, nonatomic) IBOutlet UIButton *goAwayButton;
 @property (weak, nonatomic) IBOutlet UIButton *dontGoAwayButton;
+
 @property (weak, nonatomic) IBOutlet UILabel *destinationTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numberOfFriendsLabel;
 
-@property (weak, nonatomic) IBOutlet UIImageView *nextDestinationPlaceholderImageView;
 @property (weak, nonatomic) IBOutlet UIView *currentDestinationShadow;
-@property (weak, nonatomic) IBOutlet UIImageView *currentDestinationImage;
-
-
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
-
-@property (weak, nonatomic) IBOutlet UIImageView *transportationImage;
-
-@property (weak, nonatomic) IBOutlet UILabel *numberOfFriendsLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 
 @end
 
@@ -51,7 +45,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -81,45 +74,14 @@
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapView:)];
     tap.numberOfTapsRequired = 1;
-    [self.view addGestureRecognizer:tap];
+    [self.scrollView addGestureRecognizer:tap];
 
-    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
-    [swipeLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
-    [self.view addGestureRecognizer:swipeLeft];
-
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeView:)];
-    [swipeRight setDirection:UISwipeGestureRecognizerDirectionRight];
-    [self.view addGestureRecognizer:swipeRight];
-
-//    CALayer *layer = self.destinationImageView.layer;
-//    layer.cornerRadius = 5.0;
-//    layer.borderColor = [[UIColor grayColor] CGColor];
-//    layer.borderWidth = 3;
-//    layer.frame = CGRectMake(-3, -3, CGRectGetWidth(self.destinationImageView.frame), CGRectGetHeight(self.destinationImageView.frame)+2);
-
-    Session *session = [Session sharedSession];
-
-    session.currentDestination = [session.destinations objectAtIndex:0];
-    [self populateView];
+    self.scrollView.delegate = self;
 
 // # request dos primeiros destinos # //
-    
-//    NSMutableArray *destinations = [[NSMutableArray alloc] init];
-//    destinations = HTTP REQUEST;
-    
-//    session.currentDestination = [destinations objectAtIndex:0];
-//    [destinations removeObjectAtIndex:0];
-//    session.destinations = destinations;
-    
-    _pageChanges = 0;
-    _images = [NSArray arrayWithObjects:[UIImage imageNamed:@"placeholder"],
-               [UIImage imageNamed:@"placeholder2"],
-               [UIImage imageNamed:@"placeholder3"], nil];
-    
-    self.currentDestinationImage.image = [UIImage imageNamed:@"placeholder"];
-
-    
-    self.scrollView.delegate = self;
+    Session *session = [Session sharedSession];
+    session.currentDestination = [session.destinations objectAtIndex:0];
+    [self populateView];
     
     self.currentDestinationImage.layer.masksToBounds = YES;
     self.currentDestinationShadow.layer.cornerRadius = 10.0;
@@ -127,12 +89,18 @@
     self.currentDestinationShadow.layer.shadowOpacity = 1.0;
     self.currentDestinationShadow.layer.shadowRadius = 10.0;
     self.currentDestinationShadow.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+
+    [self.indicator stopAnimating];
+
+    Session *session = [Session sharedSession];
+    session.currentDestination = [session.destinations objectAtIndex:0];
+    [self populateView];
+
     self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 3, self.scrollView.frame.size.height);
     self.scrollView.contentOffset = CGPointMake(self.view.frame.size.width, 0.0);
 }
@@ -140,68 +108,40 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-- (void)processSwipeInDirection: (UISwipeGestureRecognizerDirection) direction{
+- (void)decisionDestination: (NSString*) decision
+{
     Session *session = [Session sharedSession];
     Destination *dest = session.currentDestination;
     
-    if (direction == UISwipeGestureRecognizerDirectionRight) {
-        // NSLog(@"Right Swipe");
+    if ([decision isEqualToString:@"goAway"]) {
         NSMutableArray *destinationsChoose = session.destinationsChoose;
         [destinationsChoose addObject:dest];
         session.destinationsChoose = destinationsChoose;
     }
-    if (direction == UISwipeGestureRecognizerDirectionLeft) {
-        // NSLog(@"Left Swipe");
+    if ([decision isEqualToString:@"dontGoAway"]) {
         NSMutableArray *destinationsReject = session.destinationsReject;
         [destinationsReject addObject:dest];
         session.destinationsReject = destinationsReject;
     }
-
-    [session.destinations removeObjectAtIndex:0];
-    session.currentDestination = [session.destinations objectAtIndex:0];
-    [self populateView];
-}
-
-- (void) selectNextDestination {
-    Session *session = [Session sharedSession];
-    NSMutableArray *destinations = session.destinations;
-    
-    session.currentDestination = [destinations objectAtIndex:0];
-    [destinations removeObjectAtIndex:0];
-    
-//    Destination *newDestination = HTTP REQUEST ;
-    
-//    [destinations addObject: newDestination];
-    
-    session.destinations = destinations;
 }
 
 - (void) populateView {
     Session *session = [Session sharedSession];
     Destination *destination = session.currentDestination;
     
-    self.nameLabel.text = destination.title;
+    self.destinationTitleLabel.text = destination.title;
     DestinationViewPoint *dvp = [destination.viewPoints objectAtIndex:0];
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
     dvp.image = [UIImage imageWithData: imageData];
-    self.destinationImageView.image = dvp.image;
+    self.currentDestinationImage.image = dvp.image;
 
     if (destination.basePrice >= 200){
-        self.transportImageView.image = [UIImage imageNamed:@"icon_plane"];
+        self.transportationImage.image = [UIImage imageNamed:@"icon_plane"];
     }else{
-        self.transportImageView.image = [UIImage imageNamed:@"icon_car"];
+        self.transportationImage.image = [UIImage imageNamed:@"icon_car"];
     }
-}
-
-- (IBAction)choose:(id)sender {
-    [self processSwipeInDirection: UISwipeGestureRecognizerDirectionRight];
-}
-
-- (IBAction)reject:(id)sender {
-    [self processSwipeInDirection: UISwipeGestureRecognizerDirectionLeft];
 }
 
 - (IBAction)settings:(id)sender {
@@ -224,35 +164,35 @@
     [self performSegueWithIdentifier:@"goToDetail" sender:self];
 }
 
-- (IBAction)swipeView:(UISwipeGestureRecognizer*)swipe {
-    [self processSwipeInDirection: swipe.direction];
-}
-
 # pragma mark - Firulas Layout
 # pragma mark - UIScrollViewDelegate
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
-    NSLog(@"(%f, %f)", scrollView.contentOffset.x, scrollView.contentOffset.y);
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+//    NSLog(@"(%f, %f)", scrollView.contentOffset.x, scrollView.contentOffset.y);
     if (scrollView.contentOffset.x < 320) {
-        NSLog(@"LEFT PAGE");
-        [self nextImage];
+//        NSLog(@"LEFT PAGE");
+        [self decisionDestination:@"dontGoAway"];
+        [self nextDestination];
     } else if (scrollView.contentOffset.x >= 640) {
-        NSLog(@"RIGHT PAGE");
-        [self nextImage];
+//        NSLog(@"RIGHT PAGE");
+        [self decisionDestination:@"goAway"];
+        [self nextDestination];
     } else {
-        NSLog(@"CENTER PAGE");
+//        NSLog(@"CENTER PAGE");
     }
 }
 
 # pragma mark - Flu
 
-- (void)nextImage
+- (void)nextDestination
 {
-    _pageChanges++;
-    
-    NSInteger currentIndex = _pageChanges % [_images count];
-    
-    self.currentDestinationImage.image = [_images objectAtIndex:(currentIndex)];
+    Session *session = [Session sharedSession];
+
+    Destination *d = [session.destinations dequeueObject];
+    [session.destinations enqueueObject:d];
+
+    session.currentDestination = [session.destinations objectAtIndex:0];
+
+    [self populateView];
     [self.currentDestinationImage setNeedsDisplay];
     
     self.currentDestinationImage.alpha = 0.0;
@@ -260,25 +200,6 @@
     
     self.destinationTitleLabel.alpha = 0.0;
     self.toolBar.alpha = 0.0;
-    
-    NSString *title;
-    //self.headerLabel.text = [NSString stringWithFormat:@"%d", currentIndex];
-    switch (currentIndex) {
-        case 0:
-            title = @"Fortaleza";
-            break;
-        case 1:
-            title = @"Rio de Janeiro";
-            break;
-        case 2:
-            title = @"São Paulo";
-            break;
-        default:
-            break;
-    }
-    
-    self.destinationTitleLabel.text = title;
-    
     
     [self.scrollView setContentOffset:CGPointMake(320.0, 0.0) animated:NO];
     
@@ -289,23 +210,25 @@
                          self.destinationTitleLabel.alpha = 1.0;
                          self.toolBar.alpha = 1.0;
                      } completion:^(BOOL finished){
-                         self.nextDestinationPlaceholderImageView.image = [_images objectAtIndex:((_pageChanges + 1) % [_images count])];
+                         Destination *dest = [session.destinations objectAtIndex:1];
+                         DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:0];
+                         NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
+                         dvp.image = [UIImage imageWithData: imageData];
+                         self.nextDestinationPlaceholderImageView.image = dvp.image;
                      }];
-    
-    
 }
 
 
 - (IBAction)goAway:(id)sender {
     [self.scrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
-    //[self nextImage];
-    [self performSelector:@selector(nextImage) withObject:Nil afterDelay:0.2];
+    [self decisionDestination:@"goAway"];
+    [self performSelector:@selector(nextDestination) withObject:Nil afterDelay:0.2];
 }
 
 - (IBAction)dontGoAway:(id)sender {
     [self.scrollView setContentOffset:CGPointMake(640.0, 0.0) animated:YES];
-    [self performSelector:@selector(nextImage) withObject:Nil afterDelay:0.2];
-    //[self nextImage];
+    [self decisionDestination:@"dontGoAway"];
+    [self performSelector:@selector(nextDestination) withObject:Nil afterDelay:0.2];
 }
 
 

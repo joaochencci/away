@@ -22,7 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UIScrollView *imageScrollView;
+@property (weak, nonatomic) IBOutlet UIScrollView *viewPointsScrollView;
 
 @end
 
@@ -85,15 +85,15 @@
     Destination *dest = session.currentDestinationDetail;
 
     for (int i = 0; i < [dest.viewPoints count]; i++) {
-        CGFloat xOrigin = i * self.imageScrollView.frame.size.width;
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(xOrigin, 0, self.imageScrollView.frame.size.width, self.imageScrollView.frame.size.height)];
+        CGFloat xOrigin = i * self.viewPointsScrollView.frame.size.width;
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(xOrigin, 0, self.viewPointsScrollView.frame.size.width, self.viewPointsScrollView.frame.size.height)];
         DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:i];
         NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
         dvp.image = [UIImage imageWithData: imageData];
         imageView.image = dvp.image;
-        [self.imageScrollView addSubview:imageView];
+        [self.viewPointsScrollView addSubview:imageView];
     }
-    self.imageScrollView.contentSize = CGSizeMake(self.imageScrollView.frame.size.width * [dest.viewPoints count], self.imageScrollView.frame.size.height);
+    self.viewPointsScrollView.contentSize = CGSizeMake(self.viewPointsScrollView.frame.size.width * [dest.viewPoints count], self.viewPointsScrollView.frame.size.height);
 
     [self populateView];
 //    queue = [[NSOperationQueue alloc] init];

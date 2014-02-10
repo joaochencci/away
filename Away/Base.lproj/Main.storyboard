@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uOQ-TF-nxe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uOQ-TF-nxe">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -27,7 +27,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Scc-D5-IBz" kind="modal" identifier="doLogin" id="LnN-rl-fKj"/>
+                                    <segue destination="jmg-NW-Xwt" kind="modal" identifier="doLogin" id="TK6-qr-ILl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -39,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="719" y="-598"/>
+            <point key="canvasLocation" x="638" y="-598"/>
         </scene>
         <!--Main View Controller -  -->
         <scene sceneID="xnP-x5-uap">
@@ -165,23 +165,16 @@
                         </view>
                     </navigationItem>
                     <connections>
-                        <outlet property="destinationImageView" destination="Np8-cq-9ck" id="sRr-AY-CCS"/>
                         <outlet property="money1ImageView" destination="1RA-mB-uB2" id="Kr1-Br-2si"/>
                         <outlet property="money2ImageView" destination="tNW-6R-75V" id="xdG-UY-syg"/>
                         <outlet property="money3ImageView" destination="B7w-9s-Dev" id="y5O-Qu-rjV"/>
                         <outlet property="money4ImageView" destination="kV4-8x-9Co" id="vtS-yh-6l4"/>
                         <outlet property="money5ImageView" destination="GAM-fD-ic0" id="HbH-cd-JFh"/>
-                        <outlet property="nameLabel" destination="88N-f7-TKv" id="cb8-se-TmG"/>
-                        <outlet property="numberFriendsLabel" destination="88N-f7-TKv" id="aWv-Ow-1XY"/>
-                        <outlet property="transportImageView" destination="UHc-m2-NKg" id="RuB-Ww-w05"/>
-                        <segue destination="fdB-hD-jeq" kind="push" identifier="goToSettings" id="kLE-GA-8TB"/>
-                        <segue destination="rIV-eQ-0lo" kind="push" identifier="goToFavorites" id="m7d-qB-HHK"/>
-                        <segue destination="2an-SN-fFL" kind="push" identifier="goToDetail" id="xxe-9r-946"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XI3-d0-LNL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="204"/>
+            <point key="canvasLocation" x="711" y="969"/>
         </scene>
         <!--Detail View Controller -  -->
         <scene sceneID="gCN-b3-XrK">
@@ -298,7 +291,6 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="Ybn-8X-emP" id="RdM-Fv-3uP"/>
                         <outlet property="distanceLabel" destination="yYJ-MD-bEE" id="4Yk-U6-eAQ"/>
-                        <outlet property="imageScrollView" destination="tOg-gA-Fgl" id="8vu-bT-qQv"/>
                         <outlet property="money1ImageView" destination="brJ-Ca-TiB" id="mAO-8L-9gi"/>
                         <outlet property="money2ImageView" destination="3bS-bx-3WH" id="6E7-YX-ct4"/>
                         <outlet property="money3ImageView" destination="tHX-hk-jQf" id="5Ka-68-WbJ"/>
@@ -306,11 +298,12 @@
                         <outlet property="money5ImageView" destination="9db-ov-Zho" id="zmi-46-kYy"/>
                         <outlet property="nameLabel" destination="Dkx-7M-TtC" id="a2a-6d-P33"/>
                         <outlet property="titleLabel" destination="yT9-eF-uan" id="TJq-im-3uW"/>
+                        <outlet property="viewPointsScrollView" destination="tOg-gA-Fgl" id="lyk-fc-LS9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgu-6r-6nT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1531" y="203"/>
+            <point key="canvasLocation" x="1282" y="203"/>
         </scene>
         <!--Favorites View Controller -  -->
         <scene sceneID="dyT-oZ-HnF">
@@ -407,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ab-93-Cy1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1531" y="-598"/>
+            <point key="canvasLocation" x="1282" y="-598"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="537-SK-hFb">
@@ -481,7 +474,7 @@
                                         <rect key="frame" x="340" y="20" width="280" height="280"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="3ZE-Hg-dEJ">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ZE-Hg-dEJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <userDefinedRuntimeAttributes>
@@ -494,7 +487,7 @@
                                         </subviews>
                                     </view>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NMH-Oo-aYp">
-                                        <rect key="frame" x="21" y="-5" width="280" height="44"/>
+                                        <rect key="frame" x="340" y="-5" width="280" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <items/>
                                         <userDefinedRuntimeAttributes>
@@ -505,21 +498,21 @@
                                         </userDefinedRuntimeAttributes>
                                     </toolbar>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_car" translatesAutoresizingMaskIntoConstraints="NO" id="k9m-rm-71f">
-                                        <rect key="frame" x="142" y="3" width="38" height="28"/>
+                                        <rect key="frame" x="462" y="3" width="38" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_fb_friends" translatesAutoresizingMaskIntoConstraints="NO" id="fPw-nh-NfK">
-                                        <rect key="frame" x="31" y="3" width="21" height="25"/>
+                                        <rect key="frame" x="351" y="3" width="21" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="43" translatesAutoresizingMaskIntoConstraints="NO" id="Ehy-NQ-FQn">
-                                        <rect key="frame" x="51" y="1" width="43" height="32"/>
+                                        <rect key="frame" x="371" y="1" width="43" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jUL-lw-uSS">
-                                        <rect key="frame" x="233" y="2" width="59" height="30"/>
+                                        <rect key="frame" x="553" y="2" width="59" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_money_yes" translatesAutoresizingMaskIntoConstraints="NO" id="MzC-RY-YK3">
@@ -545,6 +538,30 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="uUi-9n-3HW">
+                                        <rect key="frame" x="130" y="131" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.058823529409999999" green="0.42352941179999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Se-hJ-9PS">
+                                        <rect key="frame" x="139" y="139" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhU-54-aBq">
+                                        <rect key="frame" x="779" y="139" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWR-wW-hrV">
+                                        <rect key="frame" x="459" y="139" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fortaleza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBN-0S-wzJ">
@@ -569,22 +586,32 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="currentDestinationImage" destination="5Mz-JO-p9I" id="Ke9-u3-nmZ"/>
+                        <outlet property="currentDestinationImage" destination="3ZE-Hg-dEJ" id="hrT-39-ZfE"/>
                         <outlet property="currentDestinationShadow" destination="1Fv-bc-fsP" id="YQE-md-bQ6"/>
                         <outlet property="destinationTitleLabel" destination="HBN-0S-wzJ" id="wna-Th-lJ8"/>
                         <outlet property="dontGoAwayButton" destination="4Ic-xL-0av" id="IOB-hS-ZDC"/>
+                        <outlet property="friendsImageView" destination="fPw-nh-NfK" id="JkT-A3-opi"/>
                         <outlet property="goAwayButton" destination="C0J-k7-aEq" id="ttO-bT-hO8"/>
+                        <outlet property="indicator" destination="uUi-9n-3HW" id="4c9-oK-FZI"/>
                         <outlet property="infoButton" destination="trf-n4-ZOT" id="QdU-Iv-f2B"/>
+                        <outlet property="money1ImageView" destination="MzC-RY-YK3" id="eeX-XM-5oL"/>
+                        <outlet property="money2ImageView" destination="woG-Wf-mbL" id="Zc2-3N-ihw"/>
+                        <outlet property="money3ImageView" destination="jgg-vW-KFW" id="cMy-3p-Okm"/>
+                        <outlet property="money4ImageView" destination="Q3O-qF-1mq" id="RsD-R6-BgY"/>
+                        <outlet property="money5ImageView" destination="Pfm-cm-PSp" id="z5P-yC-J9g"/>
                         <outlet property="nextDestinationPlaceholderImageView" destination="5Mz-JO-p9I" id="h0K-ra-ylE"/>
                         <outlet property="numberOfFriendsLabel" destination="Ehy-NQ-FQn" id="XtU-Ka-8IA"/>
                         <outlet property="scrollView" destination="Vxh-TP-Dt6" id="tjc-ix-Ewy"/>
                         <outlet property="toolBar" destination="NMH-Oo-aYp" id="GxU-m4-FqT"/>
                         <outlet property="transportationImage" destination="k9m-rm-71f" id="Fpa-Je-hEC"/>
+                        <segue destination="rIV-eQ-0lo" kind="push" identifier="goToFavorites" id="ZNb-ft-ENl"/>
+                        <segue destination="fdB-hD-jeq" kind="push" identifier="goToSettings" id="P1d-p7-KPJ"/>
+                        <segue destination="2an-SN-fFL" kind="push" identifier="goToDetail" id="2jk-Gj-03t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYt-dz-LsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1022" y="897"/>
+            <point key="canvasLocation" x="638" y="204"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="AgC-fe-MS8">
@@ -631,7 +658,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kb8-24-Pra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1531" y="885"/>
+            <point key="canvasLocation" x="1282" y="885"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3QK-uK-pfp">
@@ -650,33 +677,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3dC-ZR-NVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="293" y="-598"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4xb-18-59t">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Scc-D5-IBz" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="9Hi-bt-xFK">
-                        <barButtonItem key="backBarButtonItem" title="a" id="2mK-QZ-vvy"/>
-                    </navigationItem>
-                    <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" id="XC6-Ui-V9V">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.058823529409999999" green="0.42352941179999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.94117647059999998" green="0.96470588239999999" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="QiY-YY-rXe" kind="relationship" relationship="rootViewController" id="Dhe-pL-hvP"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="byQ-jj-nr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="494" y="204"/>
+            <point key="canvasLocation" x="198" y="-598"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9l8-OU-sU9">
@@ -686,6 +687,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="N90-F4-wpJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.058823529409999999" green="0.42352941179999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -694,7 +696,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vIN-cU-zjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="627" y="897"/>
+            <point key="canvasLocation" x="198" y="198"/>
         </scene>
     </scenes>
     <resources>
@@ -742,7 +744,6 @@
         <image name="logo_away_small" width="500" height="262"/>
         <image name="placeholder" width="331" height="233"/>
         <image name="placeholder" width="331" height="233"/>
-        <image name="placeholder" width="331" height="233"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -750,6 +751,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="xxe-9r-946"/>
+        <segue reference="xlg-3n-gD9"/>
     </inferredMetricsTieBreakers>
 </document>
