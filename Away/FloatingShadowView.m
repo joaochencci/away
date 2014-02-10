@@ -13,7 +13,7 @@
 #define SCALEDSHADOWRADIUS 0.99f;
 #define INITIALSHADOWOFFSET CGSizeMake(2, 7)
 
-#define ANIMATIONOPTIONS (UIViewAnimationOptionRepeat|UIViewAnimationOptionAutoreverse|UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState)
+#define ANIMATIONOPTIONS (UIViewAnimationOptionRepeat|UIViewAnimationOptionAutoreverse|UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionAllowUserInteraction)
 
 @interface FloatingShadowView () {
     BOOL _animationRunning;
@@ -132,7 +132,6 @@
     group.repeatCount = INFINITY;
     group.autoreverses = YES;
     group.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    
     group.animations = [NSArray arrayWithObjects:scaleAnim, shadowRadiusAnim, shadowOffsetWidthAnim, shadowOffsetHeightAnim, rotationAnim, nil];
     
     [self.layer addAnimation:group forKey:@"allImageViewAnimations"];

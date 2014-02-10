@@ -435,21 +435,9 @@
                                 <rect key="frame" x="0.0" y="170" width="320" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="nW0-wm-mxm">
-                                        <rect key="frame" x="371" y="7" width="218" height="213"/>
+                                    <view contentMode="scaleToFill" id="nW0-wm-mxm" customClass="FloatingShadowView">
+                                        <rect key="frame" x="354" y="7" width="253" height="213"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" id="v5x-Sc-rZv">
-                                                <rect key="frame" x="0.0" y="0.0" width="218" height="213"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="10"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
-                                            </imageView>
-                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
                                     <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7jC-hN-UK3">
@@ -522,9 +510,8 @@
                         <outlet property="backImage" destination="F2k-lZ-Ju8" id="nhM-2Z-sCB"/>
                         <outlet property="header" destination="qLB-sa-7u4" id="WUe-hh-W0S"/>
                         <outlet property="headerLabel" destination="cnx-eO-8w8" id="QiR-ST-oc5"/>
-                        <outlet property="image" destination="v5x-Sc-rZv" id="hRy-en-yf0"/>
                         <outlet property="label" destination="sra-aN-Wyq" id="zYd-7c-5L7"/>
-                        <outlet property="shadow" destination="nW0-wm-mxm" id="ymk-O4-K6C"/>
+                        <outlet property="shadowedView" destination="nW0-wm-mxm" id="BJU-IH-oAN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wq8-iG-vAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -627,34 +614,15 @@
     </scenes>
     <resources>
         <image name="icon_fb_friends" width="128" height="128"/>
-        <image name="icon_fb_friends" width="128" height="128"/>
-        <image name="icon_fb_friends" width="128" height="128"/>
         <image name="icon_info" width="1771" height="1771"/>
         <image name="icon_minus" width="1771" height="1771"/>
         <image name="icon_minus_hover" width="1771" height="1771"/>
         <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
         <image name="icon_money_yes" width="30" height="30"/>
         <image name="icon_plus" width="1771" height="1771"/>
         <image name="icon_plus_hover" width="1771" height="1771"/>
-        <image name="icon_plus_hover" width="1771" height="1771"/>
-        <image name="logo_away_header" width="350" height="180"/>
         <image name="logo_away_header" width="350" height="180"/>
         <image name="logo_away_small" width="500" height="262"/>
-        <image name="placeholder" width="331" height="233"/>
-        <image name="placeholder" width="331" height="233"/>
         <image name="placeholder" width="331" height="233"/>
         <image name="placeholder2" width="300" height="200"/>
     </resources>

@@ -8,6 +8,7 @@
 
 #import "TestViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "FloatingShadowView.h"
 
 
 @interface TestViewController () <UIScrollViewDelegate> {
@@ -15,13 +16,15 @@
     NSArray *_images;
 }
 
-@property (weak, nonatomic) IBOutlet UIImageView *image;
+//@property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UIScrollView *_scroll;
-@property (weak, nonatomic) IBOutlet UIView *shadow;
+//@property (weak, nonatomic) IBOutlet UIView *shadow;
 @property (weak, nonatomic) IBOutlet UIImageView *backImage;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UIView *header;
 @property (weak, nonatomic) IBOutlet UILabel *headerLabel;
+
+@property (weak, nonatomic) IBOutlet FloatingShadowView *shadowedView;
 
 @end
 
@@ -48,14 +51,9 @@
     
     self._scroll.delegate = self;
     
-    self.image.layer.masksToBounds = YES;
-    self.shadow.layer.cornerRadius = 10.0;
-    self.shadow.layer.shadowColor = [[UIColor blackColor] CGColor];
-    self.shadow.layer.shadowOpacity = 1.0;
-    self.shadow.layer.shadowRadius = 10.0;
-    self.shadow.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
     
-    //self.image.image = [UIImage imageNamed:@"placeholder2"];
+    self.shadowedView.image = [UIImage imageNamed:@"placeholder"];
+    [self.shadowedView startFloatingAnimation];
     
 }
 
@@ -95,11 +93,11 @@
     
     NSInteger currentIndex = _pageChanges % [_images count];
     
-    self.image.image = [_images objectAtIndex:(currentIndex)];
-    [self.image setNeedsDisplay];
+    self.shadowedView.image = [_images objectAtIndex:(currentIndex)];
+    //[self.image setNeedsDisplay];
     
-    self.image.alpha = 0.0;
-    self.shadow.alpha = 0.0;
+    //self.image.alpha = 0.0;
+    self.shadowedView.alpha = 0.0;
     
     self.label.alpha = 0.0;
     self.header.alpha = 0.0;
@@ -136,8 +134,8 @@
     
     [UIView animateWithDuration:0.2
                      animations:^{
-                         self.image.alpha = 1.0;
-                         self.shadow.alpha = 1.0;
+                         //self.image.alpha = 1.0;
+                         self.shadowedView.alpha = 1.0;
                          self.label.alpha = 1.0;
                          self.header.alpha = 1.0;
                      } completion:^(BOOL finished){
