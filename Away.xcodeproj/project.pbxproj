@@ -19,6 +19,8 @@
 		1A4B760C18A50F7B00304125 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B760B18A50F7B00304125 /* TestViewController.m */; };
 		1A965763189981CF00DB1D32 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965762189981CF00DB1D32 /* User.m */; };
 		1A965766189981DB00DB1D32 /* Destination.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A965765189981DB00DB1D32 /* Destination.m */; };
+		1AC4FE2018A9413E00C531E4 /* FloatingShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FE1F18A9413E00C531E4 /* FloatingShadowView.m */; };
+		1AC4FE2318A94F7500C531E4 /* ttViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC4FE2218A94F7500C531E4 /* ttViewController.m */; };
 		1AD9C3C6189C619200CA6210 /* DestinationPresenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3C5189C619200CA6210 /* DestinationPresenterManager.m */; };
 		1AD9C3CD189C645E00CA6210 /* NSMutableArray+FIFOQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3CC189C645E00CA6210 /* NSMutableArray+FIFOQueue.m */; };
 		1AD9C3CF189C69B200CA6210 /* FIFOQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3CE189C69B200CA6210 /* FIFOQueueTest.m */; };
@@ -81,6 +83,10 @@
 		1A965762189981CF00DB1D32 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		1A965764189981DB00DB1D32 /* Destination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Destination.h; sourceTree = "<group>"; };
 		1A965765189981DB00DB1D32 /* Destination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Destination.m; sourceTree = "<group>"; };
+		1AC4FE1E18A9413E00C531E4 /* FloatingShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatingShadowView.h; sourceTree = "<group>"; };
+		1AC4FE1F18A9413E00C531E4 /* FloatingShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatingShadowView.m; sourceTree = "<group>"; };
+		1AC4FE2118A94F7500C531E4 /* ttViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ttViewController.h; sourceTree = "<group>"; };
+		1AC4FE2218A94F7500C531E4 /* ttViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ttViewController.m; sourceTree = "<group>"; };
 		1AD9C3C4189C619200CA6210 /* DestinationPresenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationPresenterManager.h; sourceTree = "<group>"; };
 		1AD9C3C5189C619200CA6210 /* DestinationPresenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationPresenterManager.m; sourceTree = "<group>"; };
 		1AD9C3CB189C645E00CA6210 /* NSMutableArray+FIFOQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+FIFOQueue.h"; sourceTree = "<group>"; };
@@ -155,6 +161,8 @@
 				356AC3C7189C03B3000EEBBD /* FavoriteTableViewCell.m */,
 				355FA24618A26B5300F903BF /* DetailFriendCustomCell.h */,
 				355FA24718A26B5300F903BF /* DetailFriendCustomCell.m */,
+				1AC4FE1E18A9413E00C531E4 /* FloatingShadowView.h */,
+				1AC4FE1F18A9413E00C531E4 /* FloatingShadowView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -174,6 +182,8 @@
 				35A96E781896B85000DC1300 /* SettingsViewController.m */,
 				1A4B760A18A50F7B00304125 /* TestViewController.h */,
 				1A4B760B18A50F7B00304125 /* TestViewController.m */,
+				1AC4FE2118A94F7500C531E4 /* ttViewController.h */,
+				1AC4FE2218A94F7500C531E4 /* ttViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -421,8 +431,10 @@
 				35A96E431896B10B00DC1300 /* LoginViewController.m in Sources */,
 				35A96E791896B85000DC1300 /* SettingsViewController.m in Sources */,
 				1A965766189981DB00DB1D32 /* Destination.m in Sources */,
+				1AC4FE2318A94F7500C531E4 /* ttViewController.m in Sources */,
 				35A96E3D1896B10B00DC1300 /* AppDelegate.m in Sources */,
 				1A4B760618A41F8C00304125 /* HTTPResponseObject.m in Sources */,
+				1AC4FE2018A9413E00C531E4 /* FloatingShadowView.m in Sources */,
 				35A96E391896B10B00DC1300 /* main.m in Sources */,
 				1AD9C3D2189C92AC00CA6210 /* DestinationViewPoint.m in Sources */,
 				1AD9C3CD189C645E00CA6210 /* NSMutableArray+FIFOQueue.m in Sources */,
