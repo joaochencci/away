@@ -11,9 +11,7 @@
 #import "Destination.h"
 #import "NSMutableArray+FIFOQueue.h"
 
-@interface MainViewController () <UIScrollViewDelegate> {
-    NSInteger _pageChanges;
-}
+@interface MainViewController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *money1ImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money2ImageView;
@@ -98,9 +96,29 @@
     [self.indicator stopAnimating];
 
     Session *session = [Session sharedSession];
-    session.currentDestination = [session.destinations objectAtIndex:0];
-    [self populateView];
 
+    self.scrollView.delegate = self;
+
+    [UIView animateWithDuration:0.2
+                     animations:^{
+                         self.currentDestinationImage.alpha = 1.0;
+                         self.currentDestinationShadow.alpha = 1.0;
+                         self.destinationTitleLabel.alpha = 1.0;
+                         self.toolBar.alpha = 1.0;
+                     } completion:^(BOOL finished){
+                         Destination *dest = [session.destinations objectAtIndex:1];
+                         DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:0];
+                         NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
+                         dvp.image = [UIImage imageWithData: imageData];
+                         self.nextDestinationPlaceholderImageView.image = dvp.image;
+                     }];
+    
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 3, self.scrollView.frame.size.height);
+    self.scrollView.contentOffset = CGPointMake(self.view.frame.size.width, 0.0);
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
     self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 3, self.scrollView.frame.size.height);
     self.scrollView.contentOffset = CGPointMake(self.view.frame.size.width, 0.0);
 }

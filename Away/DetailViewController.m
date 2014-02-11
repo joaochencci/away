@@ -11,7 +11,7 @@
 #import "DestinationViewPoint.h"
 #import "Session.h"
 
-@interface DetailViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface DetailViewController () <UICollectionViewDataSource, UICollectionViewDelegate,UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *money1ImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money2ImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money3ImageView;
@@ -49,14 +49,14 @@
     static NSString *cellIdentifier = @"fbCell";
     DetailFriendCustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
 
-    NSString *url = @"http://graph.facebook.com/#ID#/picture?type=square";
+//    NSString *url = @"http://graph.facebook.com/#ID#/picture?type=square";
     // TRAZER LISTA DE AMIGOS QUE CURTIRAM TAMBÉM ESSE DESTINO, PRA PEGAR O ID, PARA USAR NA IMAGEM.
-    url = [url stringByReplacingOccurrencesOfString:@"#ID#" withString:@"100001257114590"];
+//    url = [url stringByReplacingOccurrencesOfString:@"#ID#" withString:@"100001257114590"];
 
 //    NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
 //        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
-            cell.friendImageView.image = [UIImage imageWithData: imageData];
+//            NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
+//            cell.friendImageView.image = [UIImage imageWithData: imageData];
 //            [[collectionView cellForItemAtIndexPath:indexPath] setBackgroundView:cell.friendImageView];
 //        }];
 //    }];
@@ -64,7 +64,14 @@
     return cell;
 }
 
-# pragma mark
+# pragma mark - UIScrollView
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    Session *session = [Session sharedSession];
+    Destination *dest = session.currentDestinationDetail;
+    DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:self.viewPointsScrollView.contentOffset.x / 300];
+    self.nameLabel.text = dvp.name;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -94,6 +101,8 @@
         [self.viewPointsScrollView addSubview:imageView];
     }
     self.viewPointsScrollView.contentSize = CGSizeMake(self.viewPointsScrollView.frame.size.width * [dest.viewPoints count], self.viewPointsScrollView.frame.size.height);
+    DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:0];
+    self.nameLabel.text = dvp.name;
 
     [self populateView];
 //    queue = [[NSOperationQueue alloc] init];
