@@ -11,6 +11,8 @@
 #import "Destination.h"
 #import "NSMutableArray+FIFOQueue.h"
 
+#import "FloatingShadowView.h"
+
 @interface MainViewController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *money1ImageView;
@@ -30,7 +32,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *destinationTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfFriendsLabel;
 
-@property (weak, nonatomic) IBOutlet UIView *currentDestinationShadow;
+@property (weak, nonatomic) IBOutlet FloatingShadowView *currentDestinationShadow;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
@@ -81,12 +83,14 @@
     session.currentDestination = [session.destinations objectAtIndex:0];
     [self populateView];
     
-    self.currentDestinationImage.layer.masksToBounds = YES;
-    self.currentDestinationShadow.layer.cornerRadius = 10.0;
-    self.currentDestinationShadow.layer.shadowColor = [[UIColor blackColor] CGColor];
-    self.currentDestinationShadow.layer.shadowOpacity = 1.0;
-    self.currentDestinationShadow.layer.shadowRadius = 10.0;
-    self.currentDestinationShadow.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
+    //self.currentDestinationImage.layer.masksToBounds = YES;
+    //self.currentDestinationShadow.layer.cornerRadius = 10.0;
+    //self.currentDestinationShadow.layer.shadowColor = [[UIColor blackColor] CGColor];
+    //self.currentDestinationShadow.layer.shadowOpacity = 1.0;
+    //self.currentDestinationShadow.layer.shadowRadius = 10.0;
+    //self.currentDestinationShadow.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
+    
+    [self.currentDestinationShadow startFloatingAnimation];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -153,7 +157,7 @@
     DestinationViewPoint *dvp = [destination.viewPoints objectAtIndex:0];
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
     dvp.image = [UIImage imageWithData: imageData];
-    self.currentDestinationImage.image = dvp.image;
+    self.currentDestinationShadow.image = dvp.image;
 
     if (destination.basePrice >= 200){
         self.transportationImage.image = [UIImage imageNamed:@"icon_plane"];
@@ -211,9 +215,9 @@
     session.currentDestination = [session.destinations objectAtIndex:0];
 
     [self populateView];
-    [self.currentDestinationImage setNeedsDisplay];
+    //-------[self.currentDestinationImage setNeedsDisplay];
     
-    self.currentDestinationImage.alpha = 0.0;
+    //self.currentDestinationShadow.alpha = 0.0;
     self.currentDestinationShadow.alpha = 0.0;
     
     self.destinationTitleLabel.alpha = 0.0;
@@ -223,7 +227,7 @@
     
     [UIView animateWithDuration:0.2
                      animations:^{
-                         self.currentDestinationImage.alpha = 1.0;
+                         //self.currentDestinationImage.alpha = 1.0;
                          self.currentDestinationShadow.alpha = 1.0;
                          self.destinationTitleLabel.alpha = 1.0;
                          self.toolBar.alpha = 1.0;

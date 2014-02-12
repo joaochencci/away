@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A11BBC518AAD817003BB6FC /* Demo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A11BBC418AAD817003BB6FC /* Demo.storyboard */; };
+		1A11BBCB18AAEA8C003BB6FC /* tViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A11BBCA18AAEA8C003BB6FC /* tViewController.m */; };
+		1A12F96818AB53BF00942612 /* FloatingShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A12F96718AB53BF00942612 /* FloatingShadowView.m */; };
+		1A12F96E18AB701100942612 /* DetailFromFavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A12F96D18AB701100942612 /* DetailFromFavViewController.m */; };
 		1A4B75EC18A41F2100304125 /* WebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B75EA18A41F2100304125 /* WebService.m */; };
 		1A4B75ED18A41F2100304125 /* HTTPRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B75EB18A41F2100304125 /* HTTPRequests.m */; };
 		1A4B75F318A41F4600304125 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B75EF18A41F4600304125 /* UIImage+ImageEffects.m */; };
@@ -56,6 +60,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A11BBC418AAD817003BB6FC /* Demo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Demo.storyboard; sourceTree = "<group>"; };
+		1A11BBC918AAEA8C003BB6FC /* tViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tViewController.h; sourceTree = "<group>"; };
+		1A11BBCA18AAEA8C003BB6FC /* tViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tViewController.m; sourceTree = "<group>"; };
+		1A12F96618AB53BF00942612 /* FloatingShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatingShadowView.h; sourceTree = "<group>"; };
+		1A12F96718AB53BF00942612 /* FloatingShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatingShadowView.m; sourceTree = "<group>"; };
+		1A12F96C18AB701100942612 /* DetailFromFavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailFromFavViewController.h; sourceTree = "<group>"; };
+		1A12F96D18AB701100942612 /* DetailFromFavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailFromFavViewController.m; sourceTree = "<group>"; };
 		1A4B75EA18A41F2100304125 /* WebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebService.m; sourceTree = "<group>"; };
 		1A4B75EB18A41F2100304125 /* HTTPRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRequests.m; sourceTree = "<group>"; };
 		1A4B75EF18A41F4600304125 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
@@ -148,10 +159,12 @@
 		1A3199131897E3B60080261C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				356AC3C6189C03B3000EEBBD /* FavoriteTableViewCell.h */,
-				356AC3C7189C03B3000EEBBD /* FavoriteTableViewCell.m */,
 				355FA24618A26B5300F903BF /* DetailFriendCustomCell.h */,
 				355FA24718A26B5300F903BF /* DetailFriendCustomCell.m */,
+				1A12F96618AB53BF00942612 /* FloatingShadowView.h */,
+				1A12F96718AB53BF00942612 /* FloatingShadowView.m */,
+				356AC3C6189C03B3000EEBBD /* FavoriteTableViewCell.h */,
+				356AC3C7189C03B3000EEBBD /* FavoriteTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -169,6 +182,10 @@
 				35A96E751896B83500DC1300 /* FavoritesViewController.m */,
 				35A96E771896B85000DC1300 /* SettingsViewController.h */,
 				35A96E781896B85000DC1300 /* SettingsViewController.m */,
+				1A11BBC918AAEA8C003BB6FC /* tViewController.h */,
+				1A11BBCA18AAEA8C003BB6FC /* tViewController.m */,
+				1A12F96C18AB701100942612 /* DetailFromFavViewController.h */,
+				1A12F96D18AB701100942612 /* DetailFromFavViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -270,6 +287,7 @@
 				35A96E3E1896B10B00DC1300 /* Main.storyboard */,
 				35A96E3B1896B10B00DC1300 /* AppDelegate.h */,
 				35A96E3C1896B10B00DC1300 /* AppDelegate.m */,
+				1A11BBC418AAD817003BB6FC /* Demo.storyboard */,
 				1A3199131897E3B60080261C /* View */,
 				1A3199141897E3BB0080261C /* Controller */,
 				35A96E441896B10B00DC1300 /* Images.xcassets */,
@@ -388,6 +406,7 @@
 				35A96E451896B10B00DC1300 /* Images.xcassets in Resources */,
 				35A96E371896B10B00DC1300 /* InfoPlist.strings in Resources */,
 				35A96E401896B10B00DC1300 /* Main.storyboard in Resources */,
+				1A11BBC518AAD817003BB6FC /* Demo.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,9 +437,12 @@
 				1A965766189981DB00DB1D32 /* Destination.m in Sources */,
 				35A96E3D1896B10B00DC1300 /* AppDelegate.m in Sources */,
 				1A4B760618A41F8C00304125 /* HTTPResponseObject.m in Sources */,
+				1A12F96818AB53BF00942612 /* FloatingShadowView.m in Sources */,
 				35A96E391896B10B00DC1300 /* main.m in Sources */,
 				1AD9C3D2189C92AC00CA6210 /* DestinationViewPoint.m in Sources */,
+				1A12F96E18AB701100942612 /* DetailFromFavViewController.m in Sources */,
 				1AD9C3CD189C645E00CA6210 /* NSMutableArray+FIFOQueue.m in Sources */,
+				1A11BBCB18AAEA8C003BB6FC /* tViewController.m in Sources */,
 				1A4B75F418A41F4600304125 /* NSString+URLArguments.m in Sources */,
 				35A96E761896B83500DC1300 /* FavoritesViewController.m in Sources */,
 				356AC3C5189BD7AD000EEBBD /* Session.m in Sources */,
@@ -559,6 +581,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
+					/Users/marcelotoledo/Desktop/away,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";
@@ -576,6 +599,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
+					/Users/marcelotoledo/Desktop/away,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";
