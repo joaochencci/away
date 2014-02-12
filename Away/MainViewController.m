@@ -192,11 +192,11 @@
 //    NSLog(@"(%f, %f)", scrollView.contentOffset.x, scrollView.contentOffset.y);
     if (scrollView.contentOffset.x < 320) {
 //        NSLog(@"LEFT PAGE");
-        [self decisionDestination:@"dontGoAway"];
+        [self decisionDestination:@"goAway"];
         [self nextDestination];
     } else if (scrollView.contentOffset.x >= 640) {
 //        NSLog(@"RIGHT PAGE");
-        [self decisionDestination:@"goAway"];
+        [self decisionDestination:@"dontGoAway"];
         [self nextDestination];
     } else {
 //        NSLog(@"CENTER PAGE");

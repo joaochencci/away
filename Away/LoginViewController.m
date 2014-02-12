@@ -162,14 +162,20 @@
 - (void)goToNextScene
 {
     [self preTransitionAnimationSetUp];
-    //[self loadFirstDestinations];
-    //[self performSegueWithIdentifier:@"loginSegue" sender:self];
-    [self performSelector:@selector(simulatedDelay) withObject:nil afterDelay:8];
+    [self loadFirstDestinations];
+    [self performSegueWithIdentifier:@"loginSegue" sender:self];
+//    [self performSelector:@selector(simulatedDelay) withObject:nil afterDelay:8];
 }
 
 - (void)loadFirstDestinations
 {
-    
+    Session *session = [Session sharedSession];
+    for (Destination *d in session.destinations) {
+        for (DestinationViewPoint *vp in d.viewPoints) {
+            NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: vp.imageUrl]];
+            vp.image = [UIImage imageWithData: imageData];
+        }
+    }
 }
 
 - (void)simulatedDelay
