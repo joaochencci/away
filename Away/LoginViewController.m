@@ -17,6 +17,8 @@
     
     UIImageView *_balloonView;
     UIView *_balloonShadowView;
+    
+    NSOperationQueue *_operationQueue;
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
@@ -40,7 +42,7 @@
     
     _fbButtonOn = NO;
     
-    
+    _operationQueue = [[NSOperationQueue alloc] init];
     
 }
 
@@ -163,19 +165,31 @@
 {
     [self preTransitionAnimationSetUp];
     [self loadFirstDestinations];
-    [self performSegueWithIdentifier:@"loginSegue" sender:self];
+    //[self performSegueWithIdentifier:@"loginSegue" sender:self];
 //    [self performSelector:@selector(simulatedDelay) withObject:nil afterDelay:8];
 }
 
 - (void)loadFirstDestinations
 {
-    Session *session = [Session sharedSession];
-    for (Destination *d in session.destinations) {
-        for (DestinationViewPoint *vp in d.viewPoints) {
-            NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: vp.imageUrl]];
-            vp.image = [UIImage imageWithData: imageData];
+    NSBlockOperation *operation = [[NSBlockOperation alloc] init];
+    
+    [operation addExecutionBlock:^{
+        
+        Session *session = [Session sharedSession];
+        for (Destination *d in session.destinations) {
+            for (DestinationViewPoint *vp in d.viewPoints) {
+                NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: vp.imageUrl]];
+                vp.image = [UIImage imageWithData: imageData];
+            }
         }
-    }
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [self simulatedDelay];
+        }];
+        
+    }];
+    
+    [_operationQueue addOperation:operation];
 }
 
 - (void)simulatedDelay
