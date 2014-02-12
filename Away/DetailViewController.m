@@ -95,8 +95,6 @@
         CGFloat xOrigin = i * self.viewPointsScrollView.frame.size.width;
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(xOrigin, 0, self.viewPointsScrollView.frame.size.width, self.viewPointsScrollView.frame.size.height)];
         DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:i];
-        NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
-        dvp.image = [UIImage imageWithData: imageData];
         imageView.image = dvp.image;
         [self.viewPointsScrollView addSubview:imageView];
     }
