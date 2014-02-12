@@ -59,8 +59,6 @@
     UILabel *numberOfFriends = (UILabel *)[cell viewWithTag:103];
     
     DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:0];
-    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
-    dvp.image = [UIImage imageWithData: imageData];
     imageView.image = dvp.image;
     name.text = dest.title;
     numberOfFriends.text = [NSString stringWithFormat:@"%ld", (long)[dest getNumberOfFriendsFromUser:session.user]];

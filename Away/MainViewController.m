@@ -112,8 +112,6 @@
                      } completion:^(BOOL finished){
                          Destination *dest = [session.destinations objectAtIndex:1];
                          DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:0];
-                         NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
-                         dvp.image = [UIImage imageWithData: imageData];
                          self.nextDestinationPlaceholderImageView.image = dvp.image;
                      }];
     
@@ -155,8 +153,6 @@
     
     self.destinationTitleLabel.text = destination.title;
     DestinationViewPoint *dvp = [destination.viewPoints objectAtIndex:0];
-    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
-    dvp.image = [UIImage imageWithData: imageData];
     self.currentDestinationShadow.image = dvp.image;
 
     if (destination.basePrice >= 200){
@@ -234,8 +230,6 @@
                      } completion:^(BOOL finished){
                          Destination *dest = [session.destinations objectAtIndex:1];
                          DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:0];
-                         NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: dvp.imageUrl]];
-                         dvp.image = [UIImage imageWithData: imageData];
                          self.nextDestinationPlaceholderImageView.image = dvp.image;
                      }];
 }
