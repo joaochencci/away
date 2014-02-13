@@ -15,4 +15,7 @@
 @property(nonatomic, strong) NSString *imageUrl;
 @property(nonatomic, strong) UIImage *image;
 
+// TEMP
+@property(nonatomic) int distance;
+
 @end

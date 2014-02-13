@@ -580,8 +580,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
-					/Users/marcelotoledo/Desktop/away,
+					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/away",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";
@@ -598,8 +597,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/Away/dev",
-					/Users/marcelotoledo/Desktop/away,
+					"/Users/wesleyide/Copy/Ws/BEPiD/Challenge\\ 2/away",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Away/Away-Prefix.pch";

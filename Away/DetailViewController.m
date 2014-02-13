@@ -71,6 +71,7 @@
     Destination *dest = session.currentDestinationDetail;
     DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:self.viewPointsScrollView.contentOffset.x / 300];
     self.nameLabel.text = dvp.name;
+    self.distanceLabel.text = [NSString stringWithFormat:@"%d km", dvp.distance];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -101,8 +102,10 @@
     self.viewPointsScrollView.contentSize = CGSizeMake(self.viewPointsScrollView.frame.size.width * [dest.viewPoints count], self.viewPointsScrollView.frame.size.height);
     DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:0];
     self.nameLabel.text = dvp.name;
+    self.distanceLabel.text = [NSString stringWithFormat:@"%d km", dvp.distance];
 
     [self populateView];
+
 //    queue = [[NSOperationQueue alloc] init];
 }
 
@@ -110,7 +113,6 @@
     Session *session = [Session sharedSession];
     Destination *destination = session.currentDestinationDetail;
     
-    self.nameLabel.text = destination.title;
     self.titleLabel.text = destination.title;
     self.descriptionLabel.text = destination.description;
 }

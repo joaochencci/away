@@ -8,9 +8,7 @@
 
 #import "DestinationViewPoint.h"
 
-@interface DestinationViewPoint () {
-    CGFloat *distance;
-}
+@interface DestinationViewPoint ()
 
 @end
 
