@@ -118,6 +118,55 @@
     DestinationViewPoint *dvp = [session.currentDestinationDetail.viewPoints objectAtIndex:destination.indexCurrentViewPoint];
     self.nameLabel.text = dvp.name;
     self.distanceLabel.text = [NSString stringWithFormat:@"%d km", dvp.distance];
+
+    NSArray *array;
+    if (destination.basePrice <= 200){
+        array = @[@1,@0,@0,@0,@0];
+    }else if (destination.basePrice > 200 && destination.basePrice <= 400){
+        array = @[@1,@1,@0,@0,@0];
+    }else if (destination.basePrice > 400 && destination.basePrice <= 600){
+        array = @[@1,@1,@1,@0,@0];
+    }else if (destination.basePrice > 600 && destination.basePrice <= 800){
+        array = @[@1,@1,@1,@1,@0];
+    }else if (destination.basePrice > 800){
+        array = @[@1,@1,@1,@1,@1];
+    }
+    [self populateMoneyWithArray:array];
+}
+
+- (void)populateMoneyWithArray:(NSArray*)array {
+    UIImage *moneyYes = [UIImage imageNamed:@"icon_money_yes"];
+    UIImage *moneyNo = [UIImage imageNamed:@"icon_money_no"];
+    NSNumber *n1 = [NSNumber numberWithInt:1];
+    if ([[array objectAtIndex:0] isEqualToNumber:n1]){
+        self.money1ImageView.image = moneyYes;
+    }else{
+        self.money1ImageView.image = moneyNo;
+    }
+    
+    if ([[array objectAtIndex:1] isEqualToNumber:n1]){
+        self.money2ImageView.image = moneyYes;
+    }else{
+        self.money2ImageView.image = moneyNo;
+    }
+    
+    if ([[array objectAtIndex:2] isEqualToNumber:n1]){
+        self.money3ImageView.image = moneyYes;
+    }else{
+        self.money3ImageView.image = moneyNo;
+    }
+    
+    if ([[array objectAtIndex:3] isEqualToNumber:n1]){
+        self.money4ImageView.image = moneyYes;
+    }else{
+        self.money4ImageView.image = moneyNo;
+    }
+    
+    if ([[array objectAtIndex:4] isEqualToNumber:n1]){
+        self.money5ImageView.image = moneyYes;
+    }else{
+        self.money5ImageView.image = moneyNo;
+    }
 }
 
 - (void)didReceiveMemoryWarning

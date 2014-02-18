@@ -137,13 +137,8 @@
 {
     if ([decision isEqualToString:@"goAway"]) {
         [self addDestination];
-//        NSMutableArray *destinationsChoose = session.destinationsChoose;
-//        [destinationsChoose addObject:dest];
-//        session.destinationsChoose = destinationsChoose;
     }else if ([decision isEqualToString:@"dontGoAway"]) {
-//        NSMutableArray *destinationsReject = session.destinationsReject;
-//        [destinationsReject addObject:dest];
-//        session.destinationsReject = destinationsReject;
+        //
     }
 }
 
@@ -155,10 +150,59 @@
     DestinationViewPoint *dvp = [destination.viewPoints objectAtIndex:destination.indexCurrentViewPoint];
     self.currentDestinationShadow.image = dvp.image;
 
-    if (destination.basePrice >= 200){
+    if (dvp.distance >= 600){
         self.transportationImage.image = [UIImage imageNamed:@"icon_plane"];
     }else{
         self.transportationImage.image = [UIImage imageNamed:@"icon_car"];
+    }
+
+    NSArray *array;
+    if (destination.basePrice <= 200){
+        array = @[@1,@0,@0,@0,@0];
+    }else if (destination.basePrice > 200 && destination.basePrice <= 400){
+        array = @[@1,@1,@0,@0,@0];
+    }else if (destination.basePrice > 400 && destination.basePrice <= 600){
+        array = @[@1,@1,@1,@0,@0];
+    }else if (destination.basePrice > 600 && destination.basePrice <= 800){
+        array = @[@1,@1,@1,@1,@0];
+    }else if (destination.basePrice > 800){
+        array = @[@1,@1,@1,@1,@1];
+    }
+    [self populateMoneyWithArray:array];
+}
+
+- (void)populateMoneyWithArray:(NSArray*)array {
+    UIImage *moneyYes = [UIImage imageNamed:@"icon_money_yes"];
+    UIImage *moneyNo = [UIImage imageNamed:@"icon_money_no"];
+    NSNumber *n1 = [NSNumber numberWithInt:1];
+    if ([[array objectAtIndex:0] isEqualToNumber:n1]){
+        self.money1ImageView.image = moneyYes;
+    }else{
+        self.money1ImageView.image = moneyNo;
+    }
+
+    if ([[array objectAtIndex:1] isEqualToNumber:n1]){
+        self.money2ImageView.image = moneyYes;
+    }else{
+        self.money2ImageView.image = moneyNo;
+    }
+
+    if ([[array objectAtIndex:2] isEqualToNumber:n1]){
+        self.money3ImageView.image = moneyYes;
+    }else{
+        self.money3ImageView.image = moneyNo;
+    }
+
+    if ([[array objectAtIndex:3] isEqualToNumber:n1]){
+        self.money4ImageView.image = moneyYes;
+    }else{
+        self.money4ImageView.image = moneyNo;
+    }
+
+    if ([[array objectAtIndex:4] isEqualToNumber:n1]){
+        self.money5ImageView.image = moneyYes;
+    }else{
+        self.money5ImageView.image = moneyNo;
     }
 }
 
@@ -197,17 +241,14 @@
 # pragma mark - Firulas Layout
 # pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-//    NSLog(@"(%f, %f)", scrollView.contentOffset.x, scrollView.contentOffset.y);
     if (scrollView.contentOffset.x < 320) {
-//        NSLog(@"LEFT PAGE");
         [self decisionDestination:@"goAway"];
         [self nextDestination];
     } else if (scrollView.contentOffset.x >= 640) {
-//        NSLog(@"RIGHT PAGE");
         [self decisionDestination:@"dontGoAway"];
         [self nextDestination];
     } else {
-//        NSLog(@"CENTER PAGE");
+        // CENTER PAGE
     }
 }
 

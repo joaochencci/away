@@ -41,7 +41,7 @@
     
     // Align the button in the center vertically
     loginView.center = self.view.center;
-    
+
     // Add the button to the view
     [self.view addSubview:loginView];
 

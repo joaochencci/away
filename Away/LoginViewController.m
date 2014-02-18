@@ -87,6 +87,16 @@
     // Hidding FBLogin Button
     _fbLoginButton.hidden = YES;
     _fbLoginButton.alpha = 0.0f;
+
+    for (id obj in _fbLoginButton.subviews) {
+        if ([obj isKindOfClass:[UIButton class]]) {
+            UIButton * loginButton =  obj;
+            loginButton.titleLabel.text = @"Logar com o Facebook";
+        }else if ([obj isKindOfClass:[UILabel class]]) {
+            UILabel * loginLabel =  obj;
+            loginLabel.text = @"Logar com o Facebook";
+        }
+    }
     
     // Add the button to the view, behind logo.
     [self.view insertSubview:_fbLoginButton belowSubview:self.logo];
