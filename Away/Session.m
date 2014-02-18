@@ -13,7 +13,6 @@
 @synthesize user;
 @synthesize currentDestination;
 @synthesize currentDestinationDetail;
-@synthesize indexCurrentViewPoint;
 @synthesize destinations;
 
 @synthesize destinationsChoose;

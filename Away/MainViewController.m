@@ -81,7 +81,7 @@
 // # request dos primeiros destinos # //
     Session *session = [Session sharedSession];
     session.currentDestination = [session.destinations objectAtIndex:0];
-    session.indexCurrentViewPoint = 0;
+    session.currentDestination.indexCurrentViewPoint = 0;
     [self populateView];
     
     //self.currentDestinationImage.layer.masksToBounds = YES;
@@ -155,7 +155,7 @@
     Destination *destination = session.currentDestination;
     
     self.destinationTitleLabel.text = destination.title;
-    DestinationViewPoint *dvp = [destination.viewPoints objectAtIndex:session.indexCurrentViewPoint];
+    DestinationViewPoint *dvp = [destination.viewPoints objectAtIndex:destination.indexCurrentViewPoint];
     self.currentDestinationShadow.image = dvp.image;
 
     if (destination.basePrice >= 200){
@@ -212,7 +212,7 @@
     [session.destinations enqueueObject:d];
 
     session.currentDestination = [session.destinations objectAtIndex:0];
-    session.indexCurrentViewPoint = 0;
+    session.currentDestination.indexCurrentViewPoint = 0;
 
     [self populateView];
     //-------[self.currentDestinationImage setNeedsDisplay];

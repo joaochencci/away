@@ -16,7 +16,6 @@
     Destination *destination;
     Destination *currentDestination;
     Destination *currentDestinationDetail;
-    int indexCurrentViewPoint;
     NSMutableArray *destinationsChoose;
     NSMutableArray *destinationsReject;
     CLLocation *currentLocation;
@@ -25,7 +24,6 @@
 @property (nonatomic, retain) User *user;
 @property (nonatomic, retain) Destination *currentDestination;
 @property (nonatomic, retain) Destination *currentDestinationDetail;
-@property (nonatomic) int indexCurrentViewPoint;
 @property (nonatomic, retain) NSMutableArray *destinations;
 
 @property (nonatomic, retain) NSMutableArray *destinationsChoose;
