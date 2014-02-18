@@ -135,18 +135,15 @@
 
 - (void)decisionDestination: (NSString*) decision
 {
-    Session *session = [Session sharedSession];
-    Destination *dest = session.currentDestination;
-    
     if ([decision isEqualToString:@"goAway"]) {
-        NSMutableArray *destinationsChoose = session.destinationsChoose;
-        [destinationsChoose addObject:dest];
-        session.destinationsChoose = destinationsChoose;
-    }
-    if ([decision isEqualToString:@"dontGoAway"]) {
-        NSMutableArray *destinationsReject = session.destinationsReject;
-        [destinationsReject addObject:dest];
-        session.destinationsReject = destinationsReject;
+        [self addDestination];
+//        NSMutableArray *destinationsChoose = session.destinationsChoose;
+//        [destinationsChoose addObject:dest];
+//        session.destinationsChoose = destinationsChoose;
+    }else if ([decision isEqualToString:@"dontGoAway"]) {
+//        NSMutableArray *destinationsReject = session.destinationsReject;
+//        [destinationsReject addObject:dest];
+//        session.destinationsReject = destinationsReject;
     }
 }
 
@@ -163,6 +160,18 @@
     }else{
         self.transportationImage.image = [UIImage imageNamed:@"icon_car"];
     }
+}
+
+- (void)addDestination {
+    Session *session = [Session sharedSession];
+    Destination *dest = session.currentDestination;
+    NSMutableArray *destinationsChoose = session.destinationsChoose;
+    [destinationsChoose addObject:dest];
+
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES];
+    NSArray *array = [[NSArray alloc] initWithArray:destinationsChoose];
+    array = [array sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+    session.destinationsChoose = [[NSMutableArray alloc] initWithArray:array];
 }
 
 - (IBAction)settings:(id)sender {

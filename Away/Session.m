@@ -16,7 +16,7 @@
 @synthesize destinations;
 
 @synthesize destinationsChoose;
-@synthesize destinationsReject;
+//@synthesize destinationsReject;
 @synthesize currentLocation;
 @synthesize locationManager;
 
@@ -36,7 +36,7 @@
         destination = [[Destination alloc] init];
         destinations = [[NSMutableArray alloc] init];
         destinationsChoose = [[NSMutableArray alloc] init];
-        destinationsReject = [[NSMutableArray alloc] init];
+//        destinationsReject = [[NSMutableArray alloc] init];
 
         currentLocation = [[CLLocation alloc] init];
         locationManager = [[CLLocationManager alloc] init];
