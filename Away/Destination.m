@@ -47,7 +47,7 @@
     for (DestinationViewPoint *dvp in self.viewPoints) {
         [imgs addObject:dvp.image];
     }
-    return [images copy];
+    return [imgs copy];
 }
 
 - (CGFloat)getDistanceFromPoint:(CGPoint *)point

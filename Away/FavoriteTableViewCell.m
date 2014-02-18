@@ -37,7 +37,9 @@
 - (void)setUpWithImages:(NSArray *)images andCurrentIndex:(NSInteger)currentIndex
 {
     self.viewPointsImages = images;
-    self.viewPointImageView.image = [images objectAtIndex:currentIndex];
+    self.viewPointIndex = currentIndex;
+    UIImage *img = [self getCurrentImage];
+    self.viewPointImageView.image = img;
 }
 
 - (void)startAnimating
@@ -50,4 +52,9 @@
     
 }
 
+# pragma mark - Private Methods
+- (UIImage *)getCurrentImage
+{
+    return [self.viewPointsImages objectAtIndex:self.viewPointIndex];
+}
 @end

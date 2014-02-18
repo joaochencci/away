@@ -46,6 +46,12 @@
 
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -76,7 +82,8 @@
     
     // Coloca os valores da célula
     cell.destinationTitle.text = destination.title;
-    [cell setUpWithDestination:[destination viewPointsImages] andCurrentIndex:destination.indexCurrentViewPoint];
+    NSArray *allImages = [destination getAllImages];
+    [cell setUpWithImages:allImages andCurrentIndex:destination.indexCurrentViewPoint];
     
     [cell startAnimating];
     
