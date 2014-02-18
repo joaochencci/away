@@ -9,14 +9,8 @@
 #import "FavoriteTableViewCell.h"
 
 @interface FavoriteTableViewCell ()
-@property (weak, nonatomic) IBOutlet UIImageView *destinationImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *money1ImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *money2ImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *money3ImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *money4ImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *money5ImageView;
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *numberFriendsLabel;
+
+@property(nonatomic, readwrite) NSInteger viewPointIndex;
 
 @end
 
@@ -36,6 +30,24 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+# pragma mark - Public Methods
+
+- (void)setUpWithImages:(NSArray *)images andCurrentIndex:(NSInteger)currentIndex
+{
+    self.viewPointsImages = images;
+    self.viewPointImageView.image = [images objectAtIndex:currentIndex];
+}
+
+- (void)startAnimating
+{
+    
+}
+
+- (void)stopAnimating
+{
+    
 }
 
 @end

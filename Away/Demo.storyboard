@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="NPi-NI-ycb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -379,7 +379,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" id="lRe-Zq-hwj">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" id="lRe-Zq-hwj">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
@@ -388,7 +388,7 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                     <items/>
                                                 </toolbar>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome - distância" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EGQ-lN-VnA">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome - distância" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EGQ-lN-VnA">
                                                     <rect key="frame" x="20" y="128" width="280" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -400,7 +400,9 @@
                                         <color key="tintColor" red="0.058823529409999999" green="0.42352941179999998" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="destinationImageView" destination="lRe-Zq-hwj" id="1OB-UZ-ve4"/>
+                                            <outlet property="destinationTitle" destination="EGQ-lN-VnA" id="dJq-We-BMw"/>
                                             <outlet property="nameLabel" destination="EGQ-lN-VnA" id="8Nm-7W-tSH"/>
+                                            <outlet property="viewPointImageView" destination="lRe-Zq-hwj" id="AXx-2u-uvp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -753,32 +755,15 @@
     <resources>
         <image name="icon_car" width="141" height="94"/>
         <image name="icon_fb_friends" width="128" height="128"/>
-        <image name="icon_fb_friends" width="128" height="128"/>
-        <image name="icon_fb_friends" width="128" height="128"/>
         <image name="icon_info" width="64" height="64"/>
         <image name="icon_info_hover" width="1771" height="1771"/>
         <image name="icon_minus" width="120" height="120"/>
         <image name="icon_minus_hover" width="120" height="120"/>
         <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_no" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
-        <image name="icon_money_yes" width="30" height="30"/>
         <image name="icon_money_yes" width="30" height="30"/>
         <image name="icon_plus" width="120" height="120"/>
         <image name="icon_plus_hover" width="120" height="120"/>
-        <image name="icon_plus_hover" width="120" height="120"/>
         <image name="logo_away_small" width="500" height="262"/>
-        <image name="logo_home_screen" width="265" height="135"/>
         <image name="logo_home_screen" width="265" height="135"/>
         <image name="placeholder" width="331" height="233"/>
     </resources>

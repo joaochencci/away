@@ -72,18 +72,14 @@
     }
     
     Session *session = [Session sharedSession];
-    Destination *dest = [session.destinationsChoose objectAtIndex:indexPath.row];
+    Destination *destination = [session.destinationsChoose objectAtIndex:indexPath.row];
     
     // Coloca os valores da célula
-    UIImageView *imageView = (UIImageView*)[cell viewWithTag:101];
-    UILabel *name = (UILabel *)[cell viewWithTag:102];
-    //UILabel *numberOfFriends = (UILabel *)[cell viewWithTag:103];
+    cell.destinationTitle.text = destination.title;
+    [cell setUpWithDestination:[destination viewPointsImages] andCurrentIndex:destination.indexCurrentViewPoint];
     
-    DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:0];
-    imageView.image = dvp.image;
-    name.text = dest.title;
-    //numberOfFriends.text = [NSString stringWithFormat:@"%ld", (long)[dest getNumberOfFriendsFromUser:session.user]];
-
+    [cell startAnimating];
+    
     return cell;
 }
 
@@ -91,58 +87,22 @@
     return 1;
 }
 
-
-//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-//{
-////    UIView *footerView;
-////    
-////    Session *session = [Session sharedSession];
-////    NSInteger numOfFavs = [session.destinationsChoose count];
-////    
-////    if (numOfFavs == 0) {
-////        // No favorites
-////        UIImage *img = [UIImage imageNamed:@"logo_home_screen"];
-////        UIImageView *imgView = [[UIImageView alloc] init];
-////        
-////        imgView.contentMode = UIViewContentModeScaleAspectFit;
-////        
-////        CGRect bounds;
-////        
-////        bounds.origin = CGPointZero;
-////        bounds.size = img.size;
-////        imgView.frame = bounds;
-////        imgView.image = img;
-////        
-////        footerView = imgView;
-////        
-////        tableView.bounces = NO;
-////        
-////    } else {
-////        // Has favorites
-////        tableView.bounces = YES;
-////    }
-//    
-//    return [[UIView alloc] init];
-//}
-
 # pragma mark - UITableView Delegate
 
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(FavoriteTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [cell stopAnimating];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 64.0f;
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return @"Apagar";
 }
-
-//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (indexPath.row % 2 == 0){
-//        cell.backgroundColor = [UIColor colorWithRed:15 green:108 blue:105 alpha:1];
-//    }
-//}
 
 /* Método chamado quando acontece algum tipo de edição em alguma célula do tableView */
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -160,8 +120,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Session *session = [Session sharedSession];
-    Destination *dest = [session.destinationsChoose objectAtIndex:indexPath.row];
-    session.currentDestinationDetail = dest;
+    Destination *destination = [session.destinationsChoose objectAtIndex:indexPath.row];
+    
+    FavoriteTableViewCell *cell = (FavoriteTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    
+    destination.indexCurrentViewPoint = cell.viewPointIndex;
+    session.currentDestinationDetail = destination;
     [self performSegueWithIdentifier:@"goToDetailsFromTable" sender:self];
 }
 
