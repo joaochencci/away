@@ -43,8 +43,11 @@
 # pragma mark - Public
 - (NSArray *)getAllImages
 {
-    //
-    return images;
+    NSMutableArray* imgs = [[NSMutableArray alloc] init];
+    for (DestinationViewPoint *dvp in self.viewPoints) {
+        [imgs addObject:dvp.image];
+    }
+    return [images copy];
 }
 
 - (CGFloat)getDistanceFromPoint:(CGPoint *)point

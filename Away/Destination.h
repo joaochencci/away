@@ -18,6 +18,7 @@
 
 @property(nonatomic) NSInteger basePrice;
 @property(nonatomic, strong) NSMutableArray *viewPoints;
+@property(nonatomic) int indexCurrentViewPoint;
 
 - (id)initWithDictionary:(NSDictionary *)destinationDataDictionary;
 - (NSArray *)getAllImages;

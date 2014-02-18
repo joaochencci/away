@@ -81,6 +81,7 @@
 // # request dos primeiros destinos # //
     Session *session = [Session sharedSession];
     session.currentDestination = [session.destinations objectAtIndex:0];
+    session.currentDestination.indexCurrentViewPoint = 0;
     [self populateView];
     
     //self.currentDestinationImage.layer.masksToBounds = YES;
@@ -123,6 +124,8 @@
 {
     self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width * 3, self.scrollView.frame.size.height);
     self.scrollView.contentOffset = CGPointMake(self.view.frame.size.width, 0.0);
+
+    [self populateView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -152,7 +155,7 @@
     Destination *destination = session.currentDestination;
     
     self.destinationTitleLabel.text = destination.title;
-    DestinationViewPoint *dvp = [destination.viewPoints objectAtIndex:0];
+    DestinationViewPoint *dvp = [destination.viewPoints objectAtIndex:destination.indexCurrentViewPoint];
     self.currentDestinationShadow.image = dvp.image;
 
     if (destination.basePrice >= 200){
@@ -209,6 +212,7 @@
     [session.destinations enqueueObject:d];
 
     session.currentDestination = [session.destinations objectAtIndex:0];
+    session.currentDestination.indexCurrentViewPoint = 0;
 
     [self populateView];
     //-------[self.currentDestinationImage setNeedsDisplay];
