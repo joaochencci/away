@@ -17,7 +17,7 @@
     Destination *currentDestination;
     Destination *currentDestinationDetail;
     NSMutableArray *destinationsChoose;
-    NSMutableArray *destinationsReject;
+//    NSMutableArray *destinationsReject;
     CLLocation *currentLocation;
 }
 
@@ -27,7 +27,7 @@
 @property (nonatomic, retain) NSMutableArray *destinations;
 
 @property (nonatomic, retain) NSMutableArray *destinationsChoose;
-@property (nonatomic, retain) NSMutableArray *destinationsReject;
+//@property (nonatomic, retain) NSMutableArray *destinationsReject;
 @property (nonatomic, retain) CLLocation *currentLocation;
 @property (nonatomic, retain) CLLocationManager *locationManager;
 
