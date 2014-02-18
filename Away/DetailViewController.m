@@ -69,7 +69,8 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     Session *session = [Session sharedSession];
     Destination *dest = session.currentDestinationDetail;
-    DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:self.viewPointsScrollView.contentOffset.x / 300];
+    session.indexCurrentViewPoint = scrollView.contentOffset.x / scrollView.bounds.size.width;
+    DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:session.indexCurrentViewPoint];
     self.nameLabel.text = dvp.name;
     self.distanceLabel.text = [NSString stringWithFormat:@"%d km", dvp.distance];
 }
@@ -100,21 +101,23 @@
         [self.viewPointsScrollView addSubview:imageView];
     }
     self.viewPointsScrollView.contentSize = CGSizeMake(self.viewPointsScrollView.frame.size.width * [dest.viewPoints count], self.viewPointsScrollView.frame.size.height);
-    DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:0];
-    self.nameLabel.text = dvp.name;
-    self.distanceLabel.text = [NSString stringWithFormat:@"%d km", dvp.distance];
+    self.viewPointsScrollView.contentOffset = CGPointMake(self.viewPointsScrollView.frame.size.width * session.indexCurrentViewPoint, 0);
 
     [self populateView];
 
 //    queue = [[NSOperationQueue alloc] init];
 }
 
-- (void) populateView {
+- (void)populateView {
     Session *session = [Session sharedSession];
     Destination *destination = session.currentDestinationDetail;
     
     self.titleLabel.text = destination.title;
     self.descriptionLabel.text = destination.description;
+
+    DestinationViewPoint *dvp = [session.currentDestinationDetail.viewPoints objectAtIndex:session.indexCurrentViewPoint];
+    self.nameLabel.text = dvp.name;
+    self.distanceLabel.text = [NSString stringWithFormat:@"%d km", dvp.distance];
 }
 
 - (void)didReceiveMemoryWarning
