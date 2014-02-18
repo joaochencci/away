@@ -10,7 +10,9 @@
 #import "Session.h"
 #import "FavoriteTableViewCell.h"
 
-@interface FavoritesViewController ()
+@interface FavoritesViewController () <UITableViewDataSource,UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -30,6 +32,17 @@
     [super viewDidLoad];
 
     self.navigationItem.title = @"Favoritos";
+    
+    UIImageView *logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo_home_screen"]];
+    
+    logo.center = self.view.center;
+    logo.alpha = 0.1f;
+    
+//    logo.layer.shadowColor = [UIColor blackColor].CGColor;
+//    logo.layer.shadowRadius = 4.0f;
+//    logo.layer.shadowOffset = CGSizeMake(1.0, 1.0);
+//    
+    [self.view insertSubview:logo belowSubview:self.tableView];
 
 }
 
@@ -39,42 +52,97 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+# pragma mark - UITableView
+# pragma mark - UITableView DataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     Session *session = [Session sharedSession];
     return [session.destinationsChoose count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static NSString *MyIdentifier = @"Cell";
+    
     FavoriteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    
     if (cell == nil) {
         cell = [[FavoriteTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier];
     }
+    
     Session *session = [Session sharedSession];
     Destination *dest = [session.destinationsChoose objectAtIndex:indexPath.row];
     
     // Coloca os valores da célula
     UIImageView *imageView = (UIImageView*)[cell viewWithTag:101];
     UILabel *name = (UILabel *)[cell viewWithTag:102];
-    UILabel *numberOfFriends = (UILabel *)[cell viewWithTag:103];
+    //UILabel *numberOfFriends = (UILabel *)[cell viewWithTag:103];
     
     DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:0];
     imageView.image = dvp.image;
     name.text = dest.title;
-    numberOfFriends.text = [NSString stringWithFormat:@"%ld", (long)[dest getNumberOfFriendsFromUser:session.user]];
+    //numberOfFriends.text = [NSString stringWithFormat:@"%ld", (long)[dest getNumberOfFriendsFromUser:session.user]];
 
     return cell;
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+
+//- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+//{
+////    UIView *footerView;
+////    
+////    Session *session = [Session sharedSession];
+////    NSInteger numOfFavs = [session.destinationsChoose count];
+////    
+////    if (numOfFavs == 0) {
+////        // No favorites
+////        UIImage *img = [UIImage imageNamed:@"logo_home_screen"];
+////        UIImageView *imgView = [[UIImageView alloc] init];
+////        
+////        imgView.contentMode = UIViewContentModeScaleAspectFit;
+////        
+////        CGRect bounds;
+////        
+////        bounds.origin = CGPointZero;
+////        bounds.size = img.size;
+////        imgView.frame = bounds;
+////        imgView.image = img;
+////        
+////        footerView = imgView;
+////        
+////        tableView.bounces = NO;
+////        
+////    } else {
+////        // Has favorites
+////        tableView.bounces = YES;
+////    }
+//    
+//    return [[UIView alloc] init];
+//}
+
+# pragma mark - UITableView Delegate
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 64.0f;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     return @"Apagar";
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row % 2 == 0){
-        cell.backgroundColor = [UIColor colorWithRed:15 green:108 blue:105 alpha:1];
-    }
-}
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (indexPath.row % 2 == 0){
+//        cell.backgroundColor = [UIColor colorWithRed:15 green:108 blue:105 alpha:1];
+//    }
+//}
 
 /* Método chamado quando acontece algum tipo de edição em alguma célula do tableView */
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath

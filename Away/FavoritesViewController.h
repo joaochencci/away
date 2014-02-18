@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface FavoritesViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@interface FavoritesViewController : UIViewController
 
 @end
