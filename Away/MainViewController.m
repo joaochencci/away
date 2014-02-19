@@ -13,7 +13,9 @@
 
 #import "FloatingShadowView.h"
 
-@interface MainViewController () <UIScrollViewDelegate>
+@interface MainViewController () <UIScrollViewDelegate> {
+    Boolean didTouchButton;
+}
 
 @property (weak, nonatomic) IBOutlet UIImageView *money1ImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *money2ImageView;
@@ -28,6 +30,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *infoButton;
 @property (weak, nonatomic) IBOutlet UIButton *goAwayButton;
 @property (weak, nonatomic) IBOutlet UIButton *dontGoAwayButton;
+@property (weak, nonatomic) IBOutlet UIImageView *goAwayHoverImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *dontGoAwayHoverImageView;
 
 @property (weak, nonatomic) IBOutlet UILabel *destinationTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfFriendsLabel;
@@ -242,9 +246,11 @@
 # pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     if (scrollView.contentOffset.x < 320) {
+        [self resetConfigButtons];
         [self decisionDestination:@"goAway"];
         [self nextDestination];
     } else if (scrollView.contentOffset.x >= 640) {
+        [self resetConfigButtons];
         [self decisionDestination:@"dontGoAway"];
         [self nextDestination];
     } else {
@@ -252,7 +258,30 @@
     }
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (!didTouchButton){
+        if (scrollView.contentOffset.x < 320){
+            self.goAwayHoverImageView.hidden = NO;
+            self.goAwayHoverImageView.alpha = 1 - (scrollView.contentOffset.x / 320);
+            self.goAwayButton.alpha = scrollView.contentOffset.x / 320;
+        }
+        if (scrollView.contentOffset.x > 320){
+            float diff = scrollView.contentOffset.x - 320;
+            self.dontGoAwayHoverImageView.hidden = NO;
+            self.dontGoAwayHoverImageView.alpha = diff / 320;
+            self.dontGoAwayButton.alpha = 1 - (diff / 320);
+        }
+    }
+}
+
 # pragma mark - Flu
+
+- (void)resetConfigButtons {
+    self.goAwayHoverImageView.hidden = YES;
+    self.dontGoAwayHoverImageView.hidden = YES;
+    self.goAwayButton.alpha = 1;
+    self.dontGoAwayButton.alpha = 1;
+}
 
 - (void)nextDestination
 {
@@ -286,16 +315,20 @@
                          DestinationViewPoint *dvp = [dest.viewPoints objectAtIndex:0];
                          self.nextDestinationPlaceholderImageView.image = dvp.image;
                      }];
+    [self resetConfigButtons];
+    didTouchButton = false;
 }
 
 
 - (IBAction)goAway:(id)sender {
+    didTouchButton = true;
     [self.scrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
     [self decisionDestination:@"goAway"];
     [self performSelector:@selector(nextDestination) withObject:Nil afterDelay:0.2];
 }
 
 - (IBAction)dontGoAway:(id)sender {
+    didTouchButton = true;
     [self.scrollView setContentOffset:CGPointMake(640.0, 0.0) animated:YES];
     [self decisionDestination:@"dontGoAway"];
     [self performSelector:@selector(nextDestination) withObject:Nil afterDelay:0.2];
