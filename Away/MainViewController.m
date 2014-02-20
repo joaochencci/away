@@ -245,6 +245,8 @@
 # pragma mark - Firulas Layout
 # pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    self.goAwayButton.enabled = TRUE;
+    self.dontGoAwayButton.enabled = TRUE;
     if (scrollView.contentOffset.x < 320) {
         [self resetConfigButtons];
         [self decisionDestination:@"goAway"];
@@ -261,11 +263,15 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (!didTouchButton){
         if (scrollView.contentOffset.x < 320){
+            self.goAwayButton.enabled = FALSE;
+            self.dontGoAwayButton.enabled = FALSE;
             self.goAwayHoverImageView.hidden = NO;
             self.goAwayHoverImageView.alpha = 1 - (scrollView.contentOffset.x / 320);
             self.goAwayButton.alpha = scrollView.contentOffset.x / 320;
         }
         if (scrollView.contentOffset.x > 320){
+            self.goAwayButton.enabled = FALSE;
+            self.dontGoAwayButton.enabled = FALSE;
             float diff = scrollView.contentOffset.x - 320;
             self.dontGoAwayHoverImageView.hidden = NO;
             self.dontGoAwayHoverImageView.alpha = diff / 320;
@@ -325,6 +331,7 @@
     [self.scrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
     [self decisionDestination:@"goAway"];
     [self performSelector:@selector(nextDestination) withObject:Nil afterDelay:0.2];
+    self.dontGoAwayButton.enabled = TRUE;
 }
 
 - (IBAction)dontGoAway:(id)sender {
@@ -332,8 +339,15 @@
     [self.scrollView setContentOffset:CGPointMake(640.0, 0.0) animated:YES];
     [self decisionDestination:@"dontGoAway"];
     [self performSelector:@selector(nextDestination) withObject:Nil afterDelay:0.2];
+    self.goAwayButton.enabled = TRUE;
 }
 
+- (IBAction)dontGoAwayPress:(id)sender {
+    self.goAwayButton.enabled = FALSE;
+}
 
+- (IBAction)goAwayPress:(id)sender {
+    self.dontGoAwayButton.enabled = FALSE;
+}
 
 @end
