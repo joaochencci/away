@@ -259,6 +259,13 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    // Increasing nextImageAlpha
+    NSInteger offset = fabs(scrollView.contentOffset.x - 320.0);
+    CGFloat nextDestinationAlpha = (((0.98f - 0.6f)/320.0f) * offset) + 0.6f;
+    self.nextDestinationPlaceholderImageView.alpha = nextDestinationAlpha;
+    
+    
     if (!didTouchButton){
         if (scrollView.contentOffset.x < 320){
             self.goAwayHoverImageView.hidden = NO;
@@ -281,6 +288,7 @@
     self.dontGoAwayHoverImageView.hidden = YES;
     self.goAwayButton.alpha = 1;
     self.dontGoAwayButton.alpha = 1;
+    self.nextDestinationPlaceholderImageView.alpha = 0.6;
 }
 
 - (void)nextDestination
