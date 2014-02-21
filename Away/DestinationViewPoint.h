@@ -11,11 +11,9 @@
 @interface DestinationViewPoint : NSObject
 
 @property(nonatomic, strong) NSString *name;
-@property(nonatomic, readonly) CGPoint *coordinates;
+@property(nonatomic, strong) NSArray *coordinates;
 @property(nonatomic, strong) NSString *imageUrl;
 @property(nonatomic, strong) UIImage *image;
-
-// TEMP
 @property(nonatomic) int distance;
 
 @end

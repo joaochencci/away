@@ -1,0 +1,54 @@
+{
+	"name": "Salvador",
+	"estate": "BA",
+	"info": "Lorem ipsum",
+	"points": [
+		{
+			"name": "Fonte Nova",
+			
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Pelourinho",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Chapada Diamantina",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Praia do Forte",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		}
+	]
+}

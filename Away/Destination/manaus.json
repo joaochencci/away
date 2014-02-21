@@ -1,0 +1,54 @@
+{
+	"name": "Manaus",
+	"estate": "AM",
+	"info": "Lorem ipsum",
+	"points": [
+		{
+			"name": "Arena Amazônia",
+			
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Praia da Ponta Negra",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Zona Franca",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Encontro das Águas",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		}
+	]
+}

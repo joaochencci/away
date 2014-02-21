@@ -1,0 +1,54 @@
+{
+	"name": "Natal",
+	"estate": "RN",
+	"info": "Lorem ipsum",
+	"points": [
+		{
+			"name": "Arena das Dunas",
+			
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Praia da Redinha",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Parque Estadual Dunas",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Praia de Ponta Negra",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		}
+	]
+}

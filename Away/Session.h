@@ -34,5 +34,6 @@
 + (id)sharedSession;
 - (BOOL)isDestination: (Destination*)dest in: (NSMutableArray*)dests;
 - (void)removeDestinationAtIndex:(NSInteger)index;
+- (void)updateDistances;
 
 @end

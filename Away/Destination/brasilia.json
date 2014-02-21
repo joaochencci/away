@@ -1,0 +1,60 @@
+{
+	"name": "Brasília",
+	"estate": "DF",
+	"info": "Brasília é a capital federal do Brasil e a sede do governo do Distrito Federal. A cidade está localizada na região geográfica conhecida como Planalto Central. É a quarta cidade brasileira mais populosa, e a maior cidade do mundo construída no século XX.",
+    "geo":
+    {
+        "lat": "-15.7759668",
+        "lng": "-47.7976437"
+    },
+    "base_price":"500",
+	"points": [
+		{
+			"name": "Congresso Nacional",
+						
+			"geo":
+			{
+				"lat": "-15.7994769",
+				"lng": "-47.864112"
+			},
+
+			"pic_url" : "https://i.imgur.com/Lj3K9We.jpg"
+		},
+
+		{
+			"name": "Ponte J. Kubitschek",
+						
+			"geo":
+			{
+				"lat": "-15.8246377",
+				"lng": "-47.8290294"
+			},
+
+			"pic_url" : "https://i.imgur.com/H61XkiU.jpg"
+		},
+
+		{
+			"name": "Pontão do Lago Sul",
+						
+			"geo":
+			{
+				"lat": "-15.8263724",
+				"lng": "-47.8734237"
+			},
+
+			"pic_url" : "https://i.imgur.com/UKFBAO8.jpg"
+		},
+
+		{
+			"name": "Estádio Mané Garrincha",
+			
+			"geo":
+			{
+				"lat": "-15.7832831",
+				"lng": "-47.8985485"
+			},
+
+			"pic_url" : "https://i.imgur.com/L4TI6IA.jpg"
+		}
+	]
+}

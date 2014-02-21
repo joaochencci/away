@@ -1,0 +1,54 @@
+{
+	"name": "Rio de Janeiro",
+	"estate": "RJ",
+	"info": "Lorem ipsum",
+	"points": [
+		{
+			"name": "Maracanã",
+			
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Cristo Redentor",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Praia de Copacabana",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Pão de Açúcar",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		}
+	]
+}

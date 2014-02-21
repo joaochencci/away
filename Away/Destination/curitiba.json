@@ -1,0 +1,60 @@
+{
+	"name": "Curitiba",
+	"estate": "PR",
+	"info": "Curitiba é um município brasileiro, capital do estado do Paraná. É a oitava cidade mais populosa do Brasil e a maior do sul do país. A capital do Paraná ao longo dos últimos anos tem se consolidado como a cidade mais rica do Sul do país e a 4ª em nível nacional.",
+    "geo":
+    {
+        "lat": "-25.4951519",
+        "lng": "-49.2874025"
+    },
+    "base_price":"180",
+	"points": [
+		{
+			"name": "Cataratas do Iguaçu",
+						
+			"geo":
+			{
+				"lat": "-25.6905157",
+				"lng": "-54.4409494"
+			},
+
+			"pic_url" : "https://i.imgur.com/AzOirqE.jpg"
+		},
+
+		{
+			"name": "Bosque Alemão",
+						
+			"geo":
+			{
+				"lat": "-25.4050271",
+				"lng": "-49.2879455"
+			},
+
+			"pic_url" : "https://i.imgur.com/MvywTqn.jpg"
+		},
+
+		{
+			"name": "Jardim Botânico de Curitiba",
+						
+			"geo":
+			{
+				"lat": "-25.4422451",
+				"lng": "-49.2384842"
+			},
+
+			"pic_url" : "https://i.imgur.com/J5UovPl.jpg"
+		},
+
+		{
+			"name": "Arena da Baixada",
+			
+			"geo":
+			{
+				"lat": "-25.4476564",
+				"lng": "-49.2757356"
+			},
+
+			"pic_url" : "https://i.imgur.com/7je6Rnr.jpg"
+		}
+	]
+}

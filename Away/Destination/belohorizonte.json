@@ -1,0 +1,60 @@
+{
+	"name": "Belo Horizonte",
+	"estate": "MG",
+	"info": "Belo Horizonte é um município brasileiro, capital do estado de Minas Gerais. Com uma área de aproximadamente 330 km², possui uma geografia diversificada, com morros e baixadas, distando 716 quilômetros de Brasília, a capital nacional.",
+    "geo":
+    {
+        "lat": "-19.9179151",
+        "lng": "-43.9598457"
+    },
+    "base_price":"200",
+	"points": [
+		{
+			"name": "Pq. Ecológico da Pampulha",
+						
+			"geo":
+			{
+				"lat": "-19.8510073",
+				"lng": "-44.0055846"
+			},
+
+			"pic_url" : "https://i.imgur.com/HCicHCK.jpg"
+		},
+
+		{
+			"name": "Praça da Liberdade",
+						
+			"geo":
+			{
+				"lat": "-19.9325784",
+				"lng": "-43.9380295"
+			},
+
+			"pic_url" : "https://i.imgur.com/Rjhnrj9.jpg"
+		},
+
+		{
+			"name": "Gruta da Lapinha",
+						
+			"geo":
+			{
+				"lat": "-19.5723633",
+				"lng": "-43.946063"
+			},
+
+			"pic_url" : "https://i.imgur.com/PK0cJLC.jpg"
+		},
+
+		{
+			"name": "Estádio Mineirão",
+			
+			"geo":
+			{
+				"lat": "-19.8657591",
+				"lng": "-43.9715451"
+			},
+
+			"pic_url" : "https://i.imgur.com/St5x1Az.jpg"
+		}
+	]
+}

@@ -164,10 +164,11 @@
     CLLocation *location = [session.locationManager location];
     
     NSLog(@"Coordinates: %f %f",location.coordinate.longitude, location.coordinate.latitude);
-    
+
     [session.user.location insertObject:[NSNumber numberWithFloat:location.coordinate.latitude] atIndex:0];
     [session.user.location insertObject:[NSNumber numberWithFloat:location.coordinate.longitude] atIndex:1];
-    
+
+    [session updateDistances];
      //[self callSegueToNextScene];
 }
 
