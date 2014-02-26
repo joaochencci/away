@@ -38,6 +38,7 @@
 		3555CE0518B652A300C64CE2 /* riodejaneiro.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDF718B652A300C64CE2 /* riodejaneiro.json */; };
 		3555CE0618B652A300C64CE2 /* salvador.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDF818B652A300C64CE2 /* salvador.json */; };
 		3555CE0718B652A300C64CE2 /* saopaulo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDF918B652A300C64CE2 /* saopaulo.json */; };
+		3555CE0918BCDD4D00C64CE2 /* fozdoiguacu.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CE0818BCDD4C00C64CE2 /* fozdoiguacu.json */; };
 		355FA24818A26B5300F903BF /* DetailFriendCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 355FA24718A26B5300F903BF /* DetailFriendCustomCell.m */; };
 		356AC3C5189BD7AD000EEBBD /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 356AC3C4189BD7AD000EEBBD /* Session.m */; };
 		356AC3C8189C03B3000EEBBD /* FavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356AC3C7189C03B3000EEBBD /* FavoriteTableViewCell.m */; };
@@ -120,6 +121,7 @@
 		3555CDF718B652A300C64CE2 /* riodejaneiro.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = riodejaneiro.json; sourceTree = "<group>"; };
 		3555CDF818B652A300C64CE2 /* salvador.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = salvador.json; sourceTree = "<group>"; };
 		3555CDF918B652A300C64CE2 /* saopaulo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = saopaulo.json; sourceTree = "<group>"; };
+		3555CE0818BCDD4C00C64CE2 /* fozdoiguacu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fozdoiguacu.json; sourceTree = "<group>"; };
 		355FA24618A26B5300F903BF /* DetailFriendCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailFriendCustomCell.h; sourceTree = "<group>"; };
 		355FA24718A26B5300F903BF /* DetailFriendCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailFriendCustomCell.m; sourceTree = "<group>"; };
 		356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 		3555CDEB18B652A300C64CE2 /* Destination */ = {
 			isa = PBXGroup;
 			children = (
+				3555CE0818BCDD4C00C64CE2 /* fozdoiguacu.json */,
 				3555CDEC18B652A300C64CE2 /* belohorizonte.json */,
 				3555CDED18B652A300C64CE2 /* brasilia.json */,
 				3555CDEE18B652A300C64CE2 /* cuiaba.json */,
@@ -450,6 +453,7 @@
 				3555CDFD18B652A300C64CE2 /* curitiba.json in Resources */,
 				3555CDFE18B652A300C64CE2 /* fortaleza.json in Resources */,
 				3555CE0318B652A300C64CE2 /* portoalegre.json in Resources */,
+				3555CE0918BCDD4D00C64CE2 /* fozdoiguacu.json in Resources */,
 				3555CE0118B652A300C64CE2 /* natal.json in Resources */,
 				3555CE0518B652A300C64CE2 /* riodejaneiro.json in Resources */,
 				3555CE0418B652A300C64CE2 /* recife.json in Resources */,

@@ -1,0 +1,24 @@
+{
+	"name": "Lagoa Santa",
+	"estate": "MG",
+	"info": "Lagoa Santa é um município brasileiro do estado de Minas Gerais, localizado na Região Metropolitana de Belo Horizonte. É uma região calcária situada na Bacia Média do Rio das Velhas. A região é formada por Planaltos com relevos pouco acentuados, clima tropical e temperatura média anual de 22º.",
+	"geo":
+	{
+		"lat": "",
+		"lng": ""
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Gruta da Lapinha",
+						
+			"geo":
+			{
+				"lat": "-43.946063",
+				"lng": "-19.5723633"
+			},
+
+			"pic_url" : "https://i.imgur.com/PK0cJLC.jpg"
+		}
+	]
+}

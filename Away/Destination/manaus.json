@@ -1,42 +1,36 @@
 {
 	"name": "Manaus",
 	"estate": "AM",
-	"info": "Lorem ipsum",
+	"info": "Manaus é um município brasileiro, capital do estado do Amazonas e o principal centro financeiro, corporativo e econômico da Região Norte do Brasil. É uma cidade histórica e portuária, localizada no centro da maior floresta tropical do mundo. Situa-se na confluência dos rios Negro e Solimões. É uma das cidades brasileiras mais conhecidas mundialmente, principalmente pelo seu potencial turístico e pelo ecoturismo, o que faz do município o décimo maior destino de turistas no Brasil.",
+	"geo":
+	{
+		"lat": "-59.9813835",
+		"lng": "-2.573259"
+	},
+	"base_price" : "900",
 	"points": [
-		{
-			"name": "Arena Amazônia",
-			
-			"geo":
-			{
-				"lat": "",
-				"lng": ""
-			},
-
-			"pic_url" : ""
-		},
-
 		{
 			"name": "Praia da Ponta Negra",
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-60.1042486",
+				"lng": "-3.064082"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/omcwBp0.jpg"
 		},
 
 		{
-			"name": "Zona Franca",
+			"name": "Teatro Amazonas",
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-60.023433",
+				"lng": "-3.130318"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/tjxA3xQ.jpg"
 		},
 
 		{
@@ -44,11 +38,23 @@
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-59.900105",
+				"lng": "-3.127284"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/M86f339.jpg"
+		},
+
+		{
+			"name": "Arena Amazônia",
+			
+			"geo":
+			{
+				"lat": "-3.0836654",
+				"lng": "-60.0279184"
+			},
+
+			"pic_url" : "https://i.imgur.com/hKawMJQ.jpg"
 		}
 	]
 }

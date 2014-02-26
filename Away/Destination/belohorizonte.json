@@ -2,20 +2,20 @@
 	"name": "Belo Horizonte",
 	"estate": "MG",
 	"info": "Belo Horizonte é um município brasileiro, capital do estado de Minas Gerais. Com uma área de aproximadamente 330 km², possui uma geografia diversificada, com morros e baixadas, distando 716 quilômetros de Brasília, a capital nacional.",
-    "geo":
-    {
-        "lat": "-19.9179151",
-        "lng": "-43.9598457"
-    },
-    "base_price":"200",
+	"geo":
+	{
+		"lat": "-43.9598457",
+		"lng": "-19.917915"
+	},
+	"base_price" : "200",
 	"points": [
 		{
 			"name": "Pq. Ecológico da Pampulha",
 						
 			"geo":
 			{
-				"lat": "-19.8510073",
-				"lng": "-44.0055846"
+				"lat": "-44.0055846",
+				"lng": "-19.8510073"
 			},
 
 			"pic_url" : "https://i.imgur.com/HCicHCK.jpg"
@@ -26,23 +26,23 @@
 						
 			"geo":
 			{
-				"lat": "-19.9325784",
-				"lng": "-43.9380295"
+				"lat": "-43.9380295",
+				"lng": "-19.9325784"
 			},
 
 			"pic_url" : "https://i.imgur.com/Rjhnrj9.jpg"
 		},
 
 		{
-			"name": "Gruta da Lapinha",
+			"name": "Igreja São Francisco de Assis",
 						
 			"geo":
 			{
-				"lat": "-19.5723633",
-				"lng": "-43.946063"
+				"lat": "-43.9790333",
+				"lng": "-19.8583405"
 			},
 
-			"pic_url" : "https://i.imgur.com/PK0cJLC.jpg"
+			"pic_url" : "https://i.imgur.com/ANDmRsZ.jpg"
 		},
 
 		{
@@ -50,8 +50,8 @@
 			
 			"geo":
 			{
-				"lat": "-19.8657591",
-				"lng": "-43.9715451"
+				"lat": "-43.9715451",
+				"lng": "-19.8657591"
 			},
 
 			"pic_url" : "https://i.imgur.com/St5x1Az.jpg"

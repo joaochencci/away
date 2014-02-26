@@ -8,6 +8,11 @@
 
 #import "Session.h"
 
+@interface Session () {
+    NSOperationQueue *_operationQueue;
+}
+
+@end
 @implementation Session
 
 @synthesize user;
@@ -44,16 +49,20 @@
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
         locationManager.delegate = self;
         [locationManager startUpdatingLocation];
+        _operationQueue = [[NSOperationQueue alloc] init];
 
         [self populateDestinations];
+        NSLog(@"finish init");
     }
     return self;
 }
 
 - (void)populateDestinations {
-    NSError *error = nil;
+//    NSError *error = nil;
 //    NSString *searchResultString = [NSString stringWithContentsOfURL:[NSURL URLWithString:searchURL] encoding:NSUTF8StringEncoding error:&error];
-    NSArray *dests = @[@"belohorizonte",@"brasilia",@"cuiaba",@"curitiba",@"fortaleza"];
+    NSMutableArray *dests = [NSMutableArray arrayWithArray:@[@"belohorizonte", @"brasilia", @"cuiaba", @"curitiba", @"fortaleza", @"fozdoiguacu", @"manaus", @"natal", @"portoalegre", @"recife", @"riodejaneiro", @"salvador", @"saopaulo"]];
+
+    NSError *error = nil;
     for (NSString *dest in dests) {
         NSString *filePath = [[NSBundle mainBundle] pathForResource:dest ofType:@"json"];
         NSData *jsonData = [NSData dataWithContentsOfFile:filePath];

@@ -2,20 +2,20 @@
 	"name": "Cuiabá",
 	"estate": "MT",
 	"info": "Cuiabá é a capital e maior cidade do estado de Mato Grosso. A cidade é umas das 12 sedes da Copa do mundo FIFA de 2014, representando o Pantanal (a cidade se situa a cerca de 100 quilômetros da região pantaneira).",
-    "geo":
-    {
-        "lat": "-15.4189973",
-        "lng": "-55.8829138"
-    },
-    "base_price":"400",
+	"geo":
+	{
+		"lat": "-55.8829138",
+		"lng": "-15.4189973"
+	},
+	"base_price" : "400",
 	"points": [
 		{
 			"name": "Centro Histórico",
 						
 			"geo":
 			{
-				"lat": "-15.5978741",
-				"lng": "-56.0946652"
+				"lat": "-56.0946652",
+				"lng": "-15.5978741"
 			},
 
 			"pic_url" : "https://i.imgur.com/TsS3G28.jpg"
@@ -26,11 +26,23 @@
 						
 			"geo":
 			{
-				"lat": "-15.5699596",
-				"lng": "-56.0719737"
+				"lat": "-56.0719737",
+				"lng": "-15.5699596"
 			},
 
 			"pic_url" : "https://i.imgur.com/gJmHDZz.jpg"
+		},
+
+		{
+			"name": "Catedral Basílica do Senhor Bom Jesus",
+						
+			"geo":
+			{
+				"lat": "-56.0946995",
+				"lng": "-15.597872"
+			},
+
+			"pic_url" : "http://i.imgur.com/niDSWKa.jpg"
 		},
 
 		{
@@ -38,8 +50,8 @@
 			
 			"geo":
 			{
-				"lat": "-15.6034426",
-				"lng": "-56.1213329"
+				"lat": "-56.1213329",
+				"lng": "-15.6034426"
 			},
 
 			"pic_url" : "https://i.imgur.com/1zdHHht.jpg"

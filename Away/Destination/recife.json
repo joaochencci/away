@@ -1,42 +1,36 @@
 {
 	"name": "Recife",
 	"estate": "PE",
-	"info": "Lorem ipsum",
+	"info": "Recife é um município e capital do estado de Pernambuco, no Brasil. É sede da Região Metropolitana do Recife, a maior aglomeração urbana do Norte-Nordeste e quinta maior do Brasil, com 3,7 milhões de habitantes.",
+	"geo":
+	{
+		"lat": "-34.9301372",
+		"lng": "-8.04645"
+	},
+	"base_price" : "950",
 	"points": [
-		{
-			"name": "Arena Pernambuco",
-			
-			"geo":
-			{
-				"lat": "",
-				"lng": ""
-			},
-
-			"pic_url" : ""
-		},
-
 		{
 			"name": "Praia do Paiva",
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-34.945138",
+				"lng": "-8.2600684"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/sNb7rtj.jpg"
 		},
 
 		{
-			"name": "Coroa do Avião",
+			"name": "Pontes Centenárias",
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-34.877624",
+				"lng": "-8.059995"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/jFSMdI0.jpg"
 		},
 
 		{
@@ -44,11 +38,23 @@
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-34.8883319",
+				"lng": "-8.1098251"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/vYs8zAu.jpg"
+		},
+
+		{
+			"name": "Arena Pernambuco",
+			
+			"geo":
+			{
+				"lat": "-35.0080452",
+				"lng": "-8.0405794"
+			},
+
+			"pic_url" : "https://i.imgur.com/SFITpQ2.jpg"
 		}
 	]
 }

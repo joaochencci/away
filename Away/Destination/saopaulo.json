@@ -1,30 +1,24 @@
 {
 	"name": "São Paulo",
 	"estate": "SP",
-	"info": "Lorem ipsum",
+	"info": "São Paulo é capital do estado de São Paulo e principal centro financeiro, corporativo e mercantil da América do Sul. É a cidade mais populosa do Brasil, do continente americano e de todo o hemisfério sul, e a cidade brasileira mais influente no cenário global, sendo considerada a 14ª cidade mais globalizada do planeta.",
+	"geo":
+	{
+		"lat": "-46.5952992",
+		"lng": "-23.6824124"
+	},
+	"base_price" : "100",
 	"points": [
-		{
-			"name": "Itaquerão",
-			
-			"geo":
-			{
-				"lat": "",
-				"lng": ""
-			},
-
-			"pic_url" : ""
-		},
-
 		{
 			"name": "Avenida Paulista",
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-46.6553613",
+				"lng": "-23.5629354"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/bbX7hSw.jpg"
 		},
 
 		{
@@ -32,11 +26,11 @@
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-46.657625",
+				"lng": "-23.587309"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/lxFEOly.jpg"
 		},
 
 		{
@@ -44,11 +38,23 @@
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-46.6390152",
+				"lng": "-23.5414667"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/WNrjWap.jpg"
+		},
+
+		{
+			"name": "Itaquerão",
+			
+			"geo":
+			{
+				"lat": "-46.4743103",
+				"lng": "-23.5451975"
+			},
+
+			"pic_url" : "https://i.imgur.com/OirLNVF.jpg"
 		}
 	]
 }

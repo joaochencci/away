@@ -2,20 +2,20 @@
 	"name": "Fortaleza",
 	"estate": "CE",
 	"info": "Fortaleza é um município brasileiro, capital do estado do Ceará. Sua toponímia é uma alusão ao Forte Schoonenborch, construído pelos holandeses durante sua segunda permanência no local entre 1649 e 1654. O lema da cidade (presente em seu brasão) é a palavra em latim \"Fortitudine\", que em português significa: \"força, valor, coragem\".",
-    "geo":
-    {
-        "lat": "-3.7826694",
-        "lng": "-38.5220396,"
-    },
-    "base_price":"1000",
+	"geo":
+	{
+		"lat": "-38.5220397",
+		"lng": "-3.7832103"
+	},
+	"base_price" : "1000",
 	"points": [
 		{
 			"name": "Praia das Fontes",
 						
 			"geo":
 			{
-				"lat": "-4.1862879",
-				"lng": "-38.075699"
+				"lat": "-38.075699",
+				"lng": "-4.1862879"
 			},
 
 			"pic_url" : "https://i.imgur.com/Bd6JUBR.jpg"
@@ -26,8 +26,8 @@
 						
 			"geo":
 			{
-				"lat": "-3.725631",
-				"lng": "-38.492055"
+				"lat": "-38.492055",
+				"lng": "-3.725631"
 			},
 
 			"pic_url" : "https://i.imgur.com/iVWeyuV.jpg"
@@ -38,8 +38,8 @@
 						
 			"geo":
 			{
-				"lat": "-3.7249999",
-				"lng": "-38.4583333"
+				"lat": "-38.4583333",
+				"lng": "-3.7249999"
 			},
 
 			"pic_url" : "https://i.imgur.com/f6Px5tN.jpg"
@@ -50,8 +50,8 @@
 			
 			"geo":
 			{
-				"lat": "-3.8067125",
-				"lng": "-38.52166"
+				"lat": "-38.52166",
+				"lng": "-3.8067125"
 			},
 
 			"pic_url" : "https://i.imgur.com/e4yN0gt.jpg"

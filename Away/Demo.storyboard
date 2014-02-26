@@ -765,15 +765,34 @@
     <resources>
         <image name="icon_car" width="141" height="94"/>
         <image name="icon_fb_friends" width="128" height="128"/>
+        <image name="icon_fb_friends" width="128" height="128"/>
+        <image name="icon_fb_friends" width="128" height="128"/>
         <image name="icon_info" width="64" height="64"/>
         <image name="icon_info_hover" width="64" height="64"/>
         <image name="icon_minus" width="120" height="120"/>
         <image name="icon_minus_hover" width="120" height="120"/>
+        <image name="icon_minus_hover" width="120" height="120"/>
         <image name="icon_money_no" width="30" height="30"/>
+        <image name="icon_money_no" width="30" height="30"/>
+        <image name="icon_money_no" width="30" height="30"/>
+        <image name="icon_money_no" width="30" height="30"/>
+        <image name="icon_money_no" width="30" height="30"/>
+        <image name="icon_money_no" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
+        <image name="icon_money_yes" width="30" height="30"/>
         <image name="icon_money_yes" width="30" height="30"/>
         <image name="icon_plus" width="120" height="120"/>
         <image name="icon_plus_hover" width="120" height="120"/>
+        <image name="icon_plus_hover" width="120" height="120"/>
+        <image name="icon_plus_hover" width="120" height="120"/>
         <image name="logo_away_small" width="500" height="262"/>
+        <image name="logo_home_screen" width="265" height="135"/>
         <image name="logo_home_screen" width="265" height="135"/>
         <image name="placeholder" width="331" height="233"/>
     </resources>

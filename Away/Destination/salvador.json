@@ -1,42 +1,36 @@
 {
 	"name": "Salvador",
 	"estate": "BA",
-	"info": "Lorem ipsum",
+	"info": "Salvador (fundada como São Salvador da Bahia de Todos os Santos7 ) é um município brasileiro, capital do estado da Bahia e primeira capital do Brasil. A cidade de Salvador é notável, no Brasil, pela sua gastronomia, música e arquitetura, e sua área metropolitana é a mais rica do nordeste do Brasil. A influência africana em muitos aspectos culturais da cidade a torna o centro da cultura afro-brasileira.",
+	"geo":
+	{
+		"lat": "-38.4174871",
+		"lng": "-12.8809532"
+	},
+	"base_price" : "560",
 	"points": [
-		{
-			"name": "Fonte Nova",
-			
-			"geo":
-			{
-				"lat": "",
-				"lng": ""
-			},
-
-			"pic_url" : ""
-		},
-
 		{
 			"name": "Pelourinho",
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-38.5092957",
+				"lng": "-12.9744672"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/h7jeFqy.jpg"
 		},
 
 		{
-			"name": "Chapada Diamantina",
+			"name": "Elevador Lacerda",
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-38.5135207",
+				"lng": "-12.9739295"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/aetVMKK.jpg"
 		},
 
 		{
@@ -44,11 +38,23 @@
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-37.988225",
+				"lng": "-12.550342"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/Cv1AR5R.jpg"
+		},
+
+		{
+			"name": "Fonte Nova",
+			
+			"geo":
+			{
+				"lat": "-38.5043116",
+				"lng": "-12.9790061"
+			},
+
+			"pic_url" : "https://i.imgur.com/EMpt2IL.jpg"
 		}
 	]
 }

@@ -1,0 +1,24 @@
+{
+	"name": "Igarassu",
+	"estate": "PE",
+	"info": "",
+	"geo":
+	{
+		"lat": "",
+		"lng": ""
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Coroa do Avião",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		}
+	]
+}

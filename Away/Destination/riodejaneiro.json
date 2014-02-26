@@ -1,30 +1,24 @@
 {
 	"name": "Rio de Janeiro",
 	"estate": "RJ",
-	"info": "Lorem ipsum",
+	"info": "Rio de Janeiro, capital do estado homônimo, é a segunda maior metrópole do Brasil. É também conhecida por Cidade Maravilhosa. É um dos principais centros econômicos, culturais e financeiros do país, sendo internacionalmente conhecida por diversos ícones culturais e paisagísticos.",
+	"geo":
+	{
+		"lat": "-43.449703",
+		"lng": "-22.9156912"
+	},
+	"base_price" : "600",
 	"points": [
-		{
-			"name": "Maracanã",
-			
-			"geo":
-			{
-				"lat": "",
-				"lng": ""
-			},
-
-			"pic_url" : ""
-		},
-
 		{
 			"name": "Cristo Redentor",
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-43.210632",
+				"lng": "-22.951888"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/dsAQdY3.jpg"
 		},
 
 		{
@@ -32,11 +26,11 @@
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-43.1873689",
+				"lng": "-22.9750721"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "http://i.imgur.com/K6UzUEV.jpg"
 		},
 
 		{
@@ -44,11 +38,23 @@
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-43.155954",
+				"lng": "-22.951280"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/WQEaCMi.jpg"
+		},
+
+		{
+			"name": "Maracanã",
+			
+			"geo":
+			{
+				"lat": "-43.2302721",
+				"lng": "-22.9123256"
+			},
+
+			"pic_url" : "https://i.imgur.com/KhIbZyC.jpg"
 		}
 	]
 }

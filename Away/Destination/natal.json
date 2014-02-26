@@ -1,30 +1,24 @@
 {
 	"name": "Natal",
 	"estate": "RN",
-	"info": "Lorem ipsum",
+	"info": "Natal é um município brasileiro, capital do estado do Rio Grande do Norte. Fundada em 1599, às margens do Rio Potenji, a cidade é conhecida mundialmente11 e conta com importantes monumentos, parques e museus e pontos turísticos.",
+	"geo":
+	{
+		"lat": "-35.2223205",
+		"lng": "-5.8019527"
+	},
+	"base_price" : "1100",
 	"points": [
-		{
-			"name": "Arena das Dunas",
-			
-			"geo":
-			{
-				"lat": "",
-				"lng": ""
-			},
-
-			"pic_url" : ""
-		},
-
 		{
 			"name": "Praia da Redinha",
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-35.2010774",
+				"lng": "-5.7474221"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/MdzDRHz.png"
 		},
 
 		{
@@ -32,11 +26,11 @@
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-35.189372",
+				"lng": "-5.830147"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/A9PecZU.jpg"
 		},
 
 		{
@@ -44,11 +38,23 @@
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-35.169464",
+				"lng": "-5.882482"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/h2DWwWU.jpg"
+		},
+
+		{
+			"name": "Arena das Dunas",
+			
+			"geo":
+			{
+				"lat": "-35.2124207",
+				"lng": "-5.8268059"
+			},
+
+			"pic_url" : "https://i.imgur.com/N8NMArV.jpg"
 		}
 	]
 }

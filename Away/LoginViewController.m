@@ -19,6 +19,7 @@
     UIView *_balloonShadowView;
     
     NSOperationQueue *_operationQueue;
+    NSOperationQueue *_operationQueueDestinations;
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
@@ -43,6 +44,7 @@
     _fbButtonOn = NO;
     
     _operationQueue = [[NSOperationQueue alloc] init];
+    _operationQueueDestinations = [[NSOperationQueue alloc] init];
     
 }
 
@@ -183,23 +185,46 @@
 - (void)loadFirstDestinations
 {
     NSBlockOperation *operation = [[NSBlockOperation alloc] init];
-    
+    Session *session = [Session sharedSession];
+
     [operation addExecutionBlock:^{
-        
-        Session *session = [Session sharedSession];
+        NSUInteger index = 0;
         for (Destination *d in session.destinations) {
-            for (DestinationViewPoint *vp in d.viewPoints) {
-                NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: vp.imageUrl]];
-                vp.image = [UIImage imageWithData: imageData];
+            if (index < 2){
+                NSUInteger index2 = 0;
+                for (DestinationViewPoint *vp in d.viewPoints) {
+                    if (index2 == 0){
+                        NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: vp.imageUrl]];
+                        vp.image = [UIImage imageWithData: imageData];
+                    }else{
+                        NSBlockOperation *op = [[NSBlockOperation alloc] init];
+                        [op addExecutionBlock:^{
+                            NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: vp.imageUrl]];
+                            vp.image = [UIImage imageWithData: imageData];
+                        }];
+                        [_operationQueueDestinations addOperation:op];
+                    }
+                    index2++;
+                }
+            }else{
+                NSBlockOperation *op = [[NSBlockOperation alloc] init];
+                [op addExecutionBlock:^{
+                    for (DestinationViewPoint *vp in d.viewPoints) {
+                        NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: vp.imageUrl]];
+                        vp.image = [UIImage imageWithData: imageData];
+                    }
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                        NSLog(@"finish block %@", d.title);
+                    }];
+                }];
+                [_operationQueueDestinations addOperation:op];
             }
+            index++;
         }
-        
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [self simulatedDelay];
         }];
-        
     }];
-    
     [_operationQueue addOperation:operation];
 }
 

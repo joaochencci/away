@@ -1,0 +1,60 @@
+{
+	"name": "Foz do Iguaçu",
+	"estate": "PR",
+	"info": "Foz do Iguaçu é um município brasileiro do estado do Paraná. É o segundo destino de turistas estrangeiros no país9 e o primeiro da região sul. Conhecida internacionalmente pelas Cataratas do Iguaçu, uma das vencedoras do concurso que escolheu as 7 Maravilhas da Natureza10 e pela Usina Hidrelétrica de Itaipu, a segunda maior do mundo em tamanho e primeira em geração de energia11 , que em 1996 foi considerada uma das 7 Maravilhas do Mundo Moderno pela Sociedade Americana de Engenheiros Civis.",
+	"geo":
+	{
+		"lat": "-54.4571479",
+		"lng": "-25.4654964"
+	},
+	"base_price" : "500",
+	"points": [
+		{
+			"name": "Cataratas do Iguaçu",
+						
+			"geo":
+			{
+				"lat": "-54.4409494",
+				"lng": "-25.6905157"
+			},
+
+			"pic_url" : "https://i.imgur.com/AzOirqE.jpg"
+		},
+
+		{
+			"name": "Marco das Três Fronteiras",
+						
+			"geo":
+			{
+				"lat": "-54.590264",
+				"lng": "-25.590072"
+			},
+
+			"pic_url" : "https://i.imgur.com/0PExrJV.jpg"
+		},
+
+		{
+			"name": "Usina Hidrelétrica de Itaipu",
+						
+			"geo":
+			{
+				"lat": "-54.584592",
+				"lng": "-25.447265"
+			},
+
+			"pic_url" : "https://i.imgur.com/sB9h6yR.jpg"
+		},
+
+		{
+			"name": "Mesquita Omar Ibn Al-Khattab",
+						
+			"geo":
+			{
+				"lat": "-54.5800276",
+				"lng": "-25.5201086"
+			},
+
+			"pic_url" : "https://i.imgur.com/i1Jh6Fz.jpg"
+		}
+	]
+}

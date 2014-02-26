@@ -2,23 +2,23 @@
 	"name": "Curitiba",
 	"estate": "PR",
 	"info": "Curitiba é um município brasileiro, capital do estado do Paraná. É a oitava cidade mais populosa do Brasil e a maior do sul do país. A capital do Paraná ao longo dos últimos anos tem se consolidado como a cidade mais rica do Sul do país e a 4ª em nível nacional.",
-    "geo":
-    {
-        "lat": "-25.4951519",
-        "lng": "-49.2874025"
-    },
-    "base_price":"180",
+	"geo":
+	{
+		"lat": "-49.2874025",
+		"lng": "-25.4951519"
+	},
+	"base_price" : "200",
 	"points": [
 		{
-			"name": "Cataratas do Iguaçu",
+			"name": "Parque Tingui",
 						
 			"geo":
 			{
-				"lat": "-25.6905157",
-				"lng": "-54.4409494"
+				"lat": "-49.3118922",
+				"lng": "-25.4012732"
 			},
 
-			"pic_url" : "https://i.imgur.com/AzOirqE.jpg"
+			"pic_url" : "https://i.imgur.com/mRM33vw.jpg"
 		},
 
 		{
@@ -26,8 +26,8 @@
 						
 			"geo":
 			{
-				"lat": "-25.4050271",
-				"lng": "-49.2879455"
+				"lat": "-49.2879455",
+				"lng": "-25.4050271"
 			},
 
 			"pic_url" : "https://i.imgur.com/MvywTqn.jpg"
@@ -38,8 +38,8 @@
 						
 			"geo":
 			{
-				"lat": "-25.4422451",
-				"lng": "-49.2384842"
+				"lat": "-49.2384842",
+				"lng": "-25.4422451"
 			},
 
 			"pic_url" : "https://i.imgur.com/J5UovPl.jpg"
@@ -50,8 +50,8 @@
 			
 			"geo":
 			{
-				"lat": "-25.4476564",
-				"lng": "-49.2757356"
+				"lat": "-49.2757356",
+				"lng": "-25.4476564"
 			},
 
 			"pic_url" : "https://i.imgur.com/7je6Rnr.jpg"

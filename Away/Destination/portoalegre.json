@@ -1,30 +1,24 @@
 {
 	"name": "Porto Alegre",
 	"estate": "RS",
-	"info": "Lorem ipsum",
+	"info": "Porto Alegre é um município brasileiro e a capital do estado mais meridional do Brasil, o Rio Grande do Sul. Possui uma geografia diversificada, com morros, baixadas e um grande lago, o Guaíba.",
+	"geo":
+	{
+		"lat": "-51.1559194",
+		"lng": "-30.1022217"
+	},
+	"base_price" : "350",
 	"points": [
-		{
-			"name": "Mineirão",
-			
-			"geo":
-			{
-				"lat": "",
-				"lng": ""
-			},
-
-			"pic_url" : ""
-		},
-
 		{
 			"name": "Pq. de Itapuã",
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-51.000596",
+				"lng": "-30.269215"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/zmpbsMd.jpg"
 		},
 
 		{
@@ -32,23 +26,35 @@
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-51.216166",
+				"lng": "-30.041140"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/ZboWpIW.jpg"
 		},
 
 		{
-			"name": "Calçadão de Ipanema",
+			"name": "Cinemateca Capitólio",
 						
 			"geo":
 			{
-				"lat": "",
-				"lng": ""
+				"lat": "-51.234313",
+				"lng": "-30.031438"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/RBGAKeA.jpg"
+		},
+
+		{
+			"name": "Estádio Beira-Rio",
+			
+			"geo":
+			{
+				"lat": "-51.235825",
+				"lng": "-30.065383"
+			},
+
+			"pic_url" : "https://i.imgur.com/DqWcxIw.jpg"
 		}
 	]
 }
