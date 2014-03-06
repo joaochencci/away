@@ -1,0 +1,84 @@
+{
+	"name": "Goiânia",
+	"estate": "GO",
+	"info": "Goiânia é a capital do estado de Goiás. Possui uma geografia contínua, com poucos morros e baixadas, tendo terras planas na maior parte de seu território, com destaque para o rio Meia Ponte.",
+	"geo":
+	{
+		"lat": "-49.2624666",
+		"lng": "-16.6428184"
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Praça Cívica",
+						
+			"geo":
+			{
+				"lat": "-49.2647943",
+				"lng": "-16.6868912"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Parque Vaca Brava",
+						
+			"geo":
+			{
+				"lat": "-49.2710191",
+				"lng": "-16.7095464"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Praça do Ratinho",
+						
+			"geo":
+			{
+				"lat": "-49.262794",
+				"lng": "-16.691519"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Viaduto João Alvares de Queiroz",
+						
+			"geo":
+			{
+				"lat": "-49.263739",
+				"lng": "-16.713905"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Teatro Goiânia",
+						
+			"geo":
+			{
+				"lat": "-49.2615718",
+				"lng": "-16.6759506"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Estádio Serra Dourada",
+						
+			"geo":
+			{
+				"lat": "-49.23471",
+				"lng": "-16.6986191"
+			},
+
+			"pic_url" : ""
+		}	
+	]
+}

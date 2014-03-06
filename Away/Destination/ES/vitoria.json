@@ -1,0 +1,60 @@
+{
+	"name": "Vitória",
+	"estate": "ES",
+	"info": "Vitória é a capital do estado do Espírito Santo, na Região Sudeste do Brasil. É uma das três ilhas-capitais do país (as outras são Florianópolis e São Luís). Vitória limita-se ao norte com o município da Serra, ao sul com Vila Velha, a leste com o Oceano Atlântico e a oeste com Cariacica.",
+	"geo":
+	{
+		"lat": "-40.2861705",
+		"lng": "-20.2821915"
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Centro Histórico",
+						
+			"geo":
+			{
+				"lat": "-40.338007",
+				"lng": "-20.3176065"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Ilha do Frade",
+						
+			"geo":
+			{
+				"lat": "-40.2810912",
+				"lng": "-20.3022973"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Teatro Carlos Gomes",
+						
+			"geo":
+			{
+				"lat": "-40.3357108",
+				"lng": "-20.3194902"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Terceira Ponte",
+						
+			"geo":
+			{
+				"lat": "-40.2861535",
+				"lng": "-20.318159"
+			},
+
+			"pic_url" : ""
+		}	
+	]
+}

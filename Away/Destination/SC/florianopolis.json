@@ -1,0 +1,84 @@
+{
+	"name": "Florianópolis",
+	"estate": "SC",
+	"info": "Florianópolis é a capital do estado de Santa Catarina, na Região Sul do Brasil. Destaca-se por ser a capital brasileira com o melhor Índice de Desenvolvimento Humano (IDH), de 0.8479 , além de ser o terceiro município com o mais alto valor do índice no país, segundo os mais recentes dados do Programa das Nações Unidas para o Desenvolvimento em 2010.",
+	"geo":
+	{
+		"lat": "-48.4826754",
+		"lng": "-27.6161749"
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Ponte Hercílio Luz",
+						
+			"geo":
+			{
+				"lat": "-48.5654361",
+				"lng": "-27.5938156"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Fortaleza São José",
+						
+			"geo":
+			{
+				"lat": "-48.5178187",
+				"lng": "-27.4316153"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Praia da Joaquina",
+						
+			"geo":
+			{
+				"lat": "-48.4488349",
+				"lng": "-27.6295844"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Centro Histórico",
+						
+			"geo":
+			{
+				"lat": "-48.551244",
+				"lng": "-27.598367"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Avenida Beira Mar",
+						
+			"geo":
+			{
+				"lat": "-48.561090",
+				"lng": "-27.595351"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Estádio da Ressacada",
+						
+			"geo":
+			{
+				"lat": "-48.532447",
+				"lng": "-27.665925"
+			},
+
+			"pic_url" : ""
+		}	
+	]
+}

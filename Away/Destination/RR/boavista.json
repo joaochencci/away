@@ -1,0 +1,60 @@
+{
+	"name": "Boa Vista",
+	"estate": "RR",
+	"info": "",
+	"geo":
+	{
+		"lat": "",
+		"lng": ""
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "",
+						
+			"geo":
+			{
+				"lat": "",
+				"lng": ""
+			},
+
+			"pic_url" : ""
+		}	
+	]
+}

@@ -1,0 +1,60 @@
+{
+	"name": "Maceió",
+	"estate": "AL",
+	"info": "Maceió é a capital do estado de Alagoas. Integra, com outros dez municípios alagoanos, a Região Metropolitana de Maceió, sendo o mais populoso de Alagoas, o 17º de todo o país e o 73º do continente americano.",
+	"geo":
+	{
+		"lat": "-35.6869382",
+		"lng": "-9.5353673"
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Praia de Pajuçara",
+						
+			"geo":
+			{
+				"lat": "-35.7135816",
+				"lng": "-9.6711334"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Lagoa Mundaú",
+						
+			"geo":
+			{
+				"lat": "-35.8027731",
+				"lng": "-9.6628723"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Teatro Deodoro",
+						
+			"geo":
+			{
+				"lat": "-35.7411365",
+				"lng": "-9.6671647"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Estádio Rei Pelé",
+						
+			"geo":
+			{
+				"lat": "-35.759069",
+				"lng": "-9.671892"
+			},
+
+			"pic_url" : ""
+		}	
+	]
+}

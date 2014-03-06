@@ -1,0 +1,60 @@
+{
+	"name": "Belém",
+	"estate": "PA",
+	"info": "Belém é capital do estado do Pará. A cidade exerce significativa influência nacional, seja do ponto de vista cultural, econômico ou político. Conta com importantes monumentos, parques e museus",
+	"geo":
+	{
+		"lat": "-48.4392935",
+		"lng": "-1.343203"
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Forte do Castelo",
+						
+			"geo":
+			{
+				"lat": "-48.505417",
+				"lng": "-1.454392"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Teatro da Paz",
+						
+			"geo":
+			{
+				"lat": "-48.4936812",
+				"lng": "-1.4529846"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Baía do Guajará",
+						
+			"geo":
+			{
+				"lat": "-48.5049761",
+				"lng": "-1.4180321"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Mercado do Ver-o-Peso",
+						
+			"geo":
+			{
+				"lat": "-48.5035756",
+				"lng": "-1.4522171"
+			},
+
+			"pic_url" : ""
+		}	
+	]
+}

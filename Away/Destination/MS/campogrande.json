@@ -1,0 +1,60 @@
+{
+	"name": "Campo Grande",
+	"estate": "MS",
+	"info": "Campo Grande é capital do estado de Mato Grosso do Sul. Reduto histórico de divisionistas entre o sul e o norte, Campo Grande foi fundada por mineiros, que vieram aproveitar os campos de pastagens nativas e as águas cristalinas da região dos cerrados. A cidade foi planejada em meio a uma vasta área verde, com ruas e avenidas largas. Relativamente arborizada e com diversos jardins por entre as suas vias, apresenta, ainda nos dias de hoje, forte relação com a cultura indígena e suas raízes históricas. Por causa da cor de sua terra (roxa ou vermelha), recebeu a alcunha de Cidade Morena. A cidade está localizada em uma região de planalto, em que é possível ver os limites da linha do horizonte ao fundo de qualquer paisagem. O aquífero Guarani passa por baixo da cidade.",
+	"geo":
+	{
+		"lat": "-54.2618866",
+		"lng": "-20.875456"
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Parque das Nações Indígenas",
+						
+			"geo":
+			{
+				"lat": "-54.5806848",
+				"lng": "-20.4510283"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Relógio Central",
+						
+			"geo":
+			{
+				"lat": "-54.619167",
+				"lng": "-20.464392"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Reserva Indígena Urbana Marçal de Souza",
+						
+			"geo":
+			{
+				"lat": "-54.5699984",
+				"lng": "-20.4695393"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Praça Cuiabá",
+						
+			"geo":
+			{
+				"lat": "-54.6313837",
+				"lng": "-20.4631625"
+			},
+
+			"pic_url" : ""
+		}	
+	]
+}

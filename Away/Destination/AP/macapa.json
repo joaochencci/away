@@ -1,0 +1,60 @@
+{
+	"name": "Macapá",
+	"estate": "AP",
+	"info": "Macapá é um município brasileiro, capital e maior cidade do estado do Amapá. É a única capital estadual brasileira que não possui interligação por rodovia a outras capitais . Além disso, é a única cortada pela linha do Equador. Está localizada às margens do Rio Amazonas. Macapá pertence à mesorregião do Sul do Amapá e à microrregião homônima.",
+	"geo":
+	{
+		"lat": "-50.6788393",
+		"lng": "0.5913396"
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Marco Zero",
+						
+			"geo":
+			{
+				"lat": "-51.069475",
+				"lng": "0.021469"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Fortaleza de São José de Macapá",
+						
+			"geo":
+			{
+				"lat": "-51.0491323",
+				"lng": "0.0310707"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Igreja Matriz de São José",
+						
+			"geo":
+			{
+				"lat": "-51.051765",
+				"lng": "0.0367949"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Museu Sacacá",
+						
+			"geo":
+			{
+				"lat": "-51.068125",
+				"lng": "0.0295109"
+			},
+
+			"pic_url" : ""
+		}	
+	]
+}

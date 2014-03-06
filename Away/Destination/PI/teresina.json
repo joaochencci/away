@@ -1,0 +1,60 @@
+{
+	"name": "Teresina",
+	"estate": "PI",
+	"info": "Teresina é a capital e o município mais populoso do estado brasileiro do Piauí. É a única capital da Região Nordeste que não se localiza às margens do Oceano Atlântico. Hoje é uma das cidades que mais cresce no Brasil. Teresina também é a terceira cidade onde mais acontecem sequências de descargas elétricas no mundo. Por esta razão, a região recebe a curiosa denominação de \"Chapada do Corisco\". Seu lema é a frase \"Omnia in Charitate\", que significa, em português, \"Tudo pela caridade\".",
+	"geo":
+	{
+		"lat": "-42.8014784",
+		"lng": "-5.1864438"
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Mirante da Ponte do \"Sesquicentenário\" João Isidoro França",
+						
+			"geo":
+			{
+				"lat": "-42.8252294",
+				"lng": "-5.0480065"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Biblioteca Municipal Abdias Neves",
+						
+			"geo":
+			{
+				"lat": "-42.8322454",
+				"lng": "-5.0696588"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Palácio do Karnak",
+						
+			"geo":
+			{
+				"lat": "-42.8115521",
+				"lng": "-5.091098"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Estádio Governador Alberto Tavares Silva",
+						
+			"geo":
+			{
+				"lat": "-42.7927611",
+				"lng": "-5.116202"
+			},
+
+			"pic_url" : ""
+		}	
+	]
+}

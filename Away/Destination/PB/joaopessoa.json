@@ -1,0 +1,60 @@
+{
+	"name": "João Pessoa",
+	"estate": "PB",
+	"info": "João Pessoa é capital e principal centro financeiro e econômico do estado da Paraíba. Em 1992, João Pessoa recebeu o título de \"segunda capital mais verde do mundo\". Segundo um cálculo baseado na relação entre número de habitantes e área verde, ficando atrás apenas de Paris, capital da França. É uma das capitais de melhor qualidade de vida do nordeste brasileiro, possuindo diversos locais que auxiliam a população da cidade a obter uma vida melhor e de qualidade.",
+	"geo":
+	{
+		"lat": "-34.8833954",
+		"lng": "-7.149667"
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Praça dos Três Poderes",
+						
+			"geo":
+			{
+				"lat": "-34.883802",
+				"lng": "-7.121503"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Rio Jaguaribe",
+						
+			"geo":
+			{
+				"lat": "-34.863979",
+				"lng": "-7.1371379"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Farol do Cabo Branco",
+						
+			"geo":
+			{
+				"lat": "-34.7966369",
+				"lng": "-7.1487477"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Convento de São Francisco",
+						
+			"geo":
+			{
+				"lat": "-34.8869884",
+				"lng": "-7.1137273"
+			},
+
+			"pic_url" : ""
+		}	
+	]
+}

@@ -1,0 +1,60 @@
+{
+	"name": "Rio Branco",
+	"estate": "AC",
+	"info": "Rio Branco é um município brasileiro, capital do Estado do Acre. Localiza-se às margens do Rio Acre, no Vale do Acre e na microrregião homônima.",
+	"geo":
+	{
+		"lat": "-67.8310966",
+		"lng": "-9.9863306"
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Memorial dos Autonomistas",
+						
+			"geo":
+			{
+				"lat": "-67.809944",
+				"lng": "-9.9742713"
+			},
+
+			"pic_url" : "https://i.imgur.com/58mNhpG.jpg"
+		},
+
+		{
+			"name": "Praça da Revolução",
+						
+			"geo":
+			{
+				"lat": "-67.809908",
+				"lng": "-9.973001"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Parque da Maternidade",
+						
+			"geo":
+			{
+				"lat": "-67.8081939",
+				"lng": "-9.9679405"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Estádio Arena da Floresta",
+						
+			"geo":
+			{
+				"lat": "-67.803884",
+				"lng": "-10.002430"
+			},
+
+			"pic_url" : ""
+		}	
+	]
+}

@@ -1,0 +1,60 @@
+{
+	"name": "Porto Velho",
+	"estate": "RO",
+	"info": "Porto Velho é capital do estado de Rondônia. Situada na margem à leste do Rio Madeira, na Região Norte do Brasil. Foi fundada pela empresa americana Madeira Mamoré Railway Company em 4 de julho de 1907, durante a construção da Estrada de Ferro Madeira-Mamoré, comandada pelo magnata norte-americano Percival Farquhar.",
+	"geo":
+	{
+		"lat": "-64.5236479",
+		"lng": "-8.9848761"
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Museu da Estrada de Ferro Madeira-Mamoré",
+						
+			"geo":
+			{
+				"lat": "-63.908625",
+				"lng": "-8.765951"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "As Três Caixas D'Água",
+						
+			"geo":
+			{
+				"lat": "-63.9004303",
+				"lng": "-8.7611605"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Casa da Cultura Ivan Marrocos",
+						
+			"geo":
+			{
+				"lat": "-63.9066617",
+				"lng": "-8.7621358"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Rio Madeira",
+						
+			"geo":
+			{
+				"lat": "-63.922590",
+				"lng": "-8.738424"
+			},
+
+			"pic_url" : ""
+		}	
+	]
+}

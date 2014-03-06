@@ -26,19 +26,36 @@
 		1AD9C3CD189C645E00CA6210 /* NSMutableArray+FIFOQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3CC189C645E00CA6210 /* NSMutableArray+FIFOQueue.m */; };
 		1AD9C3CF189C69B200CA6210 /* FIFOQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3CE189C69B200CA6210 /* FIFOQueueTest.m */; };
 		1AD9C3D2189C92AC00CA6210 /* DestinationViewPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C3D1189C92AC00CA6210 /* DestinationViewPoint.m */; };
-		3555CDFA18B652A300C64CE2 /* belohorizonte.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDEC18B652A300C64CE2 /* belohorizonte.json */; };
-		3555CDFB18B652A300C64CE2 /* brasilia.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDED18B652A300C64CE2 /* brasilia.json */; };
-		3555CDFC18B652A300C64CE2 /* cuiaba.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDEE18B652A300C64CE2 /* cuiaba.json */; };
-		3555CDFD18B652A300C64CE2 /* curitiba.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDEF18B652A300C64CE2 /* curitiba.json */; };
-		3555CDFE18B652A300C64CE2 /* fortaleza.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDF018B652A300C64CE2 /* fortaleza.json */; };
-		3555CE0018B652A300C64CE2 /* manaus.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDF218B652A300C64CE2 /* manaus.json */; };
-		3555CE0118B652A300C64CE2 /* natal.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDF318B652A300C64CE2 /* natal.json */; };
-		3555CE0318B652A300C64CE2 /* portoalegre.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDF518B652A300C64CE2 /* portoalegre.json */; };
-		3555CE0418B652A300C64CE2 /* recife.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDF618B652A300C64CE2 /* recife.json */; };
-		3555CE0518B652A300C64CE2 /* riodejaneiro.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDF718B652A300C64CE2 /* riodejaneiro.json */; };
-		3555CE0618B652A300C64CE2 /* salvador.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDF818B652A300C64CE2 /* salvador.json */; };
-		3555CE0718B652A300C64CE2 /* saopaulo.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CDF918B652A300C64CE2 /* saopaulo.json */; };
-		3555CE0918BCDD4D00C64CE2 /* fozdoiguacu.json in Resources */ = {isa = PBXBuildFile; fileRef = 3555CE0818BCDD4C00C64CE2 /* fozdoiguacu.json */; };
+		35036B8218BF8B9D00FFF4A5 /* riobranco.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B4A18BF8B9D00FFF4A5 /* riobranco.json */; };
+		35036B8318BF8B9D00FFF4A5 /* maceio.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B4C18BF8B9D00FFF4A5 /* maceio.json */; };
+		35036B8418BF8B9D00FFF4A5 /* manaus.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B4E18BF8B9D00FFF4A5 /* manaus.json */; };
+		35036B8518BF8B9D00FFF4A5 /* macapa.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B5018BF8B9D00FFF4A5 /* macapa.json */; };
+		35036B8618BF8B9D00FFF4A5 /* salvador.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B5218BF8B9D00FFF4A5 /* salvador.json */; };
+		35036B8718BF8B9D00FFF4A5 /* fortaleza.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B5418BF8B9D00FFF4A5 /* fortaleza.json */; };
+		35036B8818BF8B9D00FFF4A5 /* brasilia.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B5618BF8B9D00FFF4A5 /* brasilia.json */; };
+		35036B8918BF8B9D00FFF4A5 /* vitoria.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B5818BF8B9D00FFF4A5 /* vitoria.json */; };
+		35036B8A18BF8B9D00FFF4A5 /* goiania.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B5A18BF8B9D00FFF4A5 /* goiania.json */; };
+		35036B8B18BF8B9D00FFF4A5 /* saoluis.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B5C18BF8B9D00FFF4A5 /* saoluis.json */; };
+		35036B8C18BF8B9D00FFF4A5 /* belohorizonte.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B5E18BF8B9D00FFF4A5 /* belohorizonte.json */; };
+		35036B8D18BF8B9D00FFF4A5 /* lagoasanta.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B5F18BF8B9D00FFF4A5 /* lagoasanta.json */; };
+		35036B8E18BF8B9D00FFF4A5 /* campogrande.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B6118BF8B9D00FFF4A5 /* campogrande.json */; };
+		35036B8F18BF8B9D00FFF4A5 /* cuiaba.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B6318BF8B9D00FFF4A5 /* cuiaba.json */; };
+		35036B9018BF8B9D00FFF4A5 /* belem.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B6518BF8B9D00FFF4A5 /* belem.json */; };
+		35036B9118BF8B9D00FFF4A5 /* joaopessoa.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B6718BF8B9D00FFF4A5 /* joaopessoa.json */; };
+		35036B9218BF8B9D00FFF4A5 /* igarassu.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B6918BF8B9D00FFF4A5 /* igarassu.json */; };
+		35036B9318BF8B9D00FFF4A5 /* recife.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B6A18BF8B9D00FFF4A5 /* recife.json */; };
+		35036B9418BF8B9D00FFF4A5 /* teresina.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B6C18BF8B9D00FFF4A5 /* teresina.json */; };
+		35036B9518BF8B9D00FFF4A5 /* curitiba.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B6E18BF8B9D00FFF4A5 /* curitiba.json */; };
+		35036B9618BF8B9D00FFF4A5 /* fozdoiguacu.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B6F18BF8B9D00FFF4A5 /* fozdoiguacu.json */; };
+		35036B9718BF8B9D00FFF4A5 /* riodejaneiro.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B7118BF8B9D00FFF4A5 /* riodejaneiro.json */; };
+		35036B9818BF8B9D00FFF4A5 /* natal.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B7318BF8B9D00FFF4A5 /* natal.json */; };
+		35036B9918BF8B9D00FFF4A5 /* portovelho.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B7518BF8B9D00FFF4A5 /* portovelho.json */; };
+		35036B9A18BF8B9D00FFF4A5 /* boavista.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B7718BF8B9D00FFF4A5 /* boavista.json */; };
+		35036B9B18BF8B9D00FFF4A5 /* portoalegre.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B7918BF8B9D00FFF4A5 /* portoalegre.json */; };
+		35036B9C18BF8B9D00FFF4A5 /* florianopolis.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B7B18BF8B9D00FFF4A5 /* florianopolis.json */; };
+		35036B9D18BF8B9D00FFF4A5 /* aracaju.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B7D18BF8B9D00FFF4A5 /* aracaju.json */; };
+		35036B9E18BF8B9D00FFF4A5 /* saopaulo.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B7F18BF8B9D00FFF4A5 /* saopaulo.json */; };
+		35036B9F18BF8B9D00FFF4A5 /* palmas.json in Resources */ = {isa = PBXBuildFile; fileRef = 35036B8118BF8B9D00FFF4A5 /* palmas.json */; };
 		355FA24818A26B5300F903BF /* DetailFriendCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 355FA24718A26B5300F903BF /* DetailFriendCustomCell.m */; };
 		356AC3C5189BD7AD000EEBBD /* Session.m in Sources */ = {isa = PBXBuildFile; fileRef = 356AC3C4189BD7AD000EEBBD /* Session.m */; };
 		356AC3C8189C03B3000EEBBD /* FavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356AC3C7189C03B3000EEBBD /* FavoriteTableViewCell.m */; };
@@ -109,19 +126,36 @@
 		1AD9C3CE189C69B200CA6210 /* FIFOQueueTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FIFOQueueTest.m; sourceTree = "<group>"; };
 		1AD9C3D0189C92AC00CA6210 /* DestinationViewPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationViewPoint.h; sourceTree = "<group>"; };
 		1AD9C3D1189C92AC00CA6210 /* DestinationViewPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationViewPoint.m; sourceTree = "<group>"; };
-		3555CDEC18B652A300C64CE2 /* belohorizonte.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = belohorizonte.json; sourceTree = "<group>"; };
-		3555CDED18B652A300C64CE2 /* brasilia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brasilia.json; sourceTree = "<group>"; };
-		3555CDEE18B652A300C64CE2 /* cuiaba.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cuiaba.json; sourceTree = "<group>"; };
-		3555CDEF18B652A300C64CE2 /* curitiba.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = curitiba.json; sourceTree = "<group>"; };
-		3555CDF018B652A300C64CE2 /* fortaleza.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fortaleza.json; sourceTree = "<group>"; };
-		3555CDF218B652A300C64CE2 /* manaus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manaus.json; sourceTree = "<group>"; };
-		3555CDF318B652A300C64CE2 /* natal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = natal.json; sourceTree = "<group>"; };
-		3555CDF518B652A300C64CE2 /* portoalegre.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = portoalegre.json; sourceTree = "<group>"; };
-		3555CDF618B652A300C64CE2 /* recife.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recife.json; sourceTree = "<group>"; };
-		3555CDF718B652A300C64CE2 /* riodejaneiro.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = riodejaneiro.json; sourceTree = "<group>"; };
-		3555CDF818B652A300C64CE2 /* salvador.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = salvador.json; sourceTree = "<group>"; };
-		3555CDF918B652A300C64CE2 /* saopaulo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = saopaulo.json; sourceTree = "<group>"; };
-		3555CE0818BCDD4C00C64CE2 /* fozdoiguacu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fozdoiguacu.json; sourceTree = "<group>"; };
+		35036B4A18BF8B9D00FFF4A5 /* riobranco.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = riobranco.json; sourceTree = "<group>"; };
+		35036B4C18BF8B9D00FFF4A5 /* maceio.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = maceio.json; sourceTree = "<group>"; };
+		35036B4E18BF8B9D00FFF4A5 /* manaus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manaus.json; sourceTree = "<group>"; };
+		35036B5018BF8B9D00FFF4A5 /* macapa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = macapa.json; sourceTree = "<group>"; };
+		35036B5218BF8B9D00FFF4A5 /* salvador.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = salvador.json; sourceTree = "<group>"; };
+		35036B5418BF8B9D00FFF4A5 /* fortaleza.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fortaleza.json; sourceTree = "<group>"; };
+		35036B5618BF8B9D00FFF4A5 /* brasilia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brasilia.json; sourceTree = "<group>"; };
+		35036B5818BF8B9D00FFF4A5 /* vitoria.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vitoria.json; sourceTree = "<group>"; };
+		35036B5A18BF8B9D00FFF4A5 /* goiania.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = goiania.json; sourceTree = "<group>"; };
+		35036B5C18BF8B9D00FFF4A5 /* saoluis.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = saoluis.json; sourceTree = "<group>"; };
+		35036B5E18BF8B9D00FFF4A5 /* belohorizonte.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = belohorizonte.json; sourceTree = "<group>"; };
+		35036B5F18BF8B9D00FFF4A5 /* lagoasanta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lagoasanta.json; sourceTree = "<group>"; };
+		35036B6118BF8B9D00FFF4A5 /* campogrande.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = campogrande.json; sourceTree = "<group>"; };
+		35036B6318BF8B9D00FFF4A5 /* cuiaba.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cuiaba.json; sourceTree = "<group>"; };
+		35036B6518BF8B9D00FFF4A5 /* belem.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = belem.json; sourceTree = "<group>"; };
+		35036B6718BF8B9D00FFF4A5 /* joaopessoa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = joaopessoa.json; sourceTree = "<group>"; };
+		35036B6918BF8B9D00FFF4A5 /* igarassu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = igarassu.json; sourceTree = "<group>"; };
+		35036B6A18BF8B9D00FFF4A5 /* recife.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recife.json; sourceTree = "<group>"; };
+		35036B6C18BF8B9D00FFF4A5 /* teresina.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = teresina.json; sourceTree = "<group>"; };
+		35036B6E18BF8B9D00FFF4A5 /* curitiba.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = curitiba.json; sourceTree = "<group>"; };
+		35036B6F18BF8B9D00FFF4A5 /* fozdoiguacu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fozdoiguacu.json; sourceTree = "<group>"; };
+		35036B7118BF8B9D00FFF4A5 /* riodejaneiro.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = riodejaneiro.json; sourceTree = "<group>"; };
+		35036B7318BF8B9D00FFF4A5 /* natal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = natal.json; sourceTree = "<group>"; };
+		35036B7518BF8B9D00FFF4A5 /* portovelho.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = portovelho.json; sourceTree = "<group>"; };
+		35036B7718BF8B9D00FFF4A5 /* boavista.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = boavista.json; sourceTree = "<group>"; };
+		35036B7918BF8B9D00FFF4A5 /* portoalegre.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = portoalegre.json; sourceTree = "<group>"; };
+		35036B7B18BF8B9D00FFF4A5 /* florianopolis.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = florianopolis.json; sourceTree = "<group>"; };
+		35036B7D18BF8B9D00FFF4A5 /* aracaju.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = aracaju.json; sourceTree = "<group>"; };
+		35036B7F18BF8B9D00FFF4A5 /* saopaulo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = saopaulo.json; sourceTree = "<group>"; };
+		35036B8118BF8B9D00FFF4A5 /* palmas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = palmas.json; sourceTree = "<group>"; };
 		355FA24618A26B5300F903BF /* DetailFriendCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailFriendCustomCell.h; sourceTree = "<group>"; };
 		355FA24718A26B5300F903BF /* DetailFriendCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailFriendCustomCell.m; sourceTree = "<group>"; };
 		356AC3C1189A77B9000EEBBD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -274,24 +308,257 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
-		3555CDEB18B652A300C64CE2 /* Destination */ = {
+		35036B4818BF8B9D00FFF4A5 /* Destination */ = {
 			isa = PBXGroup;
 			children = (
-				3555CE0818BCDD4C00C64CE2 /* fozdoiguacu.json */,
-				3555CDEC18B652A300C64CE2 /* belohorizonte.json */,
-				3555CDED18B652A300C64CE2 /* brasilia.json */,
-				3555CDEE18B652A300C64CE2 /* cuiaba.json */,
-				3555CDEF18B652A300C64CE2 /* curitiba.json */,
-				3555CDF018B652A300C64CE2 /* fortaleza.json */,
-				3555CDF218B652A300C64CE2 /* manaus.json */,
-				3555CDF318B652A300C64CE2 /* natal.json */,
-				3555CDF518B652A300C64CE2 /* portoalegre.json */,
-				3555CDF618B652A300C64CE2 /* recife.json */,
-				3555CDF718B652A300C64CE2 /* riodejaneiro.json */,
-				3555CDF818B652A300C64CE2 /* salvador.json */,
-				3555CDF918B652A300C64CE2 /* saopaulo.json */,
+				35036B4918BF8B9D00FFF4A5 /* AC */,
+				35036B4B18BF8B9D00FFF4A5 /* AL */,
+				35036B4D18BF8B9D00FFF4A5 /* AM */,
+				35036B4F18BF8B9D00FFF4A5 /* AP */,
+				35036B5118BF8B9D00FFF4A5 /* BA */,
+				35036B5318BF8B9D00FFF4A5 /* CE */,
+				35036B5518BF8B9D00FFF4A5 /* DF */,
+				35036B5718BF8B9D00FFF4A5 /* ES */,
+				35036B5918BF8B9D00FFF4A5 /* GO */,
+				35036B5B18BF8B9D00FFF4A5 /* MA */,
+				35036B5D18BF8B9D00FFF4A5 /* MG */,
+				35036B6018BF8B9D00FFF4A5 /* MS */,
+				35036B6218BF8B9D00FFF4A5 /* MT */,
+				35036B6418BF8B9D00FFF4A5 /* PA */,
+				35036B6618BF8B9D00FFF4A5 /* PB */,
+				35036B6818BF8B9D00FFF4A5 /* PE */,
+				35036B6B18BF8B9D00FFF4A5 /* PI */,
+				35036B6D18BF8B9D00FFF4A5 /* PR */,
+				35036B7018BF8B9D00FFF4A5 /* RJ */,
+				35036B7218BF8B9D00FFF4A5 /* RN */,
+				35036B7418BF8B9D00FFF4A5 /* RO */,
+				35036B7618BF8B9D00FFF4A5 /* RR */,
+				35036B7818BF8B9D00FFF4A5 /* RS */,
+				35036B7A18BF8B9D00FFF4A5 /* SC */,
+				35036B7C18BF8B9D00FFF4A5 /* SE */,
+				35036B7E18BF8B9D00FFF4A5 /* SP */,
+				35036B8018BF8B9D00FFF4A5 /* TO */,
 			);
 			path = Destination;
+			sourceTree = "<group>";
+		};
+		35036B4918BF8B9D00FFF4A5 /* AC */ = {
+			isa = PBXGroup;
+			children = (
+				35036B4A18BF8B9D00FFF4A5 /* riobranco.json */,
+			);
+			path = AC;
+			sourceTree = "<group>";
+		};
+		35036B4B18BF8B9D00FFF4A5 /* AL */ = {
+			isa = PBXGroup;
+			children = (
+				35036B4C18BF8B9D00FFF4A5 /* maceio.json */,
+			);
+			path = AL;
+			sourceTree = "<group>";
+		};
+		35036B4D18BF8B9D00FFF4A5 /* AM */ = {
+			isa = PBXGroup;
+			children = (
+				35036B4E18BF8B9D00FFF4A5 /* manaus.json */,
+			);
+			path = AM;
+			sourceTree = "<group>";
+		};
+		35036B4F18BF8B9D00FFF4A5 /* AP */ = {
+			isa = PBXGroup;
+			children = (
+				35036B5018BF8B9D00FFF4A5 /* macapa.json */,
+			);
+			path = AP;
+			sourceTree = "<group>";
+		};
+		35036B5118BF8B9D00FFF4A5 /* BA */ = {
+			isa = PBXGroup;
+			children = (
+				35036B5218BF8B9D00FFF4A5 /* salvador.json */,
+			);
+			path = BA;
+			sourceTree = "<group>";
+		};
+		35036B5318BF8B9D00FFF4A5 /* CE */ = {
+			isa = PBXGroup;
+			children = (
+				35036B5418BF8B9D00FFF4A5 /* fortaleza.json */,
+			);
+			path = CE;
+			sourceTree = "<group>";
+		};
+		35036B5518BF8B9D00FFF4A5 /* DF */ = {
+			isa = PBXGroup;
+			children = (
+				35036B5618BF8B9D00FFF4A5 /* brasilia.json */,
+			);
+			path = DF;
+			sourceTree = "<group>";
+		};
+		35036B5718BF8B9D00FFF4A5 /* ES */ = {
+			isa = PBXGroup;
+			children = (
+				35036B5818BF8B9D00FFF4A5 /* vitoria.json */,
+			);
+			path = ES;
+			sourceTree = "<group>";
+		};
+		35036B5918BF8B9D00FFF4A5 /* GO */ = {
+			isa = PBXGroup;
+			children = (
+				35036B5A18BF8B9D00FFF4A5 /* goiania.json */,
+			);
+			path = GO;
+			sourceTree = "<group>";
+		};
+		35036B5B18BF8B9D00FFF4A5 /* MA */ = {
+			isa = PBXGroup;
+			children = (
+				35036B5C18BF8B9D00FFF4A5 /* saoluis.json */,
+			);
+			path = MA;
+			sourceTree = "<group>";
+		};
+		35036B5D18BF8B9D00FFF4A5 /* MG */ = {
+			isa = PBXGroup;
+			children = (
+				35036B5E18BF8B9D00FFF4A5 /* belohorizonte.json */,
+				35036B5F18BF8B9D00FFF4A5 /* lagoasanta.json */,
+			);
+			path = MG;
+			sourceTree = "<group>";
+		};
+		35036B6018BF8B9D00FFF4A5 /* MS */ = {
+			isa = PBXGroup;
+			children = (
+				35036B6118BF8B9D00FFF4A5 /* campogrande.json */,
+			);
+			path = MS;
+			sourceTree = "<group>";
+		};
+		35036B6218BF8B9D00FFF4A5 /* MT */ = {
+			isa = PBXGroup;
+			children = (
+				35036B6318BF8B9D00FFF4A5 /* cuiaba.json */,
+			);
+			path = MT;
+			sourceTree = "<group>";
+		};
+		35036B6418BF8B9D00FFF4A5 /* PA */ = {
+			isa = PBXGroup;
+			children = (
+				35036B6518BF8B9D00FFF4A5 /* belem.json */,
+			);
+			path = PA;
+			sourceTree = "<group>";
+		};
+		35036B6618BF8B9D00FFF4A5 /* PB */ = {
+			isa = PBXGroup;
+			children = (
+				35036B6718BF8B9D00FFF4A5 /* joaopessoa.json */,
+			);
+			path = PB;
+			sourceTree = "<group>";
+		};
+		35036B6818BF8B9D00FFF4A5 /* PE */ = {
+			isa = PBXGroup;
+			children = (
+				35036B6918BF8B9D00FFF4A5 /* igarassu.json */,
+				35036B6A18BF8B9D00FFF4A5 /* recife.json */,
+			);
+			path = PE;
+			sourceTree = "<group>";
+		};
+		35036B6B18BF8B9D00FFF4A5 /* PI */ = {
+			isa = PBXGroup;
+			children = (
+				35036B6C18BF8B9D00FFF4A5 /* teresina.json */,
+			);
+			path = PI;
+			sourceTree = "<group>";
+		};
+		35036B6D18BF8B9D00FFF4A5 /* PR */ = {
+			isa = PBXGroup;
+			children = (
+				35036B6E18BF8B9D00FFF4A5 /* curitiba.json */,
+				35036B6F18BF8B9D00FFF4A5 /* fozdoiguacu.json */,
+			);
+			path = PR;
+			sourceTree = "<group>";
+		};
+		35036B7018BF8B9D00FFF4A5 /* RJ */ = {
+			isa = PBXGroup;
+			children = (
+				35036B7118BF8B9D00FFF4A5 /* riodejaneiro.json */,
+			);
+			path = RJ;
+			sourceTree = "<group>";
+		};
+		35036B7218BF8B9D00FFF4A5 /* RN */ = {
+			isa = PBXGroup;
+			children = (
+				35036B7318BF8B9D00FFF4A5 /* natal.json */,
+			);
+			path = RN;
+			sourceTree = "<group>";
+		};
+		35036B7418BF8B9D00FFF4A5 /* RO */ = {
+			isa = PBXGroup;
+			children = (
+				35036B7518BF8B9D00FFF4A5 /* portovelho.json */,
+			);
+			path = RO;
+			sourceTree = "<group>";
+		};
+		35036B7618BF8B9D00FFF4A5 /* RR */ = {
+			isa = PBXGroup;
+			children = (
+				35036B7718BF8B9D00FFF4A5 /* boavista.json */,
+			);
+			path = RR;
+			sourceTree = "<group>";
+		};
+		35036B7818BF8B9D00FFF4A5 /* RS */ = {
+			isa = PBXGroup;
+			children = (
+				35036B7918BF8B9D00FFF4A5 /* portoalegre.json */,
+			);
+			path = RS;
+			sourceTree = "<group>";
+		};
+		35036B7A18BF8B9D00FFF4A5 /* SC */ = {
+			isa = PBXGroup;
+			children = (
+				35036B7B18BF8B9D00FFF4A5 /* florianopolis.json */,
+			);
+			path = SC;
+			sourceTree = "<group>";
+		};
+		35036B7C18BF8B9D00FFF4A5 /* SE */ = {
+			isa = PBXGroup;
+			children = (
+				35036B7D18BF8B9D00FFF4A5 /* aracaju.json */,
+			);
+			path = SE;
+			sourceTree = "<group>";
+		};
+		35036B7E18BF8B9D00FFF4A5 /* SP */ = {
+			isa = PBXGroup;
+			children = (
+				35036B7F18BF8B9D00FFF4A5 /* saopaulo.json */,
+			);
+			path = SP;
+			sourceTree = "<group>";
+		};
+		35036B8018BF8B9D00FFF4A5 /* TO */ = {
+			isa = PBXGroup;
+			children = (
+				35036B8118BF8B9D00FFF4A5 /* palmas.json */,
+			);
+			path = TO;
 			sourceTree = "<group>";
 		};
 		35A96E201896B10B00DC1300 = {
@@ -345,7 +612,7 @@
 		35A96E331896B10B00DC1300 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3555CDEB18B652A300C64CE2 /* Destination */,
+				35036B4818BF8B9D00FFF4A5 /* Destination */,
 				35A96E341896B10B00DC1300 /* Away-Info.plist */,
 				35A96E351896B10B00DC1300 /* InfoPlist.strings */,
 				35A96E381896B10B00DC1300 /* main.m */,
@@ -450,23 +717,40 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3555CDFD18B652A300C64CE2 /* curitiba.json in Resources */,
-				3555CDFE18B652A300C64CE2 /* fortaleza.json in Resources */,
-				3555CE0318B652A300C64CE2 /* portoalegre.json in Resources */,
-				3555CE0918BCDD4D00C64CE2 /* fozdoiguacu.json in Resources */,
-				3555CE0118B652A300C64CE2 /* natal.json in Resources */,
-				3555CE0518B652A300C64CE2 /* riodejaneiro.json in Resources */,
-				3555CE0418B652A300C64CE2 /* recife.json in Resources */,
-				3555CDFB18B652A300C64CE2 /* brasilia.json in Resources */,
+				35036B8B18BF8B9D00FFF4A5 /* saoluis.json in Resources */,
 				35A96E451896B10B00DC1300 /* Images.xcassets in Resources */,
-				3555CE0618B652A300C64CE2 /* salvador.json in Resources */,
+				35036B9B18BF8B9D00FFF4A5 /* portoalegre.json in Resources */,
+				35036B9F18BF8B9D00FFF4A5 /* palmas.json in Resources */,
+				35036B9C18BF8B9D00FFF4A5 /* florianopolis.json in Resources */,
+				35036B9818BF8B9D00FFF4A5 /* natal.json in Resources */,
+				35036B8D18BF8B9D00FFF4A5 /* lagoasanta.json in Resources */,
+				35036B9218BF8B9D00FFF4A5 /* igarassu.json in Resources */,
+				35036B8418BF8B9D00FFF4A5 /* manaus.json in Resources */,
+				35036B8918BF8B9D00FFF4A5 /* vitoria.json in Resources */,
+				35036B9A18BF8B9D00FFF4A5 /* boavista.json in Resources */,
+				35036B9418BF8B9D00FFF4A5 /* teresina.json in Resources */,
+				35036B9D18BF8B9D00FFF4A5 /* aracaju.json in Resources */,
+				35036B8818BF8B9D00FFF4A5 /* brasilia.json in Resources */,
+				35036B9518BF8B9D00FFF4A5 /* curitiba.json in Resources */,
+				35036B8618BF8B9D00FFF4A5 /* salvador.json in Resources */,
+				35036B8E18BF8B9D00FFF4A5 /* campogrande.json in Resources */,
+				35036B8318BF8B9D00FFF4A5 /* maceio.json in Resources */,
+				35036B9018BF8B9D00FFF4A5 /* belem.json in Resources */,
 				35A96E371896B10B00DC1300 /* InfoPlist.strings in Resources */,
 				35A96E401896B10B00DC1300 /* Main.storyboard in Resources */,
-				3555CE0018B652A300C64CE2 /* manaus.json in Resources */,
-				3555CDFC18B652A300C64CE2 /* cuiaba.json in Resources */,
+				35036B8218BF8B9D00FFF4A5 /* riobranco.json in Resources */,
+				35036B9718BF8B9D00FFF4A5 /* riodejaneiro.json in Resources */,
+				35036B8518BF8B9D00FFF4A5 /* macapa.json in Resources */,
+				35036B8718BF8B9D00FFF4A5 /* fortaleza.json in Resources */,
+				35036B9E18BF8B9D00FFF4A5 /* saopaulo.json in Resources */,
+				35036B8F18BF8B9D00FFF4A5 /* cuiaba.json in Resources */,
+				35036B8A18BF8B9D00FFF4A5 /* goiania.json in Resources */,
 				1A11BBC518AAD817003BB6FC /* Demo.storyboard in Resources */,
-				3555CE0718B652A300C64CE2 /* saopaulo.json in Resources */,
-				3555CDFA18B652A300C64CE2 /* belohorizonte.json in Resources */,
+				35036B9318BF8B9D00FFF4A5 /* recife.json in Resources */,
+				35036B8C18BF8B9D00FFF4A5 /* belohorizonte.json in Resources */,
+				35036B9918BF8B9D00FFF4A5 /* portovelho.json in Resources */,
+				35036B9118BF8B9D00FFF4A5 /* joaopessoa.json in Resources */,
+				35036B9618BF8B9D00FFF4A5 /* fozdoiguacu.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

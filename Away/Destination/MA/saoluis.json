@@ -1,0 +1,60 @@
+{
+	"name": "São Luís",
+	"estate": "MA",
+	"info": "São Luís é um município e a capital do estado do Maranhão. É a única cidade brasileira fundada por franceses, em 1612, tendo sido posteriormente invadida por holandeses. Em seguida, foi colonizada pelos portugueses. Em 1621, quando o Brasil foi dividido em duas unidades administrativas — Estado do Maranhão e Estado do Brasil — São Luís foi a capital da primeira unidade administrativa.",
+	"geo":
+	{
+		"lat": "-44.2887962",
+		"lng": "-2.6356682"
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Praia do Calhau",
+						
+			"geo":
+			{
+				"lat": "-44.3036392",
+				"lng": "-2.5177932"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Foz do Rio Anil",
+						
+			"geo":
+			{
+				"lat": "-44.305728",
+				"lng": "-2.522330"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Praça Marcílio Dias",
+						
+			"geo":
+			{
+				"lat": "-44.306887",
+				"lng": "-2.526378"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Centro Histórico",
+						
+			"geo":
+			{
+				"lat": "-44.3031942",
+				"lng": "-2.52974"
+			},
+
+			"pic_url" : ""
+		}	
+	]
+}

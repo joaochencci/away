@@ -1,0 +1,60 @@
+{
+	"name": "Aracaju",
+	"estate": "SE",
+	"info": "Aracaju é um município e capital do estado de Sergipe. Localiza-se no litoral, sendo cortada por rios como o Sergipe e o Poxim. Apesar de ser a menos populosa das capitais nordestinas, sua localização perfaz como importante ponto estratégico enquanto centro urbano, econômico, cultural e político para o país. É apontada como a capital com menor desigualdade do Nordeste Brasileiro, como a cidade com os hábitos de vida mais saudáveis do país, exemplo nacional na consideração de ciclovias nos projetos de deslocamento urbano e é considerada a capital do país com menor índice de fumantes, segundo o Ministério da Saúde.",
+	"geo":
+	{
+		"lat": "-37.1033845",
+		"lng": "-11.0021951"
+	},
+	"base_price" : "",
+	"points": [
+		{
+			"name": "Teleférico no Zoológico",
+						
+			"geo":
+			{
+				"lat": "-37.052488",
+				"lng": "-10.890089"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Arcos da Orla de Atalai",
+						
+			"geo":
+			{
+				"lat": "-37.0483422",
+				"lng": "-10.9888076"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Ponte Aracaju-Barra dos Coqueiros",
+						
+			"geo":
+			{
+				"lat": "-37.0492458",
+				"lng": "-10.8949237"
+			},
+
+			"pic_url" : ""
+		},
+
+		{
+			"name": "Palácio Ignácio Barbosa",
+						
+			"geo":
+			{
+				"lat": "-37.048018",
+				"lng": "-10.908799"
+			},
+
+			"pic_url" : ""
+		}	
+	]
+}
