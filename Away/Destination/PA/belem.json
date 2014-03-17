@@ -7,7 +7,7 @@
 		"lat": "-48.4392935",
 		"lng": "-1.343203"
 	},
-	"base_price" : "",
+	"base_price" : "800",
 	"points": [
 		{
 			"name": "Forte do Castelo",
@@ -18,7 +18,7 @@
 				"lng": "-1.454392"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/220eLWH.jpg"
 		},
 
 		{
@@ -30,7 +30,7 @@
 				"lng": "-1.4529846"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/2UOsZqU.jpg"
 		},
 
 		{
@@ -42,7 +42,7 @@
 				"lng": "-1.4180321"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/EA9eGMH.jpg"
 		},
 
 		{
@@ -54,7 +54,7 @@
 				"lng": "-1.4522171"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/1kG00tD.jpg"
 		}	
 	]
 }

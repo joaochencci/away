@@ -7,7 +7,7 @@
 		"lat": "-67.8310966",
 		"lng": "-9.9863306"
 	},
-	"base_price" : "",
+	"base_price" : "100",
 	"points": [
 		{
 			"name": "Memorial dos Autonomistas",
@@ -30,7 +30,7 @@
 				"lng": "-9.973001"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/RtKDyvP.jpg"
 		},
 
 		{
@@ -42,7 +42,7 @@
 				"lng": "-9.9679405"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/RmUtID9.jpg"
 		},
 
 		{
@@ -54,7 +54,7 @@
 				"lng": "-10.002430"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/B9mqCyK.jpg"
 		}	
 	]
 }

@@ -7,7 +7,7 @@
 		"lat": "-50.6788393",
 		"lng": "0.5913396"
 	},
-	"base_price" : "",
+	"base_price" : "300",
 	"points": [
 		{
 			"name": "Marco Zero",
@@ -18,7 +18,7 @@
 				"lng": "0.021469"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/FXiO2Jz.jpg"
 		},
 
 		{
@@ -30,7 +30,7 @@
 				"lng": "0.0310707"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/4qERV2Y.jpg"
 		},
 
 		{
@@ -42,7 +42,7 @@
 				"lng": "0.0367949"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "http://i.imgur.com/dTdff9T.jpg"
 		},
 
 		{
@@ -54,7 +54,7 @@
 				"lng": "0.0295109"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/SjkX6zT.jpg"
 		}	
 	]
 }

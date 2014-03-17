@@ -60,7 +60,7 @@
 - (void)populateDestinations {
 //    NSError *error = nil;
 //    NSString *searchResultString = [NSString stringWithContentsOfURL:[NSURL URLWithString:searchURL] encoding:NSUTF8StringEncoding error:&error];
-    NSMutableArray *dests = [NSMutableArray arrayWithArray:@[@"belohorizonte", @"brasilia", @"cuiaba", @"curitiba", @"fortaleza", @"fozdoiguacu", @"manaus", @"natal", @"portoalegre", @"recife", @"riodejaneiro", @"salvador", @"saopaulo"]];
+    NSMutableArray *dests = [NSMutableArray arrayWithArray:@[@"belohorizonte", @"brasilia", @"cuiaba", @"curitiba", @"fortaleza", @"fozdoiguacu", @"manaus", @"natal", @"portoalegre", @"recife", @"riodejaneiro", @"salvador", @"saopaulo", @"riobranco", @"maceio", @"macapa", @"vitoria", @"goiania", @"saoluis", @"campogrande", @"belem", @"joaopessoa"]];
 
     NSError *error = nil;
     for (NSString *dest in dests) {

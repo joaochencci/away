@@ -7,7 +7,7 @@
 		"lat": "-44.2887962",
 		"lng": "-2.6356682"
 	},
-	"base_price" : "",
+	"base_price" : "600",
 	"points": [
 		{
 			"name": "Praia do Calhau",
@@ -18,7 +18,7 @@
 				"lng": "-2.5177932"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/c1MniQR.jpg"
 		},
 
 		{
@@ -30,7 +30,7 @@
 				"lng": "-2.522330"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/sG5h1bY.jpg"
 		},
 
 		{
@@ -42,7 +42,7 @@
 				"lng": "-2.526378"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/sSBbKGA.jpg"
 		},
 
 		{
@@ -54,7 +54,7 @@
 				"lng": "-2.52974"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/qR3LDx2.jpg"
 		}	
 	]
 }

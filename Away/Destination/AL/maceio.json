@@ -7,7 +7,7 @@
 		"lat": "-35.6869382",
 		"lng": "-9.5353673"
 	},
-	"base_price" : "",
+	"base_price" : "200",
 	"points": [
 		{
 			"name": "Praia de Pajuçara",
@@ -18,7 +18,7 @@
 				"lng": "-9.6711334"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/E3DpomH.jpg"
 		},
 
 		{
@@ -30,7 +30,7 @@
 				"lng": "-9.6628723"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/4t1TCXG.jpg"
 		},
 
 		{
@@ -42,7 +42,7 @@
 				"lng": "-9.6671647"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/8Qrd5ZI.jpg"
 		},
 
 		{
@@ -54,7 +54,7 @@
 				"lng": "-9.671892"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/vnxTPUp.jpg"
 		}	
 	]
 }

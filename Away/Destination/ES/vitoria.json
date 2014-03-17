@@ -7,7 +7,7 @@
 		"lat": "-40.2861705",
 		"lng": "-20.2821915"
 	},
-	"base_price" : "",
+	"base_price" : "400",
 	"points": [
 		{
 			"name": "Centro Histórico",
@@ -18,7 +18,7 @@
 				"lng": "-20.3176065"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/Z5t7OKu.jpg"
 		},
 
 		{
@@ -30,7 +30,7 @@
 				"lng": "-20.3022973"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/ef6Cmsq.jpg"
 		},
 
 		{
@@ -42,7 +42,7 @@
 				"lng": "-20.3194902"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/cL0GrKI.jpg"
 		},
 
 		{
@@ -54,7 +54,7 @@
 				"lng": "-20.318159"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/IdWki7i.jpg"
 		}	
 	]
 }

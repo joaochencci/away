@@ -7,7 +7,7 @@
 		"lat": "-49.2624666",
 		"lng": "-16.6428184"
 	},
-	"base_price" : "",
+	"base_price" : "500",
 	"points": [
 		{
 			"name": "Praça Cívica",
@@ -18,7 +18,7 @@
 				"lng": "-16.6868912"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/KG4FGPr.jpg"
 		},
 
 		{
@@ -30,7 +30,7 @@
 				"lng": "-16.7095464"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/gC7YpsC.jpg"
 		},
 
 		{
@@ -42,7 +42,7 @@
 				"lng": "-16.691519"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/DEZYlc1.jpg"
 		},
 
 		{
@@ -54,7 +54,7 @@
 				"lng": "-16.713905"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/paQVVmA.jpg"
 		},
 
 		{
@@ -66,7 +66,7 @@
 				"lng": "-16.6759506"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/wKN9HFS.jpg"
 		},
 
 		{
@@ -78,7 +78,7 @@
 				"lng": "-16.6986191"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/7ggzJQn.jpg"
 		}	
 	]
 }

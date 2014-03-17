@@ -7,7 +7,7 @@
 		"lat": "-34.8833954",
 		"lng": "-7.149667"
 	},
-	"base_price" : "",
+	"base_price" : "800",
 	"points": [
 		{
 			"name": "Praça dos Três Poderes",
@@ -18,7 +18,7 @@
 				"lng": "-7.121503"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/X4zkEJY.jpg"
 		},
 
 		{
@@ -30,7 +30,7 @@
 				"lng": "-7.1371379"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/t0YUjJI.jpg"
 		},
 
 		{
@@ -42,7 +42,7 @@
 				"lng": "-7.1487477"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/j1vkHOT.jpg"
 		},
 
 		{
@@ -54,7 +54,7 @@
 				"lng": "-7.1137273"
 			},
 
-			"pic_url" : ""
+			"pic_url" : "https://i.imgur.com/pVJ9WYf.jpg"
 		}	
 	]
 }
